@@ -89,8 +89,8 @@
     }
     .emblem-core {
       position: relative;
-      width: 220px;
-      height: 220px;
+      width: 200px;
+      height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -100,9 +100,9 @@
 
     /* Central Logo Floating Badge */
     .emblem-logo {
-      width: 105px;
-      height: 105px;
-      border-radius: 28px;
+      width: 95px;
+      height: 95px;
+      border-radius: 26px;
       overflow: hidden;
       position: relative;
       z-index: 10;
@@ -112,14 +112,14 @@
     }
     @keyframes logo-float {
       0% { transform: translateY(0px) scale(1); box-shadow: 0 0 40px rgba(139, 92, 246, 0.6); }
-      100% { transform: translateY(-8px) scale(1.03); box-shadow: 0 0 70px rgba(6, 182, 212, 0.6), 0 0 110px rgba(139, 92, 246, 0.5); }
+      100% { transform: translateY(-7px) scale(1.03); box-shadow: 0 0 70px rgba(6, 182, 212, 0.6), 0 0 110px rgba(139, 92, 246, 0.5); }
     }
 
     /* Orbit Ring 1 - Cyan Planet Ring (Tilted like Saturn) */
     .orbit-ring-1 {
       position: absolute;
-      width: 260px;
-      height: 260px;
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       border: 2px solid transparent;
       border-top: 2.5px solid #06B6D4;
@@ -135,8 +135,8 @@
     /* Orbit Ring 2 - Violet/Pink Celestial Ribbon */
     .orbit-ring-2 {
       position: absolute;
-      width: 300px;
-      height: 300px;
+      width: 290px;
+      height: 290px;
       border-radius: 50%;
       border: 2px solid transparent;
       border-left: 2.5px solid #8B5CF6;
@@ -152,8 +152,8 @@
     /* Orbit Ring 3 - Outer Cybernetic Radar Reticle */
     .orbit-ring-3 {
       position: absolute;
-      width: 350px;
-      height: 350px;
+      width: 335px;
+      height: 335px;
       border-radius: 50%;
       border: 1px dashed rgba(255, 255, 255, 0.18);
       transform-style: preserve-3d;
@@ -277,7 +277,7 @@
       <div class="font-display font-bold text-2xl tracking-[0.25em] text-white">AURA DIGITAL</div>
       <div class="text-[10px] tracking-[0.4em] uppercase text-cyan-400 font-mono flex items-center justify-center gap-2">
         <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-        <span>DİJİTAL SİSTEMLER BAŞLATILIYOR...</span>
+        <span>DİJİTAL BÜYÜME SİSTEMLERİ BAŞLATILIYOR...</span>
       </div>
     </div>
     <button id="skip-loader-btn" class="mt-8 text-[11px] text-stone-500 hover:text-stone-300 font-mono tracking-widest uppercase transition-colors">
@@ -295,7 +295,7 @@
     <span class="inline-flex items-center gap-2">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
       <span class="text-white font-semibold">2026 KONTENJANI:</span>
-      <span class="text-stone-300">Bu ay sadece 3 işletmeye özel %100 anahtar teslim lüks dijital büyüme mimarisi.</span>
+      <span class="text-stone-300">Bu ay sınırlı sayıda işletmeye özel %100 anahtar teslim büyüme mimarisi.</span>
     </span>
   </div>
 
@@ -316,14 +316,15 @@
 
       <!-- Menü Linkleri -->
       <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wider text-stone-300 uppercase">
+        <a href="#neden-kaybediyorsunuz" class="hover:text-white transition-colors">Neden Aura?</a>
+        <a href="#surec" class="hover:text-white transition-colors">Nasıl Çalışıyoruz?</a>
         <a href="#hizmetler" class="hover:text-white transition-colors">Hizmetlerimiz</a>
-        <a href="#referans" class="text-violet-400 hover:text-white transition-colors flex items-center gap-1.5 font-bold">
-          <span class="w-2 h-2 rounded-full bg-violet-400 animate-pulse"></span>
-          <span>Linail Case Study</span>
+        <a href="#projelerimiz" class="text-cyan-400 hover:text-white transition-colors flex items-center gap-1.5 font-bold">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          <span>Projelerimiz</span>
         </a>
-        <a href="#neden-biz" class="hover:text-white transition-colors">Farkımız</a>
         <a href="#paketler" class="hover:text-white transition-colors">Fiyatlandırma</a>
-        <a href="#iletisim" class="hover:text-white transition-colors">İletişim</a>
+        <a href="#sss" class="hover:text-white transition-colors">SSS</a>
       </nav>
 
       <!-- Sağ Taraf Kontroller & CTA -->
@@ -341,7 +342,7 @@
            target="_blank"
            class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-gradient-to-r from-aura-violet via-indigo-600 to-aura-cyan hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-xl shadow-aura-violet/30 border border-white/20">
           <i data-lucide="sparkles" class="w-4 h-4"></i>
-          <span>Ücretsiz Analiz</span>
+          <span>Ücretsiz Analiz Al</span>
         </a>
 
         <!-- Mobil Menü Butonu -->
@@ -354,11 +355,12 @@
 
     <!-- Mobil Menü Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden border-b border-white/10 bg-aura-card/95 backdrop-blur-2xl px-6 py-6 space-y-4 text-center">
+      <a href="#neden-kaybediyorsunuz" class="block text-sm tracking-wider uppercase text-stone-300 hover:text-white py-1">Neden Aura?</a>
+      <a href="#surec" class="block text-sm tracking-wider uppercase text-stone-300 hover:text-white py-1">Nasıl Çalışıyoruz?</a>
       <a href="#hizmetler" class="block text-sm tracking-wider uppercase text-stone-300 hover:text-white py-1">Hizmetlerimiz</a>
-      <a href="#referans" class="block text-sm tracking-wider uppercase text-violet-400 font-semibold py-1">Linail Case Study</a>
-      <a href="#neden-biz" class="block text-sm tracking-wider uppercase text-stone-300 hover:text-white py-1">Farkımız</a>
+      <a href="#projelerimiz" class="block text-sm tracking-wider uppercase text-cyan-400 font-bold py-1">Projelerimiz</a>
       <a href="#paketler" class="block text-sm tracking-wider uppercase text-stone-300 hover:text-white py-1">Fiyatlandırma</a>
-      <a href="#iletisim" class="block text-sm tracking-wider uppercase text-stone-300 hover:text-white py-1">İletişim</a>
+      <a href="#sss" class="block text-sm tracking-wider uppercase text-stone-300 hover:text-white py-1">SSS</a>
       <a href="https://wa.me/905318696764?text=Merhaba%2C%20Aura%20Digital%20ile%20işletmem%20için%20ücretsiz%20dijital%20analiz%20almak%20istiyorum." 
          target="_blank" 
          class="block w-full py-3.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-gradient-to-r from-aura-violet to-aura-cyan shadow-xl">
@@ -368,21 +370,20 @@
   </header>
 
   <!-- HERO SECTION WITH BACKGROUND VIDEO & 3D GYROSCOPE -->
-  <section class="relative pt-12 pb-24 md:pt-20 md:pb-36 overflow-hidden">
+  <section class="relative pt-10 pb-20 md:pt-16 md:pb-32 overflow-hidden">
     
     <!-- ARKA PLAN SİNEMATİK DÖNGÜ VİDEOSU -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
       <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-35 mix-blend-screen scale-105">
         <source src="assets/aura-hero-bg.mp4" type="video/mp4">
       </video>
-      <!-- Karartma & Renk Geçiş Filtresi (Okunabilirlik ve Sinematik Derinlik) -->
-      <div class="absolute inset-0 bg-gradient-to-b from-aura-bg/80 via-aura-bg/40 to-aura-bg pointer-events-none"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-aura-bg/85 via-aura-bg/45 to-aura-bg pointer-events-none"></div>
     </div>
 
     <div class="max-w-6xl mx-auto px-6 text-center flex flex-col items-center relative z-10">
       
       <!-- 3D HOLOGRAPHIC LOGO GYROSCOPE (Dönen A Halkaları) -->
-      <div class="emblem-stage mb-10 mt-4">
+      <div class="emblem-stage mb-8 mt-2">
         <div id="aura-emblem-core" class="emblem-core cursor-pointer group" title="Aura Digital Holographic Core">
           
           <!-- Halka 1 (Cyan / Gezegen Halkası) -->
@@ -410,7 +411,7 @@
       <!-- Rozet -->
       <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card text-xs font-semibold text-violet-300 mb-6 border border-violet-500/30 shadow-xl shadow-violet-950/50">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-        <span class="tracking-widest uppercase">YENİ NESİL DİJİTAL BÜYÜME MİMARİSİ</span>
+        <span class="tracking-widest uppercase">YENİ NESİL DİJİTAL DÖNÜŞÜM & MÜŞTERİ KAZANIM MİMARİSİ</span>
       </div>
 
       <!-- Ana Başlık -->
@@ -422,7 +423,7 @@
       <!-- Alt Açıklama -->
       <p class="text-stone-300 font-light text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed mb-10 drop-shadow-md">
         Aylarca süren hantal ajans toplantılarına, çöken sunuculara ve boşa giden reklamlara son. 
-        <strong class="text-white font-medium">72 saatte anahtar teslim</strong>, sıfır sunucu masrafı ve doğrudan telefona müşteri akıtan akıllı reklam mühendisliği.
+        <strong class="text-white font-medium">72 saatte anahtar teslim</strong>, ömür boyu 0 TL sunucu masrafı ve doğrudan telefona müşteri akıtan akıllı satış mimarisi.
       </p>
 
       <!-- Butonlar -->
@@ -434,15 +435,15 @@
           <span>Hemen Projenizi Başlatın</span>
         </a>
 
-        <a href="#referans" 
+        <a href="#projelerimiz" 
            class="w-full sm:w-auto px-9 py-4.5 rounded-full text-xs font-bold tracking-widest uppercase text-stone-200 glass-card hover:text-white hover:border-white/40 transition-all duration-300 flex items-center justify-center gap-2">
-          <i data-lucide="play" class="w-4 h-4 text-cyan-400"></i>
-          <span>Canlı Örneği İnceleyin</span>
+          <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i>
+          <span>Projelerimizi İnceleyin</span>
         </a>
       </div>
 
       <!-- İstatistik Sayaç Şeridi -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl mt-20 pt-12 border-t border-white/10 text-left">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl mt-16 pt-10 border-t border-white/10 text-left">
         <div class="glass-card p-5 rounded-2xl">
           <span class="block font-display text-3xl md:text-4xl font-extrabold text-white mb-1">72 Saat</span>
           <span class="text-xs text-stone-400 tracking-wider uppercase font-semibold">Canlıya Alım Hızı</span>
@@ -464,132 +465,344 @@
     </div>
   </section>
 
-  <!-- CANLI CASE STUDY: LİNAİL BEAUTY STUDIO (MİLYON DOLARLIK REFERANS) -->
-  <section id="referans" class="py-24 bg-gradient-to-b from-aura-bg via-[#090912] to-aura-bg relative overflow-hidden">
-    
-    <!-- Arka Plan İkinci Video (3D Geometrik Küpler - Çok Hafif) -->
-    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-15">
-      <video autoplay muted loop playsinline class="w-full h-full object-cover">
-        <source src="assets/aura-cubes-bg.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="max-w-6xl mx-auto px-6 relative z-10">
+  <!-- BÖLÜM 1: MÜŞTERİYİ UYANDIRAN & İKNA EDEN GERÇEK: İŞLETMENİZ NEDEN KAYBEDİYOR? -->
+  <section id="neden-kaybediyorsunuz" class="py-24 bg-gradient-to-b from-aura-bg via-[#080811] to-aura-bg relative">
+    <div class="max-w-6xl mx-auto px-6">
       
-      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-        <span class="text-xs tracking-[0.35em] uppercase text-cyan-400 font-bold flex items-center justify-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-          <span>CANLI BAŞARI HİKAYESİ</span>
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-xs tracking-[0.35em] uppercase text-rose-400 font-bold flex items-center justify-center gap-2">
+          <i data-lucide="alert-triangle" class="w-4 h-4"></i>
+          <span>ACI GERÇEK</span>
         </span>
         <h2 class="font-display text-3xl md:text-5xl font-extrabold text-white">
-          Söz Değil, <span class="aura-gradient-text">Canlı Kanıt.</span>
+          İşletmenizin İnternette <br>
+          <span class="text-rose-400">Her Gün Müşteri Kaybetmesinin</span> 3 Sebebi.
         </h2>
-        <p class="text-stone-400 text-sm font-light">
-          Aura Digital altyapısıyla sıfırdan inşa ettiğimiz, Google'da 1. sıraya oturan ve her gün randevu üreten son projemiz.
+        <p class="text-stone-400 text-sm md:text-base font-light">
+          Türkiye'deki yerel işletme web sitelerinin %90'ı birer "dijital kartvizit" olmaktan öteye gidemez ve kasaya 1 TL bile kazandırmaz. İşte sebebi:
         </p>
       </div>
 
-      <!-- Proje Kartı -->
-      <div class="glass-card rounded-[36px] p-8 md:p-14 border border-violet-500/30 relative overflow-hidden group shadow-2xl">
-        <div class="absolute -right-20 -top-20 w-96 h-96 bg-violet-600/20 rounded-full blur-[110px] pointer-events-none"></div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Hata 1 -->
+        <div class="glass-card rounded-3xl p-8 border-rose-500/20 hover:border-rose-500/40 transition-all space-y-4 relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400">
+            <i data-lucide="gauge" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs font-mono text-rose-400 uppercase tracking-widest font-semibold">01 • YAVAŞLIK ÖLDÜRÜR</span>
+          <h3 class="font-display text-xl font-bold text-white">3 Saniyede Açılmayan Siteye Kimse Bakmaz</h3>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed font-light">
+            Eski usul hantal WordPress siteleri telefonlarda 5-8 saniyede anca açılır. Modern müşteri 2 saniyeden fazla beklemez; sayfayı kapatıp Google'daki bir sonraki rakibinize gider.
+          </p>
+          <div class="pt-2 text-[11px] text-rose-300/80 font-mono">
+            ⚠️ Sonuç: Reklama verdiğiniz paranın %70'i çöpe gider.
+          </div>
+        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
-          <!-- Sol Bilgi -->
-          <div class="lg:col-span-6 space-y-6">
-            <div class="flex items-center gap-3">
-              <span class="px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-purple-950/80 text-purple-300 border border-purple-500/40">
-                LÜKS GÜZELLİK & SAĞLIK
+        <!-- Hata 2 -->
+        <div class="glass-card rounded-3xl p-8 border-amber-500/20 hover:border-amber-500/40 transition-all space-y-4 relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="map-pin-off" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs font-mono text-amber-400 uppercase tracking-widest font-semibold">02 • HARİTALARDA GÖRÜNMEZLİK</span>
+          <h3 class="font-display text-xl font-bold text-white">Semtinizdeki Müşteriyi Rakipler Topluyor</h3>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed font-light">
+            Bölgenizdeki bir müşteri "en yakın diş hekimi", "en iyi kuaför" veya "hukuk bürosu" diye arattığında Google Haritalar ilk 3'e giremiyorsanız, o müşteri sizin varlığınızdan bile haberdar olmaz.
+          </p>
+          <div class="pt-2 text-[11px] text-amber-300/80 font-mono">
+            ⚠️ Sonuç: Sıcak müşteri arayanlar doğrudan kapı komşunuza gider.
+          </div>
+        </div>
+
+        <!-- Hata 3 -->
+        <div class="glass-card rounded-3xl p-8 border-violet-500/20 hover:border-violet-500/40 transition-all space-y-4 relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400">
+            <i data-lucide="mouse-pointer-click" class="w-6 h-6"></i>
+          </div>
+          <span class="text-xs font-mono text-violet-400 uppercase tracking-widest font-semibold">03 • DÖNÜŞÜM EKSİKLİĞİ</span>
+          <h3 class="font-display text-xl font-bold text-white">WhatsApp Hattına Akmayan Trafik Çöptür</h3>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed font-light">
+            Karışık menüler, 20 sayfalık gereksiz yazılar ve görünmeyen iletişim butonları... Müşteri sayfaya girse bile ne yapacağını bilemez. Bir web sitesi tek bir amaca hizmet etmelidir: Randevu & Teklif almak!
+          </p>
+          <div class="pt-2 text-[11px] text-violet-300/80 font-mono">
+            ⚠️ Sonuç: Ziyaretçi gelir ama kasanıza para girmez.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Çözüm Köprüsü -->
+      <div class="mt-14 p-6 md:p-8 rounded-3xl bg-gradient-to-r from-violet-950/40 via-black to-cyan-950/40 border border-white/10 text-center flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-left space-y-1">
+          <div class="text-white font-display font-bold text-lg md:text-xl">İşte tam bu yüzden Aura Digital var.</div>
+          <div class="text-stone-400 text-xs md:text-sm">Biz sadece "güzel site" tasarlamıyoruz; telefonunuza randevu ve müşteri akıtan satış motoru kuruyoruz.</div>
+        </div>
+        <a href="https://wa.me/905318696764?text=Merhaba%2C%20işletmemin%20web%20sitesini%20ve%20harita%20konumunu%20analiz%20ettirmek%20istiyorum." 
+           target="_blank"
+           class="shrink-0 px-7 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-gradient-to-r from-aura-violet to-aura-cyan shadow-lg hover:scale-105 transition-all">
+          Ücretsiz İşletme Analizi Al
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BÖLÜM 2: 72 SAATLİK BÜYÜME PROTOKOLÜ (NASIL ÇALIŞIYORUZ?) -->
+  <section id="surec" class="py-24 bg-aura-bg relative">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs tracking-[0.35em] uppercase text-cyan-400 font-bold">ZAMANINIZ DEĞERLİDİR</span>
+        <h2 class="font-display text-3xl md:text-5xl font-extrabold text-white">
+          72 Saatte Nasıl <br>
+          <span class="aura-gradient-text">Anahtar Teslim Ediyoruz?</span>
+        </h2>
+        <p class="text-stone-400 text-sm font-light">
+          Aylarca süren sıkıcı toplantılar yok. 3 net adımda sıfırdan zirveye çıkaran sistemimiz:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Adım 1 -->
+        <div class="glass-card rounded-3xl p-8 relative space-y-4 hover:-translate-y-1 transition-transform">
+          <div class="text-4xl font-display font-black text-violet-500/30">01</div>
+          <h3 class="font-display text-xl font-bold text-white">15 Dakikalık Strateji Görüşmesi</h3>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed font-light">
+            İşletmenizi, en karlı hizmetinizi ve hedef müşteri kitlenizi 15 dakikada netleştiririz. Şablon kullanmayız; markanızın DNA'sına uygun lüks renk paleti ve teklif metinlerini hazırlarız.
+          </p>
+          <div class="text-[11px] text-cyan-400 font-mono">✓ Süre: 15 Dakika (WhatsApp/Telefon)</div>
+        </div>
+
+        <!-- Adım 2 -->
+        <div class="glass-card rounded-3xl p-8 relative space-y-4 border-violet-500/40 shadow-xl shadow-violet-950/40 hover:-translate-y-1 transition-transform">
+          <div class="text-4xl font-display font-black text-cyan-500/30">02</div>
+          <h3 class="font-display text-xl font-bold text-white">72 Saatte Kodlama & Harita SEO</h3>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed font-light">
+            Sıfır sunucu masraflı, 0.4 saniye hızında çalışan sitenizi sinematik video ve görsellerle kodlarız. Google Haritalar'da 1. sıraya çıkmanız için resmi LocalBusiness şemasını entegre ederiz.
+          </p>
+          <div class="text-[11px] text-violet-400 font-mono">✓ Süre: Kesintisiz 72 Saat</div>
+        </div>
+
+        <!-- Adım 3 -->
+        <div class="glass-card rounded-3xl p-8 relative space-y-4 hover:-translate-y-1 transition-transform">
+          <div class="text-4xl font-display font-black text-emerald-500/30">03</div>
+          <h3 class="font-display text-xl font-bold text-white">Canlıya Alım & Müşteri Akışı</h3>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed font-light">
+            Alan adınızı Cloudflare küresel güvenliğiyle yayına alır, doğrudan WhatsApp hattınıza randevu yönlendirmesini test ederiz. Siteniz dünyada ışık hızında çalışmaya başlar.
+          </p>
+          <div class="text-[11px] text-emerald-400 font-mono">✓ Süre: 0 Saniye Gecikme, Ömür Boyu Garanti</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BÖLÜM 3: SEÇKİN PROJELERİMİZ (PORTFÖY & CANLI BAŞARI HİKAYELERİ) -->
+  <section id="projelerimiz" class="py-24 bg-gradient-to-b from-aura-bg via-[#090912] to-aura-bg relative overflow-hidden">
+    
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs tracking-[0.35em] uppercase text-cyan-400 font-bold flex items-center justify-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+          <span>SEÇKİN PORTFÖYÜMÜZ</span>
+        </span>
+        <h2 class="font-display text-3xl md:text-5xl font-extrabold text-white">
+          İmzamızı Taşıyan <br>
+          <span class="aura-gradient-text">Lüks Dijital Eserler.</span>
+        </h2>
+        <p class="text-stone-400 text-sm font-light">
+          Farklı sektörlerden premium markalar için hayata geçirdiğimiz yüksek hızlı ve satış odaklı projeler.
+        </p>
+      </div>
+
+      <!-- Projeler Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- PROJE 1: LİNAİL BEAUTY STUDIO (CANLI REFERANS) -->
+        <div class="glass-card rounded-3xl p-7 border-violet-500/30 hover:border-violet-500/60 transition-all flex flex-col justify-between group shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-950/80 text-purple-300 border border-purple-500/30">
+                Güzellik & Spa • Ataşehir
               </span>
-              <span class="text-xs text-stone-400">Ataşehir Uphill Towers</span>
+              <span class="flex items-center gap-1 text-[10px] text-emerald-400 font-mono font-bold">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                CANLI YAYINDA
+              </span>
             </div>
 
-            <h3 class="font-display text-3xl md:text-4xl font-extrabold text-white leading-tight">
-              Linail Beauty Studio <br>
-              <span class="text-stone-400 font-normal text-2xl">Tam Kapsamlı Dijital Dönüşüm</span>
-            </h3>
-
-            <p class="text-stone-300 text-sm leading-relaxed font-light">
-              Ataşehir Finans Merkezi ve Uphill Towers bölgesindeki elit kitleyi çekmek için sıfır sunucu masraflı, sinematik video döngülü ultra lüks bir web sitesi geliştirdik. Google Haritalar SEO ve Arama Ağı altyapısıyla doğrudan VIP müşterileri randevuya bağladık.
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Linail Beauty Studio</h3>
+            <p class="text-xs text-stone-400 leading-relaxed font-light mb-6">
+              Ataşehir Uphill Towers'ta yer alan VIP salon için sinematik video döngülü, 0.4s açılış hızına sahip ultra lüks web sitesi ve Google Haritalar 1. sıra SEO optimizasyonu.
             </p>
 
-            <div class="space-y-3 pt-2">
-              <div class="flex items-center gap-3 text-xs md:text-sm text-stone-200">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-                <span><strong>0.4 Saniye Açılış Hızı:</strong> Cloudflare küresel CDN üzerinde 0 TL sunucu maliyeti.</span>
+            <div class="space-y-2 border-t border-white/10 pt-4 text-xs text-stone-300 mb-6">
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Sunucu Masrafı:</span>
+                <span class="text-emerald-400 font-bold">0 TL / Ömür Boyu</span>
               </div>
-              <div class="flex items-center gap-3 text-xs md:text-sm text-stone-200">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-                <span><strong>Google Haritalar Liderliği:</strong> 5.0 Yıldız, LocalBusiness resmi veri şeması.</span>
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Google Haritalar:</span>
+                <span class="text-amber-400 font-bold">5.0 ★ Lider Konum</span>
               </div>
-              <div class="flex items-center gap-3 text-xs md:text-sm text-stone-200">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
-                <span><strong>Doğrudan WhatsApp Funnel'ı:</strong> Randevuya hazır müşteriyi yakalayan buton mimarisi.</span>
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Randevu Artışı:</span>
+                <span class="text-cyan-400 font-bold">+%340 Büyüme</span>
               </div>
-            </div>
-
-            <div class="pt-4 flex flex-wrap items-center gap-4">
-              <a href="https://linailbeauty.com" 
-                 target="_blank" 
-                 class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-bold tracking-wider uppercase text-white bg-gradient-to-r from-violet-600 via-indigo-600 to-cyan-600 hover:scale-105 transition-all shadow-xl shadow-violet-900/50 border border-white/20">
-                <span>Canlı Referans Sitede Gezin</span>
-                <i data-lucide="external-link" class="w-4 h-4"></i>
-              </a>
-
-              <span class="text-xs text-stone-400 font-mono">
-                👉 linailbeauty.com
-              </span>
             </div>
           </div>
 
-          <!-- Sağ: Görsel Vitrin Mockup -->
-          <div class="lg:col-span-6 bg-black/75 rounded-3xl p-6 border border-white/15 shadow-2xl relative overflow-hidden">
-            <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
-              <div class="flex items-center gap-2">
-                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-              </div>
-              <span class="text-[11px] text-stone-400 font-mono">https://linailbeauty.com</span>
-              <span class="text-[10px] text-emerald-400 font-bold px-2 py-0.5 rounded bg-emerald-950 border border-emerald-500/30 flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                CANLI / AKTİF
+          <a href="https://linailbeauty.com" 
+             target="_blank" 
+             class="w-full py-3 rounded-full text-center text-xs font-bold tracking-wider uppercase text-white bg-gradient-to-r from-violet-600 to-indigo-600 hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+            <span>Canlı Siteyi Ziyaret Et</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- PROJE 2: VERA DENTAL & ESTETİK (SAĞLIK KONSEPTİ) -->
+        <div class="glass-card rounded-3xl p-7 border-white/10 hover:border-cyan-500/40 transition-all flex flex-col justify-between group shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                Sağlık & Estetik Diş • Kadıköy
+              </span>
+              <span class="text-[10px] text-cyan-400 font-mono font-semibold">
+                PROJE KONSEPTİ
               </span>
             </div>
 
-            <div class="space-y-4">
-              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between hover:bg-white/10 transition-colors">
-                <div>
-                  <h4 class="text-white font-medium text-sm">VIP 3 İşlem Mimarisi</h4>
-                  <p class="text-xs text-stone-400 mt-0.5">Zamanı kısıtlı kadınlar için eşsiz teklif</p>
-                </div>
-                <span class="text-xs font-bold text-violet-400 font-mono">DÖNÜŞÜM 3X</span>
-              </div>
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Vera Dental Clinic</h3>
+            <p class="text-xs text-stone-400 leading-relaxed font-light mb-6">
+              İmplant ve gülüş tasarımı arayan A+ hastaları hedefleyen, interaktif öncesi/sonrası gülüş simülatörü ve tek dokunuşla muayene randevusu alan kurumsal klinik mimarisi.
+            </p>
 
-              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between hover:bg-white/10 transition-colors">
-                <div>
-                  <h4 class="text-white font-medium text-sm">Finans Merkezi & Uphill SEO</h4>
-                  <p class="text-xs text-stone-400 mt-0.5">Yerel aramalarda doğrudan zirve</p>
-                </div>
-                <span class="text-xs font-bold text-cyan-400 font-mono">1. SIRA</span>
+            <div class="space-y-2 border-t border-white/10 pt-4 text-xs text-stone-300 mb-6">
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Hedefleme:</span>
+                <span class="text-cyan-400 font-bold">Bağdat Caddesi VIP</span>
               </div>
-
-              <div class="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between hover:bg-white/10 transition-colors">
-                <div>
-                  <h4 class="text-white font-medium text-sm">Otoklav & Butik Deneyim</h4>
-                  <p class="text-xs text-stone-400 mt-0.5">9:16 Dikey stüdyo tur videosu</p>
-                </div>
-                <span class="text-xs font-bold text-amber-400 font-mono">5.0 PUAN</span>
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Altyapı:</span>
+                <span class="text-white font-bold">Cloudflare Hızlı CDN</span>
               </div>
-            </div>
-
-            <div class="mt-6 p-4 rounded-2xl bg-violet-950/40 border border-violet-500/30 text-center">
-              <p class="text-xs text-violet-200 font-light italic">
-                “Sıradan bir broşür sitesi değil; her sabah randevu bildirimleriyle açılan otomatik bir satış motoru.”
-              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Teklif Mimarisi:</span>
+                <span class="text-emerald-400 font-bold">Doğrudan Randevu Formu</span>
+              </div>
             </div>
           </div>
 
+          <a href="https://wa.me/905318696764?text=Merhaba%2C%20kliniğim%20için%20Vera%20Dental%20gibi%20bir%20web%20sitesi%20istiyorum." 
+             target="_blank" 
+             class="w-full py-3 rounded-full text-center text-xs font-bold tracking-wider uppercase text-stone-200 glass-card hover:text-white hover:border-white/40 transition-all flex items-center justify-center gap-2">
+            <span>Kliniğiniz İçin İsteyin</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- PROJE 3: NEXUS HUKUK & DANIŞMANLIK (KURUMSAL) -->
+        <div class="glass-card rounded-3xl p-7 border-white/10 hover:border-amber-500/40 transition-all flex flex-col justify-between group shadow-xl">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-950/80 text-amber-300 border border-amber-500/30">
+                Hukuk & Arabuluculuk • Levent
+              </span>
+              <span class="text-[10px] text-amber-400 font-mono font-semibold">
+                PROJE KONSEPTİ
+              </span>
+            </div>
+
+            <h3 class="font-display text-2xl font-bold text-white mb-2">Nexus Law Partners</h3>
+            <p class="text-xs text-stone-400 leading-relaxed font-light mb-6">
+              Şirketler hukuku ve gayrimenkul davalarında güven inşa eden; tipografik zarafet, karanlık mod lüks ve gizlilik odaklı danışmanlık talep formuyla donatılmış kurumsal kimlik.
+            </p>
+
+            <div class="space-y-2 border-t border-white/10 pt-4 text-xs text-stone-300 mb-6">
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Konum:</span>
+                <span class="text-amber-400 font-bold">Levent Plazalar Bölgesi</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Güvenlik:</span>
+                <span class="text-emerald-400 font-bold">Uçtan Uca SSL Korumalı</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-stone-400">Mobil Hız:</span>
+                <span class="text-cyan-400 font-bold">Google PageSpeed 99</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/905318696764?text=Merhaba%2C%20ofisim%20için%20kurumsal%20web%20sitesi%20teklifi%20almak%20istiyorum." 
+             target="_blank" 
+             class="w-full py-3 rounded-full text-center text-xs font-bold tracking-wider uppercase text-stone-200 glass-card hover:text-white hover:border-white/40 transition-all flex items-center justify-center gap-2">
+            <span>Ofisiniz İçin İsteyin</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BÖLÜM 4: HANGİ SEKTÖRLERE HİZMET VERİYORUZ? (SEKTÖREL ÇÖZÜMLER) -->
+  <section class="py-20 bg-aura-bg relative border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <span class="text-xs tracking-[0.35em] uppercase text-violet-400 font-bold">SEKTÖREL UZMANLIK</span>
+        <h2 class="font-display text-3xl md:text-4xl font-extrabold text-white">
+          Sektörünüzün Dinamiklerini <br>
+          <span class="aura-gradient-text">Ezbere Biliyoruz.</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+        
+        <div class="p-6 rounded-2xl glass-card hover:border-violet-500/40 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-400 mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-white text-xs font-bold mb-1">Klinik & Sağlık</h4>
+          <p class="text-[11px] text-stone-400 font-light">Diş, Estetik, Diyetisyen</p>
+        </div>
+
+        <div class="p-6 rounded-2xl glass-card hover:border-cyan-500/40 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-white text-xs font-bold mb-1">Güzellik & Kuaför</h4>
+          <p class="text-[11px] text-stone-400 font-light">VIP Salonlar & Spa</p>
+        </div>
+
+        <div class="p-6 rounded-2xl glass-card hover:border-amber-500/40 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="scale" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-white text-xs font-bold mb-1">Hukuk & Danışmanlık</h4>
+          <p class="text-[11px] text-stone-400 font-light">Avukat & Mali Müşavir</p>
+        </div>
+
+        <div class="p-6 rounded-2xl glass-card hover:border-emerald-500/40 transition-all group">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="utensils" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-white text-xs font-bold mb-1">Restoran & Kafe</h4>
+          <p class="text-[11px] text-stone-400 font-light">Lüks Menü & Rezervasyon</p>
+        </div>
+
+        <div class="p-6 rounded-2xl glass-card hover:border-pink-500/40 transition-all group col-span-2 md:col-span-1">
+          <div class="w-10 h-10 mx-auto rounded-xl bg-pink-500/10 flex items-center justify-center text-pink-400 mb-3 group-hover:scale-110 transition-transform">
+            <i data-lucide="building-2" class="w-5 h-5"></i>
+          </div>
+          <h4 class="text-white text-xs font-bold mb-1">Mimarlık & İnşaat</h4>
+          <p class="text-[11px] text-stone-400 font-light">Portföy & Proje Vitrini</p>
         </div>
 
       </div>
@@ -876,6 +1089,88 @@
     </div>
   </section>
 
+  <!-- BÖLÜM 5: SIKÇA SORULAN SORULAR (TÜM İTİRAZLARI YOK EDEN BÖLÜM) -->
+  <section id="sss" class="py-24 bg-gradient-to-b from-aura-bg via-[#080811] to-aura-bg relative">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs tracking-[0.3em] uppercase text-cyan-400 font-bold">AKLINIZDAKİ SORULAR</span>
+        <h2 class="font-display text-3xl md:text-5xl font-extrabold text-white">
+          Merak Edilenler & <br>
+          <span class="aura-gradient-text">Net Cevaplar.</span>
+        </h2>
+        <p class="text-stone-400 text-sm font-light">
+          Aklınızda hiçbir soru işareti kalmaması için en çok sorulan konuları şeffaflıkla yanıtladık.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="glass-card rounded-2xl p-6 group cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-display font-bold text-white text-base md:text-lg list-none">
+            <span>Ömür boyu 0 TL sunucu masrafı nasıl mümkün oluyor?</span>
+            <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-violet-400 group-open:rotate-180 transition-transform">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/5 font-light">
+            Eski ajanslar siteleri yavaş ve maliyetli sunucularda tutar, her ay sizden sunucu parası ister. Biz dünyanın en büyük bulut ağı olan <strong>Cloudflare</strong> küresel CDN altyapısını kullanıyoruz. Siteniz 330'dan fazla dünya lokasyonunda aynı anda barınır, asla çökmez ve sunucu faturası ödemezsiniz.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-2xl p-6 group cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-display font-bold text-white text-base md:text-lg list-none">
+            <span>72 saatte gerçekten teslim edebilir misiniz?</span>
+            <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-violet-400 group-open:rotate-180 transition-transform">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/5 font-light">
+            Evet! Geleneksel ajansların 2 ayda bitiremediği işi, modern yazılım mimarimiz, hazır test edilmiş dönüşüm şablonlarımız ve yapay zeka destekli içerik üretimimiz sayesinde 72 saat içinde sıfırdan canlıya alıyoruz.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-2xl p-6 group cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-display font-bold text-white text-base md:text-lg list-none">
+            <span>Google Haritalarda 1. sıraya nasıl çıkacağım?</span>
+            <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-violet-400 group-open:rotate-180 transition-transform">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/5 font-light">
+            Web sitenizin arka planına Google'ın resmi <strong>LocalBusiness JSON-LD</strong> veri şemasını kodluyoruz. Google işletme profiliniz, harita koordinatlarınız ve hizmet kelimeleriniz Google botlarına doğrudan altın tepside sunulur. Bölgesel aramalarda rakiplerinizin önüne geçersiniz.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-2xl p-6 group cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-display font-bold text-white text-base md:text-lg list-none">
+            <span>Sitem teslim edildikten sonra yalnız mı kalacağım?</span>
+            <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-violet-400 group-open:rotate-180 transition-transform">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/5 font-light">
+            Kesinlikle hayır. Biz bir kere iş yapıp kaçan ajanslardan değiliz. VIP WhatsApp hattımız üzerinden doğrudan projenizi yöneten ekibe 7/24 ulaşırsınız. Ufak revizeler, fiyat güncellemeleri veya teknik destek için her zaman yanınızdayız.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-2xl p-6 group cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-display font-bold text-white text-base md:text-lg list-none">
+            <span>Alan adım (domain) yok, ne yapmalıyım?</span>
+            <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-violet-400 group-open:rotate-180 transition-transform">
+              <i data-lucide="chevron-down" class="w-4 h-4"></i>
+            </span>
+          </summary>
+          <p class="text-stone-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/5 font-light">
+            Hiç dert etmeyin. Alan adı seçiminden tesciline, TRABIS (.com.tr) onayından SSL güvenlik kilidine kadar tüm teknik süreci sizin adınıza anahtar teslim biz yönetiyoruz.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- İLETİŞİM & ÜCRETSİZ ANALİZ FORMU -->
   <section id="iletisim" class="py-24 bg-gradient-to-t from-black via-aura-bg to-aura-bg relative">
     <div class="max-w-4xl mx-auto px-6">
@@ -941,9 +1236,11 @@
       </p>
 
       <div class="flex items-center gap-4 text-stone-400">
-        <a href="https://linailbeauty.com" target="_blank" class="hover:text-white transition-colors">Referans Proje</a>
+        <a href="#projelerimiz" class="hover:text-white transition-colors">Projelerimiz</a>
         <span>•</span>
         <a href="#paketler" class="hover:text-white transition-colors">Paketler</a>
+        <span>•</span>
+        <a href="#sss" class="hover:text-white transition-colors">SSS</a>
         <span>•</span>
         <a href="#" class="hover:text-white transition-colors">Başa Dön ↑</a>
       </div>
@@ -1029,17 +1326,15 @@
       }
 
       if (!isPlaying) {
-        // Create 2 harmonic drone oscillators
         osc1 = audioCtx.createOscillator();
         osc2 = audioCtx.createOscillator();
         gainNode = audioCtx.createGain();
 
-        // 55Hz (A1) deep sub + 110Hz (A2) harmonic
         osc1.type = 'sine';
         osc1.frequency.setValueAtTime(55, audioCtx.currentTime);
         
         osc2.type = 'triangle';
-        osc2.frequency.setValueAtTime(110.5, audioCtx.currentTime); // subtle beat frequency
+        osc2.frequency.setValueAtTime(110.5, audioCtx.currentTime);
 
         gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
         gainNode.gain.exponentialRampToValueAtTime(0.06, audioCtx.currentTime + 1.5);
