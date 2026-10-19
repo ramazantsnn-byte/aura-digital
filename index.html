@@ -252,11 +252,30 @@
       100% { transform: rotate(360deg); }
     }
 
-    /* Ambient Glow Blobs */
-    .glow-blob {
-      filter: blur(140px);
-      opacity: 0.28;
+    /* Disable iOS native video controls and start playback icon */
+    video::-webkit-media-controls { display: none !important; }
+    video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+    video::-webkit-media-controls-play-button { display: none !important; }
+    video { outline: none; }
+
+    /* Ultra-Smooth Ambient Glows (Zero GPU blur overhead - No lag/freeze) */
+    .glow-blob-purple {
+      background: radial-gradient(circle, rgba(147, 51, 234, 0.22) 0%, rgba(147, 51, 234, 0.06) 50%, transparent 70%);
       pointer-events: none;
+      transform: translateZ(0);
+      will-change: opacity;
+    }
+    .glow-blob-cyan {
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.20) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 70%);
+      pointer-events: none;
+      transform: translateZ(0);
+      will-change: opacity;
+    }
+    .glow-blob-violet {
+      background: radial-gradient(circle, rgba(109, 40, 217, 0.20) 0%, rgba(109, 40, 217, 0.04) 50%, transparent 70%);
+      pointer-events: none;
+      transform: translateZ(0);
+      will-change: opacity;
     }
   </style>
 </head>
@@ -285,10 +304,10 @@
     </button>
   </div>
 
-  <!-- Arka Plan Işık Efektleri (Ambient Aura Lighting) -->
-  <div class="fixed top-0 left-1/4 w-[700px] h-[700px] bg-purple-600 rounded-full glow-blob -z-10 animate-pulse" style="animation-duration: 9s;"></div>
-  <div class="fixed top-1/3 right-10 w-[600px] h-[600px] bg-cyan-600 rounded-full glow-blob -z-10 animate-pulse" style="animation-duration: 11s; animation-delay: 2s;"></div>
-  <div class="fixed bottom-10 left-10 w-[700px] h-[700px] bg-violet-800 rounded-full glow-blob -z-10"></div>
+  <!-- Arka Plan Işık Efektleri (Ambient Aura Lighting - GPU Optimized) -->
+  <div class="fixed top-0 left-1/4 w-[600px] h-[600px] rounded-full glow-blob-purple -z-10 animate-pulse" style="animation-duration: 9s;"></div>
+  <div class="fixed top-1/3 right-10 w-[550px] h-[550px] rounded-full glow-blob-cyan -z-10 animate-pulse" style="animation-duration: 11s; animation-delay: 2s;"></div>
+  <div class="fixed bottom-10 left-10 w-[600px] h-[600px] rounded-full glow-blob-violet -z-10"></div>
 
   <!-- Üst Duyuru Bandı -->
   <div class="bg-gradient-to-r from-violet-950/90 via-black to-cyan-950/90 border-b border-white/10 py-2.5 px-4 text-center text-xs tracking-wider text-stone-300 relative z-30">
@@ -374,7 +393,7 @@
     
     <!-- ARKA PLAN SİNEMATİK DÖNGÜ VİDEOSU -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-      <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-35 mix-blend-screen scale-105">
+      <video autoplay muted loop playsinline webkit-playsinline disablepictureinpicture preload="metadata" class="w-full h-full object-cover opacity-35 mix-blend-screen scale-105 pointer-events-none">
         <source src="assets/aura-hero-bg.mp4" type="video/mp4">
       </video>
       <div class="absolute inset-0 bg-gradient-to-b from-aura-bg/85 via-aura-bg/45 to-aura-bg pointer-events-none"></div>
@@ -1260,7 +1279,7 @@
   <script>
     lucide.createIcons();
 
-    // Cinema Loader Logic
+    // Cinema Loader Logic - Instant & Smooth Transition (No freezing)
     const loader = document.getElementById('cinema-loader');
     const skipBtn = document.getElementById('skip-loader-btn');
     
@@ -1268,42 +1287,89 @@
       if (loader && !loader.classList.contains('loaded')) {
         loader.classList.add('loaded');
         sessionStorage.setItem('aura_intro_viewed', 'true');
+        setTimeout(() => {
+          if (loader.parentNode) loader.parentNode.removeChild(loader);
+        }, 500);
       }
     }
 
     if (sessionStorage.getItem('aura_intro_viewed') === 'true') {
-      loader?.classList.add('loaded');
+      closeLoader();
     } else {
-      setTimeout(closeLoader, 1800);
+      // Auto close quickly or on first touch/interaction
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setTimeout(closeLoader, 300);
+      } else {
+        window.addEventListener('DOMContentLoaded', () => setTimeout(closeLoader, 250));
+      }
+      window.addEventListener('load', closeLoader);
+      setTimeout(closeLoader, 600); // Safety fallback
     }
     skipBtn?.addEventListener('click', closeLoader);
+    document.addEventListener('touchstart', closeLoader, { passive: true, once: true });
+    document.addEventListener('click', closeLoader, { once: true });
 
-    // Interactive 3D Gyroscope Mouse Tracking
+    // Interactive 3D Gyroscope Mouse Tracking (Debounced with rAF, disabled on touch/mobile)
+    const isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const emblemCore = document.getElementById('aura-emblem-core');
     const spotlight = document.getElementById('cursor-spotlight');
 
-    document.addEventListener('mousemove', (e) => {
-      // Spotlight Follower
-      if (spotlight) {
-        spotlight.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-      }
+    if (isFinePointer) {
+      let mouseX = 0, mouseY = 0;
+      let ticking = false;
+      let emblemRect = null;
 
-      // 3D Tilt for Emblem
-      if (emblemCore) {
-        const rect = emblemCore.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - centerX) / (window.innerWidth / 2);
-        const deltaY = (e.clientY - centerY) / (window.innerHeight / 2);
-        
-        emblemCore.style.transform = `rotateY(${deltaX * 24}deg) rotateX(${-deltaY * 24}deg)`;
+      function updateEmblemRect() {
+        if (emblemCore) {
+          emblemRect = emblemCore.getBoundingClientRect();
+        }
       }
-    });
+      updateEmblemRect();
+      window.addEventListener('resize', updateEmblemRect, { passive: true });
 
-    // Reset Emblem on Mouse Leave
-    document.addEventListener('mouseleave', () => {
-      if (emblemCore) {
-        emblemCore.style.transform = `rotateY(0deg) rotateX(0deg)`;
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Spotlight Follower
+            if (spotlight) {
+              spotlight.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+            }
+
+            // 3D Tilt for Emblem
+            if (emblemCore && emblemRect) {
+              const centerX = emblemRect.left + emblemRect.width / 2;
+              const centerY = emblemRect.top + emblemRect.height / 2;
+              const deltaX = (mouseX - centerX) / (window.innerWidth / 2);
+              const deltaY = (mouseY - centerY) / (window.innerHeight / 2);
+              
+              emblemCore.style.transform = `rotateY(${deltaX * 18}deg) rotateX(${-deltaY * 18}deg)`;
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+
+      // Reset Emblem on Mouse Leave
+      document.addEventListener('mouseleave', () => {
+        if (emblemCore) {
+          emblemCore.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        }
+      });
+    } else {
+      // Touch/Mobile: disable spotlight to save GPU memory & CPU cycles
+      if (spotlight) spotlight.style.display = 'none';
+    }
+
+    // Video Autoplay Safe Fallback
+    document.querySelectorAll('video').forEach(vid => {
+      vid.muted = true;
+      const p = vid.play();
+      if (p !== undefined) {
+        p.catch(() => {});
       }
     });
 
