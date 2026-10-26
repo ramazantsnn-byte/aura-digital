@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CepHane İletişim | Değerinde Telefon Alım & Hızlı Teknik Servis</title>
-  <meta name="description" content="CepHane İletişim: Telefonunuzu 15 dakikada nakite çevirin veya 30 dakikada garantili tamir ettirin. WhatsApp: 0530 354 34 65 ">
+  <meta name="description" content="CepHane İletişim: Telefonunuzu 15 dakikada nakite çevirin veya 30 dakikada garantili tamir ettirin. WhatsApp: 0530 354 34 65">
   
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,8 +39,10 @@
       </a>
 
       <div class="nav-links">
-        <a href="#degerleme" class="nav-highlight"><i class="fa-solid fa-calculator"></i> Telefonunu Sat (Nakit Fiyat)</a>
+        <a href="#degerleme" class="nav-highlight"><i class="fa-solid fa-calculator"></i> Telefonunu Sat (Nakit)</a>
         <a href="#tamir-randevu"><i class="fa-solid fa-calendar-check"></i> Tamir Randevusu</a>
+        <a href="#ekspertiz-360"><i class="fa-solid fa-arrows-rotate text-cyan"></i> 360° Ekspertiz</a>
+        <a href="#magaza"><i class="fa-solid fa-store"></i> Mağazamız</a>
         <a href="#vitrin">Cihaz Vitrini</a>
         <a href="#iletisim">Konum & İletişim</a>
       </div>
@@ -61,12 +63,14 @@
   <div class="mobile-drawer" id="mobileDrawer">
     <a href="#degerleme" class="mobile-nav-link text-cyan"><i class="fa-solid fa-calculator"></i> Telefonunu Nakite Çevir</a>
     <a href="#tamir-randevu" class="mobile-nav-link"><i class="fa-solid fa-calendar-check"></i> 30 Dk Tamir Randevusu Al</a>
+    <a href="#ekspertiz-360" class="mobile-nav-link"><i class="fa-solid fa-arrows-rotate"></i> 360° Cihaz İnceleme</a>
+    <a href="#magaza" class="mobile-nav-link"><i class="fa-solid fa-store"></i> Mağazamız & Google Fotoğrafları</a>
     <a href="#vitrin" class="mobile-nav-link"><i class="fa-solid fa-mobile-screen"></i> Vitrindeki Cihazlar</a>
     <a href="#iletisim" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> İletişim & Konum</a>
     <a href="tel:05303543465" class="btn btn-primary w-full"><i class="fa-solid fa-phone"></i> Hemen Ara (0530 354 34 65)</a>
   </div>
 
-  <!-- Hero Section (Resimli & Zengin) -->
+  <!-- Hero Section -->
   <section class="hero-section" id="hero">
     <div class="container hero-grid">
       <div class="hero-content">
@@ -130,7 +134,7 @@
     </div>
   </section>
 
-  <!-- FORM 1: TELEFONUNU NAKİTE ÇEVİR (DETAYLI DEĞERLEME) -->
+  <!-- FORM 1: TELEFONUNU NAKİTE ÇEVİR (DEĞERLEME FORMU) -->
   <section class="section-wrapper bg-alt" id="degerleme">
     <div class="container">
       <div class="section-header text-center">
@@ -227,7 +231,7 @@
 
           <div class="form-submit-box">
             <button type="submit" class="btn btn-whatsapp-giant">
-              <i class="fa-brands fa-whatsapp"></i> Fiyat Teklifi Al (WhatsApp) (15 Dk'da Dönüş)
+              <i class="fa-brands fa-whatsapp"></i> Fiyat Teklifi Al (WhatsApp - 15 Dk'da Dönüş)
             </button>
             <p class="submit-note"><i class="fa-solid fa-shield-check text-cyan"></i> Bilgileriniz doğrudan CepHane İletişim resmi WhatsApp hattına şifreli ve eksiksiz ekspertiz fişi olarak iletilir.</p>
           </div>
@@ -236,8 +240,57 @@
     </div>
   </section>
 
-  <!-- FORM 2: TAMİR & RANDEVU TAKVİMİ (30 DAKİKADA TESLİM) -->
-  <section class="section-wrapper" id="tamir-randevu">
+  <!-- 360 DERECE AKILLI CİHAZ EKSPERTİZİ BÖLÜMÜ (ULTRA GÖRSEL ENTEGRASYONU) -->
+  <section class="section-wrapper panoramic-section" id="ekspertiz-360">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-arrows-rotate"></i> 360° Donanım & Çip Güvencesi</span>
+        <h2 class="section-title">Milimetrik <span class="gradient-text">Ekspertiz Standartlarımız</span></h2>
+        <p class="section-sub">Satın aldığımız ve tamir ettiğimiz her cihaz, optik lazer tarama ve mikroskop altında 360 derece denetlenir.</p>
+      </div>
+
+      <div class="panoramic-showcase-box" id="panoBox">
+        <div class="pano-img-container" id="panoContainer">
+          <img src="assets/phone_360.jpg" alt="360 Derece Titanyum iPhone Cihaz Ekspertizi" class="pano-img">
+          
+          <!-- Interactive Inspection Hotspots -->
+          <div class="hotspot hs-camera" onclick="showHotspotInfo('Kamera & Lens Modülü: Safir cam çizik taraması, 3x/5x optik zoom stabilitesi ve OIS sarsıntı kontrolü eksiksiz yapılır.')">
+            <span class="pulse-ring"></span>
+            <span class="hs-label"><i class="fa-solid fa-camera"></i> Safir Lens & Kamera</span>
+          </div>
+
+          <div class="hotspot hs-chassis" onclick="showHotspotInfo('Havacılık Titanyum Kasa: Lazer mikrometre ile gövde bükülme, darbe, vida yuvaları ve su yalıtım contaları test edilir.')">
+            <span class="pulse-ring"></span>
+            <span class="hs-label"><i class="fa-solid fa-shield"></i> Titanyum Kasa</span>
+          </div>
+
+          <div class="hotspot hs-screen" onclick="showHotspotInfo('Dynamic OLED & TrueTone: 120Hz ProMotion ekran akıcılığı, ölü piksel ve dokunmatik hassasiyeti kalibre edilir.')">
+            <span class="pulse-ring"></span>
+            <span class="hs-label"><i class="fa-solid fa-eye"></i> 120Hz TrueTone Ekran</span>
+          </div>
+
+          <div class="hotspot hs-chip" onclick="showHotspotInfo('Bionic Çip & Anakart: Termal kamera ile işlemci sıcaklığı, lehim hatları ve anakart kaçak akımları ölçülür.')">
+            <span class="pulse-ring"></span>
+            <span class="hs-label"><i class="fa-solid fa-microchip"></i> Bionic Çip & Anakart</span>
+          </div>
+
+          <div class="hotspot hs-battery" onclick="showHotspotInfo('Batarya & Şarj Entegresi: %100 orijinal döngü sayısı, pil sağlığı ve hızlı şarj protokolü doğrulanır.')">
+            <span class="pulse-ring"></span>
+            <span class="hs-label"><i class="fa-solid fa-battery-full"></i> Batarya & Pil Sağlığı</span>
+          </div>
+        </div>
+
+        <div class="pano-info-bar" id="panoInfoBar">
+          <i class="fa-solid fa-circle-info text-cyan"></i>
+          <span id="panoInfoText">Noktalara tıklayarak CepHane İletişim 360° donanım ekspertiz kriterlerini inceleyebilirsiniz.</span>
+          <span class="pano-badge-hint"><i class="fa-solid fa-hand-pointer"></i> Kontrol Noktaları</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM 2: TAMİR & RANDEVU TAKVİMİ (İNSANSIZ, ULTRA TEKNİK GÖRSEL) -->
+  <section class="section-wrapper bg-alt" id="tamir-randevu">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">Gözünüzün Önünde 30 Dk</span>
@@ -247,9 +300,9 @@
 
       <div class="repair-grid">
         <div class="repair-image-side">
-          <img src="assets/repair_lab.jpg" alt="CepHane Teknik Servis Laboratuvarı" class="repair-img">
+          <img src="assets/repair_lab.jpg" alt="CepHane Hassas Lehim ve Ekran Onarım Laboratuvarı" class="repair-img">
           <div class="repair-badges-box">
-            <div class="r-badge"><i class="fa-solid fa-check-circle text-cyan"></i> Orijinal Parça Garantisi</div>
+            <div class="r-badge"><i class="fa-solid fa-microchip text-cyan"></i> Mikroskop Altında Çip & Anakart Onarımı</div>
             <div class="r-badge"><i class="fa-solid fa-bolt text-cyan"></i> Ortalama 30 Dakika İşlem Süresi</div>
             <div class="r-badge"><i class="fa-solid fa-shield-halved text-cyan"></i> 6 Ay Yazılı Servis Garantisi</div>
           </div>
@@ -321,7 +374,7 @@
   </section>
 
   <!-- VİTRİN: 2. EL & SIFIR CİHAZLAR -->
-  <section class="section-wrapper bg-alt" id="vitrin">
+  <section class="section-wrapper" id="vitrin">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag">CepHane İletişim Güvencesiyle</span>
@@ -339,7 +392,7 @@
           <p class="product-specs">Doğal Titanyum • Pil %94 • Kutulu & Faturalı</p>
           <div class="product-price-row">
             <span class="product-tag-warranty"><i class="fa-solid fa-shield-check text-cyan"></i> 6 Ay CepHane Garantili</span>
-            <a href="https://wa.me/905303543465?text=Sedat%20Bey%20selamlar,%20vitrindeki%20iPhone%2015%20Pro%20hakk%C4%B1nda%20fiyat%20almak%20istiyorum." target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
+            <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20vitrindeki%20iPhone%2015%20Pro%20hakkında%20fiyat%20almak%20istiyorum." target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
           </div>
         </div>
 
@@ -352,7 +405,7 @@
           <p class="product-specs">Derin Mor • Pil %91 • Hatasız Çiziksiz</p>
           <div class="product-price-row">
             <span class="product-tag-warranty"><i class="fa-solid fa-shield-check text-cyan"></i> Faturalı Cihaz</span>
-            <a href="https://wa.me/905303543465?text=Sedat%20Bey%20selamlar,%20iPhone%2014%20Pro%20Max%20hakk%C4%B1nda%20fiyat%20almak%20istiyorum." target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
+            <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20iPhone%2014%20Pro%20Max%20hakkında%20fiyat%20almak%20istiyorum." target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
           </div>
         </div>
 
@@ -365,7 +418,7 @@
           <p class="product-specs">Gece Yarısı • 2 Yıl Apple Türkiye Garantili</p>
           <div class="product-price-row">
             <span class="product-tag-warranty"><i class="fa-solid fa-shield-check text-cyan"></i> Sıfır Kutu</span>
-            <a href="https://wa.me/905303543465?text=Sedat%20Bey%20selamlar,%20s%C4%B1f%C4%B1r%20iPhone%2013%20fiyat%C4%B1%20nedir?" target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
+            <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20sıfır%20iPhone%2013%20fiyatı%20nedir?" target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
           </div>
         </div>
 
@@ -378,28 +431,97 @@
           <p class="product-specs">Aktif Gürültü Engelleme • Sıfır Jelatinli</p>
           <div class="product-price-row">
             <span class="product-tag-warranty"><i class="fa-solid fa-shield-check text-cyan"></i> Orijinal</span>
-            <a href="https://wa.me/905303543465?text=Sedat%20Bey%20selamlar,%20AirPods%20Pro%202%20stokta%20var%20m%C4%B1?" target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
+            <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20AirPods%20Pro%202%20stokta%20var%20mı?" target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- İLETİŞİM & HARİTA -->
-  <section class="section-wrapper" id="iletisim">
+  <!-- GOOGLE HARİTALAR & MAĞAZAMIZDAN KARELER (TEPEÜSTÜ / ÜMRANİYE) -->
+  <section class="section-wrapper" id="magaza">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-brands fa-google text-cyan"></i> Google Haritalar & Mağazamız</span>
+        <h2 class="section-title">CepHane İletişim <span class="gradient-text">Showroom & Servis Odası</span></h2>
+        <p class="section-sub">Ümraniye Tepeüstü'ndeki mağazamıza dilediğiniz an gelin; kahvenizi yudumlarken cihazınızı test edelim veya anında nakit ödemenizi teslim edelim.</p>
+      </div>
+
+      <div class="store-gallery-grid">
+        <div class="store-card">
+          <img src="assets/store_interior.jpg" alt="CepHane İletişim Mağaza İçi ve Showroom" class="store-card-img">
+          <div class="store-card-overlay">
+            <span class="store-tag"><i class="fa-solid fa-store"></i> Ana Showroom & Danışma</span>
+            <h3>Ferah, Güvenli ve Şeffaf Hizmet Alanı</h3>
+            <p>Tüm alım, satım ve anında nakit işlemleri gözünüzün önünde şeffaf olarak gerçekleştirilir.</p>
+          </div>
+        </div>
+
+        <div class="store-card">
+          <img src="assets/store_vitrine.jpg" alt="CepHane İletişim Cihaz Vitrini ve Aksesuarlar" class="store-card-img">
+          <div class="store-card-overlay">
+            <span class="store-tag"><i class="fa-solid fa-shield-halved"></i> Garantili Cihaz Vitrini</span>
+            <h3>Sıfır & Kusursuz 2. El Modeller</h3>
+            <p>Apple iPhone 15 Pro, AirPods Pro 2 ve orijinal MagSafe aksesuarları kutulu, faturalı ve garantili teslim.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="store-features-strip">
+        <div class="store-feat-item">
+          <i class="fa-brands fa-google text-cyan"></i>
+          <div>
+            <strong>4.9 ⭐⭐⭐⭐⭐ Google Puanı</strong>
+            <span>Doğrulanmış müşteri memnuniyeti</span>
+          </div>
+        </div>
+        <div class="store-feat-item">
+          <i class="fa-solid fa-train-subway text-cyan"></i>
+          <div>
+            <strong>Altınşehir Metrosuna 3 Dk</strong>
+            <span>Toplu taşıma ile kolay erişim</span>
+          </div>
+        </div>
+        <div class="store-feat-item">
+          <i class="fa-solid fa-square-parking text-cyan"></i>
+          <div>
+            <strong>Otopark & Kolay Ulaşım</strong>
+            <span>Doğanevler Caddesi üzerinde</span>
+          </div>
+        </div>
+        <div class="store-feat-item">
+          <i class="fa-solid fa-mug-hot text-cyan"></i>
+          <div>
+            <strong>Kahve & Hızlı Ekspertiz</strong>
+            <span>15-20 dakikada sonuç ve nakit ödeme</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM & GOOGLE HARİTALAR -->
+  <section class="section-wrapper bg-alt" id="iletisim">
     <div class="container">
       <div class="contact-card">
         <div class="contact-left">
           <span class="section-tag">Bize Ulaşın</span>
           <h2>CepHane İletişim <span class="text-cyan">Merkezi</span></h2>
           <p>Dükkanımıza gelin, kahvemizi içerken cihazınızın ekspertizini yapıp nakit ödemenizi teslim edelim.</p>
+          <div class="c-item" style="margin-bottom: 20px;">
+            <i class="fa-solid fa-location-dot text-cyan"></i>
+            <div>
+              <strong>Adres:</strong>
+              <span>Tepeüstü Mah., Doğanevler Cad., No: 20/B, Ümraniye / İstanbul (Altınşehir Metro Durağı Yanı)</span>
+            </div>
+          </div>
 
           <div class="contact-details">
             <div class="c-item">
               <i class="fa-solid fa-phone text-cyan"></i>
               <div>
                 <strong>Doğrudan Telefon:</strong>
-                <a href="tel:05303543465">0530 354 34 65 (CepHane İletişim)</a>
+                <a href="tel:05303543465">0530 354 34 65</a>
               </div>
             </div>
 
@@ -462,7 +584,7 @@
         <p>Değerinde telefon alım satımı, orijinal garantili teknik servis ve aksesuar merkezi.</p>
       </div>
       <div class="footer-copy">
-        <p>&copy; 2026 CepHane İletişim. CepHane Uzman Kadrosu.</p>
+        <p>&copy; 2026 CepHane İletişim. Tüm Hakları Saklıdır.</p>
         <p class="agency-credit">Web Tasarım & Dijital Motor: <strong class="text-cyan">Aura Digital</strong></p>
       </div>
     </div>
@@ -475,7 +597,7 @@
       <h3 id="modalTitle">Talebiniz Alındı!</h3>
       <p id="modalDesc">
         Formdaki tüm cihaz detayları ekspertiz fişi olarak hazırlandı. 
-        <strong>15-20 dakika içerisinde</strong> CepHane İletişim tarafından WhatsApp üzerinden size en yüksek nakit teklifi iletilecektir.
+        <strong>15-20 dakika içerisinde</strong> CepHane İletişim ekibi tarafından WhatsApp üzerinden size en yüksek nakit teklifi iletilecektir.
       </p>
       <div class="modal-actions">
         <a href="#" id="modalWaLink" target="_blank" class="btn btn-whatsapp-giant">
@@ -491,7 +613,7 @@
     <a href="tel:05303543465" class="sticky-btn sticky-call">
       <i class="fa-solid fa-phone"></i> Hemen Ara
     </a>
-    <a href="https://wa.me/905303543465?text=Sedat%20Bey%20merhaba,%20telefonum%20hakk%C4%B1nda%20fiyat%20almak%20istiyorum." target="_blank" class="sticky-btn sticky-whatsapp">
+    <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20telefonum%20hakkında%20fiyat%20almak%20istiyorum." target="_blank" class="sticky-btn sticky-whatsapp">
       <i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Yaz
     </a>
   </div>

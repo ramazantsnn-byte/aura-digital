@@ -1,8 +1,24 @@
+// CepHane İletişim - Ana Etkileşim ve Form Motoru
+const SEDAT_PHONE = '905303543465';
+
+// Global Hotspot Gösterici
+function showHotspotInfo(text) {
+  const infoBar = document.getElementById('panoInfoBar');
+  const infoText = document.getElementById('panoInfoText');
+  if (infoText && infoBar) {
+    infoText.style.opacity = '0';
+    setTimeout(() => {
+      infoText.innerHTML = `<strong>Aktif İnceleme:</strong> ${text}`;
+      infoText.style.opacity = '1';
+      infoBar.style.borderColor = '#00e5ff';
+      infoBar.style.boxShadow = '0 0 25px rgba(0, 229, 255, 0.4)';
+    }, 150);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  const SEDAT_PHONE = '905303543465';
-
-  // Mobile Drawer
+  // Mobile Drawer Menü
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -18,7 +34,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Modal Controls
+  // 360 Showcase 3D Tilt Parallax Etkisi
+  const panoBox = document.getElementById('panoBox');
+  const panoContainer = document.getElementById('panoContainer');
+  if (panoBox && panoContainer) {
+    panoBox.addEventListener('mousemove', (e) => {
+      const rect = panoBox.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -7;
+      const rotateY = ((x - centerX) / centerX) * 7;
+      panoContainer.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    panoBox.addEventListener('mouseleave', () => {
+      panoContainer.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  }
+
+  // Modal Kontrolleri (15-20 Dk Geri Dönüş Teyidi)
   const confirmModal = document.getElementById('confirmModal');
   const modalTitle = document.getElementById('modalTitle');
   const modalDesc = document.getElementById('modalDesc');
@@ -32,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalWaLink.href = waUrl;
     confirmModal.classList.add('active');
 
-    // Automatically trigger WhatsApp in a new tab after showing modal
+    // Otomatik WhatsApp yeni sekmede açılır
     setTimeout(() => {
       window.open(waUrl, '_blank');
     }, 600);
@@ -47,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 1. DEĞERLEME / TELEFON SATIŞ FORMU
+  // 1. DEĞERLEME / TELEFON NAKİT SATIŞ FORMU
   const valuationForm = document.getElementById('valuationForm');
   if (valuationForm) {
     valuationForm.addEventListener('submit', (e) => {
@@ -75,20 +111,20 @@ document.addEventListener('DOMContentLoaded', () => {
 🛡️ *Kasa Durumu:* ${body}
 📦 *Kutu & Fatura:* ${boxInvoice}
 ----------------------------------------
-_CepHane İletişim'den 15-20 dakika içinde nakit teklif bekleniyor._`;
+_CepHane İletişim uzman ekibinden 15-20 dakika içinde nakit teklif bekleniyor._`;
 
       const waUrl = `https://wa.me/${SEDAT_PHONE}?text=${encodeURIComponent(msg)}`;
 
       openConfirmation(
-        'Talebiniz Sedat Bey\'e İletildi! 🎉',
+        'Talebiniz CepHane İletişim Ekibine İletildi! 🎉',
         `Sayın <strong>${name}</strong>, cihaz bilgileriniz eksiksiz ekspertiz raporu olarak hazırlandı.<br><br>
-        <strong>15-20 dakika içerisinde</strong> CepHane ekibi tarafından WhatsApp üzerinden size en yüksek nakit teklifimiz iletilecektir.`,
+        <strong>15-20 dakika içerisinde</strong> CepHane uzman ekibi tarafından WhatsApp üzerinden size en yüksek nakit teklifimiz iletilecektir.`,
         waUrl
       );
     });
   }
 
-  // 2. TEKNİK SERVİS & RANDEVU FORMU
+  // 2. TEKNİK SERVİS & HIZLI RANDEVU FORMU
   const repairForm = document.getElementById('repairForm');
   if (repairForm) {
     repairForm.addEventListener('submit', (e) => {
@@ -113,14 +149,14 @@ _CepHane İletişim'den 15-20 dakika içinde nakit teklif bekleniyor._`;
 ⏰ *Saat Aralığı:* ${time}
 ⏱️ *Tahmini Süre:* ~30 Dakika (Gözünüzün Önünde)
 ----------------------------------------
-_CepHane ekibinden 15 dakika içinde randevu teyidi bekleniyor._`;
+_CepHane İletişim teknik servis ekibinden 15 dakika içinde randevu teyidi bekleniyor._`;
 
       const waUrl = `https://wa.me/${SEDAT_PHONE}?text=${encodeURIComponent(msg)}`;
 
       openConfirmation(
         'Randevunuz Oluşturuldu! 🛠️',
         `Sayın <strong>${name}</strong>, <strong>${model}</strong> cihazınız için randevu talebiniz alındı.<br><br>
-        <strong>15 dakika içerisinde</strong> CepHane ekibi WhatsApp üzerinden randevu saatinizi teyit edecektir. Cihazınız ortalama <strong>30 dakikada</strong> teslim edilir.`,
+        <strong>15 dakika içerisinde</strong> CepHane İletişim teknik ekibi WhatsApp üzerinden randevu saatinizi teyit edecektir. Cihazınız ortalama <strong>30 dakikada</strong> gözünüzün önünde teslim edilir.`,
         waUrl
       );
     });
