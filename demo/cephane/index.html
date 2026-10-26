@@ -157,10 +157,41 @@
               </select>
             </div>
 
-            <!-- Model -->
+            <!-- Model (Datalist ile Hızlı Seçim + Serbest Yazım) -->
             <div class="form-group">
               <label class="form-label"><i class="fa-solid fa-mobile-screen text-cyan"></i> 2. Cihaz Modeli</label>
-              <input type="text" id="valModel" class="form-control" placeholder="Örn: iPhone 13, 14 Pro Max, S23 Ultra..." required>
+              <input type="text" id="valModel" list="popularModels" class="form-control" placeholder="Seçin veya yazın (Örn: iPhone 13, 14 Pro Max, S23 Ultra...)" required>
+              <datalist id="popularModels">
+                <option value="iPhone 16 Pro Max">
+                <option value="iPhone 16 Pro">
+                <option value="iPhone 16 Plus">
+                <option value="iPhone 16">
+                <option value="iPhone 15 Pro Max">
+                <option value="iPhone 15 Pro">
+                <option value="iPhone 15 Plus">
+                <option value="iPhone 15">
+                <option value="iPhone 14 Pro Max">
+                <option value="iPhone 14 Pro">
+                <option value="iPhone 14 Plus">
+                <option value="iPhone 14">
+                <option value="iPhone 13 Pro Max">
+                <option value="iPhone 13 Pro">
+                <option value="iPhone 13">
+                <option value="iPhone 13 mini">
+                <option value="iPhone 12 Pro Max">
+                <option value="iPhone 12 Pro">
+                <option value="iPhone 12">
+                <option value="iPhone 11 Pro Max">
+                <option value="iPhone 11">
+                <option value="Samsung Galaxy S24 Ultra">
+                <option value="Samsung Galaxy S24+">
+                <option value="Samsung Galaxy S24">
+                <option value="Samsung Galaxy S23 Ultra">
+                <option value="Samsung Galaxy S23">
+                <option value="Samsung Galaxy S22 Ultra">
+                <option value="Xiaomi 14 Ultra / 14">
+                <option value="Redmi Note 13 Pro">
+              </datalist>
             </div>
 
             <!-- Hafıza -->
@@ -183,7 +214,7 @@
                 <option value="%85 - %94 (Normal/İyi)" selected>%85 - %94 (Normal/İyi)</option>
                 <option value="%80 - %84 (Orta)">%80 - %84 (Orta)</option>
                 <option value="%80 Altı / Servis Uyarısı Veriyor">%80 Altı / Servis Uyarısı Veriyor</option>
-                <option value="Android / Pil Yüzdesi Bilinmiyor">Android / Pil Yüzdesi Bilinmiyor</option>
+                <option value="Android / Pil Sağlığı İyi">Android / Pil Sağlığı İyi</option>
               </select>
             </div>
 
@@ -229,24 +260,45 @@
             </div>
           </div>
 
+          <!-- Canlı Değerleme & Tahmini Fiyat Kartı -->
+          <div class="live-valuation-card" id="liveValCard">
+            <div class="live-val-header">
+              <div class="val-pulse-indicator">
+                <span class="val-pulse-dot"></span>
+                <strong>Anlık Sistem Tahmini:</strong>
+              </div>
+              <span class="live-val-badge"><i class="fa-solid fa-bolt text-cyan"></i> Sedat Bey 15 Dk'da Kesin Teklifi İletir</span>
+            </div>
+            <div class="live-val-body">
+              <div class="live-val-price" id="liveValPrice">24.500 ₺ - 27.500 ₺</div>
+              <p class="live-val-desc" id="liveValDesc">Seçtiğiniz kriterlere göre cihazınızın tahmini nakit piyasa değeri. Dükkanımızda nakit veya anında IBAN transferiyle teslim alıyoruz.</p>
+            </div>
+          </div>
+
+          <!-- Varsa Ekstra Not -->
+          <div class="form-group" style="margin-top: 15px;">
+            <label class="form-label"><i class="fa-solid fa-comment-dots text-cyan"></i> Varsa Cihaz Hakkında Ekstra Notunuz (İsteğe Bağlı)</label>
+            <input type="text" id="valCustomerNotes" class="form-control" placeholder="Örn: Face ID aktif, pil orijinal, hiç içi açılmadı...">
+          </div>
+
           <div class="form-submit-box">
-            <button type="submit" class="btn btn-whatsapp-giant">
-              <i class="fa-brands fa-whatsapp"></i> Fiyat Teklifi Al (WhatsApp - 15 Dk'da Dönüş)
+            <button type="submit" class="btn btn-whatsapp-giant" id="btnSubmitValuation">
+              <i class="fa-brands fa-whatsapp"></i> Raporu Sedat Bey'e WhatsApp'tan Gönder (15 Dk'da Nakit Teklif)
             </button>
-            <p class="submit-note"><i class="fa-solid fa-shield-check text-cyan"></i> Bilgileriniz doğrudan CepHane İletişim resmi WhatsApp hattına şifreli ve eksiksiz ekspertiz fişi olarak iletilir.</p>
+            <p class="submit-note"><i class="fa-solid fa-shield-check text-cyan"></i> Bilgileriniz doğrudan CepHane İletişim resmi WhatsApp hattına (+90 530 354 34 65) eksiksiz ekspertiz fişi olarak iletilir.</p>
           </div>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- 360 DERECE AKILLI CİHAZ EKSPERTİZİ BÖLÜMÜ (ULTRA GÖRSEL ENTEGRASYONU) -->
+  <!-- 360 DERECE AKILLI CİHAZ EKSPERTİZİ BÖLÜMÜ (AMACI VE İŞLEVİ NETLEŞTİRİLDİ) -->
   <section class="section-wrapper panoramic-section" id="ekspertiz-360">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag"><i class="fa-solid fa-arrows-rotate"></i> 360° Donanım & Çip Güvencesi</span>
         <h2 class="section-title">Milimetrik <span class="gradient-text">Ekspertiz Standartlarımız</span></h2>
-        <p class="section-sub">Satın aldığımız ve tamir ettiğimiz her cihaz, optik lazer tarama ve mikroskop altında 360 derece denetlenir.</p>
+        <p class="section-sub">Esenyurt mağazamıza geldiğinizde Sedat Bey ve teknik ekibimiz cihazınızı bu 5 donanım standardına göre optik mikroskop ve test cihazlarıyla inceler. Cihazınızın değeri 1 kuruş bile öldürülmeden, piyasadaki en yüksek nakit karşılığı anında elden veya IBAN'ınıza ödenir.</p>
       </div>
 
       <div class="panoramic-showcase-box" id="panoBox">
@@ -285,6 +337,15 @@
           <span id="panoInfoText">Noktalara tıklayarak CepHane İletişim 360° donanım ekspertiz kriterlerini inceleyebilirsiniz.</span>
           <span class="pano-badge-hint"><i class="fa-solid fa-hand-pointer"></i> Kontrol Noktaları</span>
         </div>
+      </div>
+
+      <div class="expertiz-action-bar">
+        <a href="#degerleme" class="btn btn-primary">
+          <i class="fa-solid fa-calculator"></i> Bu Standartlarla Telefonuna Fiyat Al
+        </a>
+        <button type="button" class="btn btn-outline" id="btnOpenSelfTest">
+          <i class="fa-solid fa-stethoscope text-cyan"></i> Ekran & Ses Canlı Donanım Testi Yap
+        </button>
       </div>
     </div>
   </section>
@@ -608,20 +669,93 @@
     </div>
   </footer>
 
-  <!-- MODAL: 15-20 DK GERİ DÖNÜŞ ONAYI -->
+  <!-- MODAL 1: 15-20 DK GERİ DÖNÜŞ VE WHATSAPP ONAYI -->
   <div class="modal-overlay" id="confirmModal">
     <div class="modal-card">
       <div class="modal-icon"><i class="fa-solid fa-circle-check text-cyan"></i></div>
-      <h3 id="modalTitle">Talebiniz Alındı!</h3>
+      <h3 id="modalTitle">Talebiniz Sedat Bey'e İletildi! 🎉</h3>
+      <div class="modal-summary-box" id="modalSummaryBox">
+        <!-- JS tarafından doldurulur -->
+      </div>
       <p id="modalDesc">
-        Formdaki tüm cihaz detayları ekspertiz fişi olarak hazırlandı. 
-        <strong>15-20 dakika içerisinde</strong> CepHane İletişim ekibi tarafından WhatsApp üzerinden size en yüksek nakit teklifi iletilecektir.
+        Cihaz ve iletişim bilgileriniz eksiksiz ekspertiz fişi olarak hazırlandı. 
+        <strong>15-20 dakika içerisinde</strong> Sedat Bey tarafından WhatsApp üzerinden size en yüksek nakit teklifi iletilecektir.
       </p>
       <div class="modal-actions">
         <a href="#" id="modalWaLink" target="_blank" class="btn btn-whatsapp-giant">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp Sohbetini Aç
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Sohbetini Aç & Sedat Bey'e Gönder
         </a>
-        <button class="btn btn-outline w-full" id="modalCloseBtn" style="margin-top: 10px;">Tamam</button>
+        <button class="btn btn-outline w-full" id="modalCloseBtn" style="margin-top: 10px;">Pencereyi Kapat</button>
+      </div>
+      <p class="modal-hint-sub"><i class="fa-solid fa-shield-halved text-cyan"></i> Tarayıcınız WhatsApp uygulamasını otomatik açmadıysa yukarıdaki yeşil butona tıklayabilirsiniz.</p>
+    </div>
+  </div>
+
+  <!-- MODAL 2: CANLI DONANIM EKSPERTİZ TESTİ (EKRAN & SES TESTİ) -->
+  <div class="modal-overlay" id="hardwareTestModal">
+    <div class="modal-card modal-card-wide">
+      <div class="modal-header-row">
+        <div>
+          <span class="section-tag" style="margin: 0;"><i class="fa-solid fa-microchip"></i> CepHane Cihaz Test Laboratuvarı</span>
+          <h3 style="margin-top: 4px; font-size: 22px;">Canlı Donanım <span class="text-cyan">Ekspertiz Testi</span></h3>
+        </div>
+        <button class="modal-x-btn" id="closeHwModalBtn">&times;</button>
+      </div>
+
+      <p style="color: var(--titanium-silver); font-size: 14px; margin-bottom: 20px;">
+        Telefonunuzun ekran dokunmatiğini ve hoparlörünü test edin. Alacağınız ekspertiz puanı Sedat Bey'e gidecek fiyat raporuna otomatik eklenecektir.
+      </p>
+
+      <div class="hw-test-steps">
+        <!-- Test 1: Dokunmatik Ekran Izgarası -->
+        <div class="hw-step-box">
+          <div class="hw-step-title">
+            <i class="fa-solid fa-fingerprint text-cyan"></i>
+            <span>1. Dokunmatik Ekran Hassasiyet Testi</span>
+            <span class="hw-step-status" id="touchStatus">Karelere Dokunun</span>
+          </div>
+          <div class="touch-test-grid" id="touchGrid">
+            <!-- 12 Test Kutusu (JS ile oluşturulur veya statik) -->
+            <div class="touch-cell" data-id="1">1</div>
+            <div class="touch-cell" data-id="2">2</div>
+            <div class="touch-cell" data-id="3">3</div>
+            <div class="touch-cell" data-id="4">4</div>
+            <div class="touch-cell" data-id="5">5</div>
+            <div class="touch-cell" data-id="6">6</div>
+            <div class="touch-cell" data-id="7">7</div>
+            <div class="touch-cell" data-id="8">8</div>
+            <div class="touch-cell" data-id="9">9</div>
+            <div class="touch-cell" data-id="10">10</div>
+            <div class="touch-cell" data-id="11">11</div>
+            <div class="touch-cell" data-id="12">12</div>
+          </div>
+        </div>
+
+        <!-- Test 2: Hoparlör & Ahize Akustik Testi -->
+        <div class="hw-step-box">
+          <div class="hw-step-title">
+            <i class="fa-solid fa-volume-high text-cyan"></i>
+            <span>2. Hoparlör & Ahize Frekans Testi (1000 Hz)</span>
+            <span class="hw-step-status" id="audioStatus">Bekleniyor</span>
+          </div>
+          <div class="audio-test-row">
+            <button type="button" class="btn btn-sm btn-outline" id="btnPlaySound">
+              <i class="fa-solid fa-play"></i> Test Sesini Çal (1kHz)
+            </button>
+            <button type="button" class="btn btn-sm btn-primary" id="btnAudioPassed" disabled>
+              <i class="fa-solid fa-check"></i> Sesi Net Duydum (Sağlam)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Test Skoru Özeti -->
+      <div class="hw-score-card" id="hwScoreCard" style="display: none;">
+        <div class="hw-score-badge"><i class="fa-solid fa-award"></i> CepHane Ekspertiz Skoru: <span id="hwScoreValue">%100</span></div>
+        <p>Ekran dokunmatiğiniz ve hoparlör frekansınız kusursuz çalışıyor. Bu sonuç Sedat Bey'e gönderilecek teklif fişine başarıyla işlendi!</p>
+        <button type="button" class="btn btn-whatsapp-giant w-full" id="btnApplyTestToValuation">
+          <i class="fa-solid fa-arrow-up"></i> Fiyat Formuna Git & Teklifi Al
+        </button>
       </div>
     </div>
   </div>
