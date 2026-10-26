@@ -1559,17 +1559,24 @@ body {
   border-radius: var(--radius-full);
 }
 .product-img-box {
-  height: 140px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 60px;
-  color: var(--text-dim);
-  margin-bottom: 14px;
-  transition: color 0.2s ease;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: #02050f;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
-.product-card:hover .product-img-box {
-  color: var(--cyan-bright);
+.product-real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.product-card:hover .product-real-img {
+  transform: scale(1.06);
 }
 .product-card h3 {
   font-size: 17px;
@@ -2000,3 +2007,73 @@ body {
   background: var(--whatsapp);
   color: #fff;
 }
+
+/* ==========================================================================
+   TEK KARTLI DEĞERLEME FORMU & CANLI FİYAT ŞERİDİ
+   ========================================================================== */
+.form-card {
+  background: rgba(9, 15, 29, 0.88);
+  border: 1.5px solid rgba(0, 229, 255, 0.28);
+  border-radius: var(--radius-lg);
+  padding: 38px;
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-card), 0 0 60px rgba(0, 229, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+@media (max-width: 768px) {
+  .form-card { padding: 22px 16px; }
+}
+
+.live-price-strip {
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.14) 0%, rgba(9, 15, 29, 0.95) 100%);
+  border: 1.5px solid var(--cyan-bright);
+  border-radius: var(--radius-md);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+  flex-wrap: wrap;
+}
+.lps-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 229, 255, 0.16);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--cyan-bright);
+  flex-shrink: 0;
+}
+.lps-text { flex: 1; }
+.lps-label {
+  display: block;
+  font-size: 13px;
+  color: var(--titanium-silver);
+  font-weight: 600;
+}
+.lps-price {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--cyan-bright);
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 16px rgba(0, 229, 255, 0.4);
+}
+.lps-badge {
+  background: rgba(0, 230, 118, 0.15);
+  color: #00e676;
+  border: 1px solid rgba(0, 230, 118, 0.4);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 12.5px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
