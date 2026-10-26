@@ -29,7 +29,7 @@
       </div>
       <div class="top-contacts">
         <a href="tel:05303543465"><i class="fa-solid fa-phone text-cyan"></i> 0530 354 34 65</a>
-        <a href="https://wa.me/905303543465?text=Merhaba%20Sedat%20Bey,%20fiyat%20almak%20istiyorum." target="_blank" class="top-wa-link">
+        <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20fiyat%20almak%20istiyorum." target="_blank" class="top-wa-link">
           <i class="fa-brands fa-whatsapp text-whatsapp"></i> WhatsApp Hızlı Danışma
         </a>
       </div>
@@ -168,9 +168,29 @@
   <section class="section-wrapper" id="degerleme">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag"><i class="fa-solid fa-calculator text-cyan"></i> Tek Kartta Hızlı Fiyat</span>
-        <h2 class="section-title">Telefonunuz Ne Kadar Eder? <span class="gradient-text">Hemen Fiyat Alın</span></h2>
-        <p class="section-sub">Aşağıdaki bilgileri seçin; CepHane İletişim <strong>15-20 dakika içinde</strong> WhatsApp üzerinden en yüksek nakit teklifini Sedat Usta güvencesiyle iletsin.</p>
+        <span class="section-tag"><i class="fa-solid fa-calculator text-cyan"></i> Hızlı Fiyat Motoru</span>
+        <h2 class="section-title">CepHane İletişim'den <span class="gradient-text">Fiyat Alın</span></h2>
+        <p class="section-sub">İster mevcut telefonunuzu <strong>en yüksek piyasa değerinde nakit satın</strong>, ister <strong>30 dakikada göz önünde tamir</strong> fiyatı alın.</p>
+      </div>
+
+      <!-- ÇİFTLİ HIZLI GEÇİŞ LİNKLERİ (HEM TELEFON SATIŞI HEM DE TAMİR İÇİN) -->
+      <div class="fiyat-nav-switcher">
+        <a href="#degerleme" class="fiyat-tab-card active" id="btnSatNav">
+          <div class="fiyat-tab-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <div class="fiyat-tab-info">
+            <strong>Telefon Satış Fiyatı Al</strong>
+            <span>15 Dk'da En Yüksek Nakit / Havale Teklifi</span>
+          </div>
+          <span class="fiyat-tab-badge"><i class="fa-solid fa-arrow-down"></i> Satış Formu</span>
+        </a>
+        <a href="#tamir-randevu" class="fiyat-tab-card" id="btnTamirNav">
+          <div class="fiyat-tab-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+          <div class="fiyat-tab-info">
+            <strong>Tamir & Onarım Fiyatı Al</strong>
+            <span>Ekran, Pil, Kasa • 30 Dk Göz Önünde Servis</span>
+          </div>
+          <span class="fiyat-tab-badge"><i class="fa-solid fa-arrow-right"></i> Tamire Geç</span>
+        </a>
       </div>
 
       <!-- TEK KARTLI KULLANICI DOSTU FORM (ALT ALTA BÖLÜNMEZ, NET VE DÜZENLİ) -->
@@ -182,7 +202,7 @@
             <div class="lps-icon"><i class="fa-solid fa-coins text-cyan"></i></div>
             <div class="lps-text">
               <span class="lps-label">Sistem Tahmini Piyasa Değeri:</span>
-              <strong class="lps-price" id="valLivePrice">24.500 ₺ - 27.500 ₺</strong>
+              <strong class="lps-price" id="valLivePrice">25.000 ₺ - 28.000 ₺</strong>
             </div>
             <span class="lps-badge"><i class="fa-solid fa-bolt"></i> Anında Nakit / IBAN</span>
           </div>
@@ -192,37 +212,20 @@
             <div class="form-group">
               <label class="form-label"><i class="fa-solid fa-tag text-cyan"></i> 1. Telefon Markası</label>
               <select id="valBrand" class="form-control" required>
-                <option value="Apple (iPhone)" selected>Apple (iPhone)</option>
-                <option value="Samsung">Samsung Galaxy</option>
-                <option value="Xiaomi / Redmi / POCO">Xiaomi / Redmi / POCO</option>
-                <option value="Huawei / Oppo / Diğer">Huawei / Oppo / Diğer</option>
+                <option value="Apple (iPhone)" selected>Apple (iPhone Serisi)</option>
+                <option value="Samsung">Samsung Galaxy Serisi</option>
+                <option value="Xiaomi / Redmi / POCO">Xiaomi / Redmi / POCO Serisi</option>
+                <option value="Huawei / Oppo / Diğer">Huawei / Oppo / Diğer Markalar</option>
               </select>
             </div>
 
             <!-- 2. Model -->
             <div class="form-group">
               <label class="form-label"><i class="fa-solid fa-mobile-screen text-cyan"></i> 2. Cihaz Modeli</label>
-              <input type="text" id="valModel" list="popularPhoneList" class="form-control" placeholder="Örn: iPhone 13, 14 Pro, 15 Pro Max, S23..." value="iPhone 13" required>
-              <datalist id="popularPhoneList">
-                <option value="iPhone 15 Pro Max">
-                <option value="iPhone 15 Pro">
-                <option value="iPhone 15 Plus">
-                <option value="iPhone 15">
-                <option value="iPhone 14 Pro Max">
-                <option value="iPhone 14 Pro">
-                <option value="iPhone 14">
-                <option value="iPhone 13 Pro Max">
-                <option value="iPhone 13 Pro">
-                <option value="iPhone 13">
-                <option value="iPhone 12 Pro Max">
-                <option value="iPhone 12">
-                <option value="iPhone 11">
-                <option value="Samsung Galaxy S24 Ultra">
-                <option value="Samsung Galaxy S23 Ultra">
-                <option value="Samsung Galaxy S22">
-                <option value="Xiaomi 13 Pro">
-                <option value="Redmi Note 13 Pro">
-              </datalist>
+              <select id="valModel" class="form-control" required>
+                <!-- JavaScript tarafından seçilen markaya göre tüm modeller eksiksiz listelenir -->
+              </select>
+              <input type="text" id="valModelCustom" class="form-control" placeholder="Model adını buraya yazın..." style="display: none; margin-top: 8px;">
             </div>
 
             <!-- 3. Hafıza -->
@@ -292,10 +295,10 @@
 
           <div class="form-submit-box" style="margin-top: 26px;">
             <button type="submit" class="btn btn-whatsapp-giant">
-              <i class="fa-brands fa-whatsapp"></i> Fiyat Teklifini Sedat Bey'e WhatsApp'tan Gönder (15 Dk'da Dönüş)
+              <i class="fa-brands fa-whatsapp"></i> Fiyat Teklifini WhatsApp'tan Gönder (15 Dk'da Kesin Dönüş)
             </button>
             <p class="submit-note">
-              <i class="fa-solid fa-shield-check text-cyan"></i> Fişiniz doğrudan CepHane İletişim Esenyurt merkez WhatsApp hattına (+90 530 354 34 65) eksiksiz olarak aktarılır.
+              <i class="fa-solid fa-shield-check text-cyan"></i> Talebiniz doğrudan CepHane İletişim Esenyurt merkez WhatsApp hattına (+90 530 354 34 65) eksiksiz olarak aktarılır.
             </p>
           </div>
         </form>
@@ -527,7 +530,7 @@
 
             <div class="form-submit-box" style="margin-top: 24px;">
               <button type="submit" class="btn btn-whatsapp-giant" id="btnSubmitRepair">
-                <i class="fa-brands fa-whatsapp"></i> Tamir Fişini Sedat Usta'ya Gönder (15 Dk'da Randevu Teyidi)
+                <i class="fa-brands fa-whatsapp"></i> Tamir Randevusunu WhatsApp'tan Gönder (15 Dk'da Randevu Teyidi)
               </button>
               <p class="submit-note"><i class="fa-solid fa-circle-check text-cyan"></i> Talebiniz doğrudan CepHane İletişim teknik servis hattına iletilir ve randevu saatiniz anında teyit edilir.</p>
             </div>
@@ -594,7 +597,7 @@
         <div class="store-feat-item">
           <i class="fa-solid fa-certificate text-cyan"></i>
           <div>
-            <strong>Sedat Usta Güvencesi</strong>
+            <strong>CepHane Firma Güvencesi</strong>
             <span>Tüm alım, satım ve tamirlerde birebir esnaf dürüstlüğü</span>
           </div>
         </div>
@@ -624,7 +627,7 @@
           <p class="product-specs">Doğal Titanyum • Pil %94 • Kutulu & Faturalı</p>
           <div class="product-price-row">
             <span class="product-tag-warranty"><i class="fa-solid fa-shield-check text-cyan"></i> 6 Ay Garanti</span>
-            <a href="https://wa.me/905303543465?text=Merhaba%20Sedat%20Bey,%20vitrindeki%20iPhone%2015%20Pro%20fiyatını%20öğrenmek%20istiyorum." target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
+            <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20vitrindeki%20iPhone%2015%20Pro%20fiyatını%20öğrenmek%20istiyorum." target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
           </div>
         </div>
 
@@ -638,7 +641,7 @@
           <p class="product-specs">Derin Mor • Pil %91 • Hatasız Çiziksiz</p>
           <div class="product-price-row">
             <span class="product-tag-warranty"><i class="fa-solid fa-shield-check text-cyan"></i> Faturalı Cihaz</span>
-            <a href="https://wa.me/905303543465?text=Merhaba%20Sedat%20Bey,%20vitrindeki%20iPhone%2014%20Pro%20Max%20fiyatını%20öğrenmek%20istiyorum." target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
+            <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20vitrindeki%20iPhone%2014%20Pro%20Max%20fiyatını%20öğrenmek%20istiyorum." target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
           </div>
         </div>
 
@@ -652,7 +655,7 @@
           <p class="product-specs">Gece Yarısı • 2 Yıl Apple Türkiye Garantili</p>
           <div class="product-price-row">
             <span class="product-tag-warranty"><i class="fa-solid fa-shield-check text-cyan"></i> Sıfır Kapalı Kutu</span>
-            <a href="https://wa.me/905303543465?text=Merhaba%20Sedat%20Bey,%20sıfır%20iPhone%2013%20fiyatı%20nedir?" target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
+            <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20sıfır%20iPhone%2013%20fiyatı%20nedir?" target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
           </div>
         </div>
 
@@ -666,7 +669,7 @@
           <p class="product-specs">Aktif Gürültü Engelleme • Sıfır Jelatinli</p>
           <div class="product-price-row">
             <span class="product-tag-warranty"><i class="fa-solid fa-shield-check text-cyan"></i> Orijinal Kutu</span>
-            <a href="https://wa.me/905303543465?text=Merhaba%20Sedat%20Bey,%20AirPods%20Pro%202%20stokta%20var%20mı?" target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
+            <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20AirPods%20Pro%202%20stokta%20var%20mı?" target="_blank" class="btn btn-sm btn-primary">Fiyat Sor</a>
           </div>
         </div>
       </div>
@@ -698,7 +701,7 @@
             <i class="fa-solid fa-phone text-cyan"></i>
             <div>
               <strong>Telefon & Destek:</strong>
-              <p><a href="tel:05303543465" style="color: #fff; text-decoration: none;">0530 354 34 65</a> (Sedat Usta)</p>
+              <p><a href="tel:05303543465" style="color: #fff; text-decoration: none;">0530 354 34 65</a> (Esenyurt Merkez)</p>
             </div>
           </div>
 
@@ -749,7 +752,7 @@
       </div>
       <div class="footer-bottom">
         <p>© 2026 CepHane İletişim Esenyurt. Tüm Hakları Saklıdır.</p>
-        <p class="footer-sub-text">Sedat Usta • WhatsApp: 0530 354 34 65 • Pınar Mah. Sivas Kongre Cad. No:54/A Esenyurt / İstanbul</p>
+        <p class="footer-sub-text">CepHane İletişim • WhatsApp: 0530 354 34 65 • Pınar Mah. Sivas Kongre Cad. No:54/A Esenyurt / İstanbul</p>
       </div>
     </div>
   </footer>
@@ -760,10 +763,10 @@
       <div class="modal-icon">
         <i class="fa-solid fa-circle-check text-cyan"></i>
       </div>
-      <h3 class="modal-title" id="modalTitle">Teklifiniz Sedat Bey'e İletildi! 🎉</h3>
+      <h3 class="modal-title" id="modalTitle">Teklifiniz CepHane Ekibine İletildi! 🎉</h3>
       <div class="modal-summary-box" id="modalSummaryBox"></div>
       <p class="modal-desc" id="modalDesc">
-        Bilgileriniz başarıyla alındı. Sedat Bey 15-20 dakika içinde WhatsApp üzerinden en yüksek nakit teklifimizle size dönüş yapacaktır.
+        Bilgileriniz başarıyla alındı. CepHane İletişim ekibimiz 15-20 dakika içinde WhatsApp üzerinden en yüksek nakit teklifimizle size dönüş yapacaktır.
       </p>
       <div class="modal-actions">
         <a href="#" class="btn btn-whatsapp-giant" id="modalWaLink" target="_blank">
@@ -782,7 +785,7 @@
     <a href="#degerleme" class="sticky-btn sticky-tradein">
       <i class="fa-solid fa-calculator"></i> Telefonunu Sat
     </a>
-    <a href="https://wa.me/905303543465?text=Merhaba%20Sedat%20Bey,%20fiyat%20öğrenmek%20istiyorum." target="_blank" class="sticky-btn sticky-whatsapp">
+    <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20fiyat%20öğrenmek%20istiyorum." target="_blank" class="sticky-btn sticky-whatsapp">
       <i class="fa-brands fa-whatsapp"></i> WhatsApp
     </a>
   </div>
