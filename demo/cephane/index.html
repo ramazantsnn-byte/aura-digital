@@ -48,8 +48,11 @@
       </div>
 
       <div class="nav-actions">
+        <a href="#tamir-randevu" class="btn btn-nav-repair">
+          <i class="fa-solid fa-screwdriver-wrench text-cyan"></i> 30 Dk Tamir
+        </a>
         <a href="#degerleme" class="btn btn-primary">
-          <i class="fa-solid fa-money-bill-wave"></i> Hemen Fiyat Al
+          <i class="fa-solid fa-money-bill-wave"></i> Telefonunu Sat
         </a>
       </div>
 
@@ -76,44 +79,56 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          <span>CepHane İletişim Güvencesi</span>
+          <span>Esenyurt CepHane İletişim & Apple Laboratuvarı</span>
         </div>
         <h1 class="hero-title">
-          Telefonunu <span class="gradient-text">Değerinde Sat</span> veya <span class="text-cyan">30 Dk'da Tamir</span> Ettir.
+          Telefonunu <span class="text-cyan">30 Dk'da Gözünün Önünde Tamir</span> Ettir veya <span class="gradient-text">Değerinde Sat</span>.
         </h1>
         <p class="hero-desc">
-          CepHane İletişim profesyonel ekibiyle; eski telefonunuzun pil, ekran ve kozmetik durumuna göre <strong>en yüksek nakit teklifini 15 dakikada</strong> alın. Orijinal parça garantisiyle gözünüzün önünde tamir.
+          Verileriniz silinmeden, şifre vermenize gerek kalmadan <strong>gözünüzün önünde 20-30 dakikada orijinal parça tamiri</strong>. 6 Ay CepHane yazılı garantisi veya eski telefonunuza anında en yüksek nakit ödeme.
         </p>
 
-        <div class="hero-cta-group">
-          <a href="#degerleme" class="btn btn-primary btn-lg">
-            <i class="fa-solid fa-calculator"></i> Telefonum Ne Kadar Eder?
+        <!-- Hızlı Hizmet Seçici (Tamir & Satış Öne Çıkarma) -->
+        <div class="hero-dual-selector">
+          <a href="#tamir-randevu" class="hero-selector-card hero-repair-card">
+            <div class="selector-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+            <div class="selector-text">
+              <strong>Hemen Tamir Ettir</strong>
+              <small>Ekran • Batarya • Kasa • 30 Dk</small>
+            </div>
+            <i class="fa-solid fa-chevron-right selector-arrow"></i>
           </a>
-          <a href="#tamir-randevu" class="btn btn-outline btn-lg">
-            <i class="fa-solid fa-screwdriver-wrench"></i> Tamir Randevusu Oluştur
+
+          <a href="#degerleme" class="hero-selector-card hero-tradein-card">
+            <div class="selector-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+            <div class="selector-text">
+              <strong>Telefonunu Nakite Çevir</strong>
+              <small>15 Dk'da En Yüksek Teklif</small>
+            </div>
+            <i class="fa-solid fa-chevron-right selector-arrow"></i>
           </a>
         </div>
 
         <div class="hero-trust-bar">
           <div class="trust-item">
-            <i class="fa-solid fa-clock-rotate-left text-cyan"></i>
+            <i class="fa-solid fa-eye text-cyan"></i>
             <div>
-              <strong>15-20 Dk Geri Dönüş</strong>
-              <small>WhatsApp'tan Anında Fiyat</small>
+              <strong>Gözünüzün Önünde</strong>
+              <small>Arka odaya gitmez, şeffaf tamir</small>
             </div>
           </div>
           <div class="trust-item">
-            <i class="fa-solid fa-screwdriver text-cyan"></i>
+            <i class="fa-solid fa-shield-halved text-cyan"></i>
             <div>
-              <strong>30 Dakikada Teslim</strong>
-              <small>Ekran & Batarya Değişimi</small>
+              <strong>6 Ay Yazılı Garanti</strong>
+              <small>Orijinal & A+ Test Edilmiş Parça</small>
             </div>
           </div>
           <div class="trust-item">
-            <i class="fa-solid fa-hand-holding-dollar text-cyan"></i>
+            <i class="fa-solid fa-lock text-cyan"></i>
             <div>
-              <strong>Anında Nakit Ödeme</strong>
-              <small>Elden ya da IBAN'a Havale</small>
+              <strong>Verileriniz Sıfırlanmaz</strong>
+              <small>Şifre vermeden işlem</small>
             </div>
           </div>
         </div>
@@ -143,151 +158,267 @@
         <p class="section-sub">Aşağıdaki bilgileri doldurun; CepHane İletişim <strong>15-20 dakika içinde</strong> WhatsApp üzerinden en yüksek nakit teklifini iletsin.</p>
       </div>
 
-      <div class="form-card">
-        <form id="valuationForm">
-          <div class="form-grid-2">
-            <!-- Marka -->
-            <div class="form-group">
-              <label class="form-label"><i class="fa-solid fa-tag text-cyan"></i> 1. Telefon Markası</label>
-              <select id="valBrand" class="form-control" required>
-                <option value="Apple (iPhone)">Apple (iPhone)</option>
-                <option value="Samsung">Samsung</option>
-                <option value="Xiaomi / Redmi / POCO">Xiaomi / Redmi / POCO</option>
-                <option value="Huawei / Diğer">Huawei / Diğer</option>
-              </select>
+      <!-- GETMOBIL STİLİ ADIM ADIM CİHAZ DEĞERLEME SİHİRBAZI -->
+      <div class="gm-wizard-card" id="gmWizardCard">
+        
+        <!-- Üst Adım İlerleme Çubuğu -->
+        <div class="gm-progress-bar-container">
+          <div class="gm-progress-track">
+            <div class="gm-progress-fill" id="gmProgressFill" style="width: 25%;"></div>
+          </div>
+          <div class="gm-steps-indicator">
+            <div class="gm-step-item active" data-step="1">
+              <span class="gm-step-num">1</span>
+              <span class="gm-step-label">Marka</span>
+            </div>
+            <div class="gm-step-item" data-step="2">
+              <span class="gm-step-num">2</span>
+              <span class="gm-step-label">Model</span>
+            </div>
+            <div class="gm-step-item" data-step="3">
+              <span class="gm-step-num">3</span>
+              <span class="gm-step-label">Durum</span>
+            </div>
+            <div class="gm-step-item" data-step="4">
+              <span class="gm-step-num">4</span>
+              <span class="gm-step-label">Fiyat & WhatsApp</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADIM 1: MARKA SEÇİMİ -->
+        <div class="gm-wizard-pane active" id="paneStep1">
+          <div class="gm-pane-header text-center">
+            <span class="gm-badge-sub"><i class="fa-solid fa-mobile-screen-button text-cyan"></i> 1. Adım</span>
+            <h3 class="gm-pane-title">Hangi Marka Telefon Satmak İstiyorsunuz?</h3>
+            <p class="gm-pane-desc">En yüksek piyasa değerinde anında nakit alım yapıyoruz.</p>
+          </div>
+
+          <div class="gm-brand-grid">
+            <div class="gm-brand-card active" data-brand="Apple">
+              <div class="gm-brand-icon"><i class="fa-brands fa-apple"></i></div>
+              <strong class="gm-brand-title">Apple</strong>
+              <span>iPhone Serisi</span>
+              <span class="gm-brand-popular">En Çok Tercih Edilen</span>
             </div>
 
-            <!-- Model (Datalist ile Hızlı Seçim + Serbest Yazım) -->
-            <div class="form-group">
-              <label class="form-label"><i class="fa-solid fa-mobile-screen text-cyan"></i> 2. Cihaz Modeli</label>
-              <input type="text" id="valModel" list="popularModels" class="form-control" placeholder="Seçin veya yazın (Örn: iPhone 13, 14 Pro Max, S23 Ultra...)" required>
-              <datalist id="popularModels">
-                <option value="iPhone 16 Pro Max">
-                <option value="iPhone 16 Pro">
-                <option value="iPhone 16 Plus">
-                <option value="iPhone 16">
-                <option value="iPhone 15 Pro Max">
-                <option value="iPhone 15 Pro">
-                <option value="iPhone 15 Plus">
-                <option value="iPhone 15">
-                <option value="iPhone 14 Pro Max">
-                <option value="iPhone 14 Pro">
-                <option value="iPhone 14 Plus">
-                <option value="iPhone 14">
-                <option value="iPhone 13 Pro Max">
-                <option value="iPhone 13 Pro">
-                <option value="iPhone 13">
-                <option value="iPhone 13 mini">
-                <option value="iPhone 12 Pro Max">
-                <option value="iPhone 12 Pro">
-                <option value="iPhone 12">
-                <option value="iPhone 11 Pro Max">
-                <option value="iPhone 11">
-                <option value="Samsung Galaxy S24 Ultra">
-                <option value="Samsung Galaxy S24+">
-                <option value="Samsung Galaxy S24">
-                <option value="Samsung Galaxy S23 Ultra">
-                <option value="Samsung Galaxy S23">
-                <option value="Samsung Galaxy S22 Ultra">
-                <option value="Xiaomi 14 Ultra / 14">
-                <option value="Redmi Note 13 Pro">
-              </datalist>
+            <div class="gm-brand-card" data-brand="Samsung">
+              <div class="gm-brand-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+              <strong class="gm-brand-title">Samsung</strong>
+              <span>Galaxy S & Z Serisi</span>
             </div>
 
-            <!-- Hafıza -->
-            <div class="form-group">
-              <label class="form-label"><i class="fa-solid fa-hard-drive text-cyan"></i> 3. Hafıza Kapasitesi</label>
-              <select id="valStorage" class="form-control">
-                <option value="64 GB">64 GB</option>
-                <option value="128 GB" selected>128 GB</option>
-                <option value="256 GB">256 GB</option>
-                <option value="512 GB">512 GB</option>
-                <option value="1 TB">1 TB</option>
-              </select>
+            <div class="gm-brand-card" data-brand="Xiaomi">
+              <div class="gm-brand-icon"><i class="fa-solid fa-bolt"></i></div>
+              <strong class="gm-brand-title">Xiaomi</strong>
+              <span>Redmi & POCO</span>
             </div>
 
-            <!-- Pil Seviyesi -->
-            <div class="form-group">
-              <label class="form-label"><i class="fa-solid fa-battery-half text-cyan"></i> 4. Pil Sağlığı (%)</label>
-              <select id="valBattery" class="form-control">
-                <option value="%95 - %100 (Çok Yüksek)">%95 - %100 (Çok Yüksek)</option>
-                <option value="%85 - %94 (Normal/İyi)" selected>%85 - %94 (Normal/İyi)</option>
-                <option value="%80 - %84 (Orta)">%80 - %84 (Orta)</option>
-                <option value="%80 Altı / Servis Uyarısı Veriyor">%80 Altı / Servis Uyarısı Veriyor</option>
-                <option value="Android / Pil Sağlığı İyi">Android / Pil Sağlığı İyi</option>
-              </select>
-            </div>
-
-            <!-- Ekran Durumu -->
-            <div class="form-group">
-              <label class="form-label"><i class="fa-solid fa-display text-cyan"></i> 5. Ekran Durumu</label>
-              <select id="valScreen" class="form-control">
-                <option value="Orijinal ve Çiziksiz (Kusursuz)">Orijinal ve Çiziksiz (Kusursuz)</option>
-                <option value="Hafif Kılcal Çizikler Var">Hafif Kılcal Çizikler Var</option>
-                <option value="Kırık / Çatlak (Görüntü Var)">Kırık / Çatlak (Görüntü Var)</option>
-                <option value="Ekran Değişmiş (Yan Sanayi/Revize)">Ekran Değişmiş (Yan Sanayi/Revize)</option>
-              </select>
-            </div>
-
-            <!-- Kasa / Kozmetik Durumu -->
-            <div class="form-group">
-              <label class="form-label"><i class="fa-solid fa-shield text-cyan"></i> 6. Kasa Kozmetik Durumu</label>
-              <select id="valBody" class="form-control">
-                <option value="Sıfır Ayarında (Darbe/Ezik Yok)">Sıfır Ayarında (Darbe/Ezik Yok)</option>
-                <option value="Temiz (Normal Kullanım İzleri)">Temiz (Normal Kullanım İzleri)</option>
-                <option value="Kenarlarda Ezik veya Çizikler Var">Kenarlarda Ezik veya Çizikler Var</option>
-                <option value="Arka Cam Kırık / Kasa Hasarlı">Arka Cam Kırık / Kasa Hasarlı</option>
-              </select>
-            </div>
-
-            <!-- Kutu & Fatura -->
-            <div class="form-group">
-              <label class="form-label"><i class="fa-solid fa-box-open text-cyan"></i> 7. Kutu & Fatura Durumu</label>
-              <select id="valBoxInvoice" class="form-control">
-                <option value="Kutulu ve Faturalı">Kutulu ve Faturalı</option>
-                <option value="Sadece Kutusu Var">Sadece Kutusu Var</option>
-                <option value="Kutusu ve Faturası Yok (Sadece Cihaz)">Kutusu ve Faturası Yok (Sadece Cihaz)</option>
-              </select>
-            </div>
-
-            <!-- Müşteri Adı & Telefonu -->
-            <div class="form-group">
-              <label class="form-label"><i class="fa-solid fa-user text-cyan"></i> 8. Adınız ve Telefon Numaranız</label>
-              <div class="input-twin">
-                <input type="text" id="valCustomerName" class="form-control" placeholder="Adınız Soyadınız" required>
-                <input type="tel" id="valCustomerPhone" class="form-control" placeholder="05XX XXX XX XX" required>
-              </div>
+            <div class="gm-brand-card" data-brand="Diğer">
+              <div class="gm-brand-icon"><i class="fa-solid fa-ellipsis"></i></div>
+              <strong class="gm-brand-title">Diğer</strong>
+              <span>Huawei, Oppo, Diğer</span>
             </div>
           </div>
 
-          <!-- Canlı Değerleme & Tahmini Fiyat Kartı -->
-          <div class="live-valuation-card" id="liveValCard">
-            <div class="live-val-header">
-              <div class="val-pulse-indicator">
-                <span class="val-pulse-dot"></span>
-                <strong>Anlık Sistem Tahmini:</strong>
-              </div>
-              <span class="live-val-badge"><i class="fa-solid fa-bolt text-cyan"></i> Sedat Bey 15 Dk'da Kesin Teklifi İletir</span>
-            </div>
-            <div class="live-val-body">
-              <div class="live-val-price" id="liveValPrice">24.500 ₺ - 27.500 ₺</div>
-              <p class="live-val-desc" id="liveValDesc">Seçtiğiniz kriterlere göre cihazınızın tahmini nakit piyasa değeri. Dükkanımızda nakit veya anında IBAN transferiyle teslim alıyoruz.</p>
-            </div>
-          </div>
-
-          <!-- Varsa Ekstra Not -->
-          <div class="form-group" style="margin-top: 15px;">
-            <label class="form-label"><i class="fa-solid fa-comment-dots text-cyan"></i> Varsa Cihaz Hakkında Ekstra Notunuz (İsteğe Bağlı)</label>
-            <input type="text" id="valCustomerNotes" class="form-control" placeholder="Örn: Face ID aktif, pil orijinal, hiç içi açılmadı...">
-          </div>
-
-          <div class="form-submit-box">
-            <button type="submit" class="btn btn-whatsapp-giant" id="btnSubmitValuation">
-              <i class="fa-brands fa-whatsapp"></i> Raporu Sedat Bey'e WhatsApp'tan Gönder (15 Dk'da Nakit Teklif)
+          <div class="gm-nav-row text-center">
+            <button type="button" class="btn btn-primary btn-lg" id="btnNextToStep2">
+              Devam Et: Modeli Seç <i class="fa-solid fa-arrow-right"></i>
             </button>
-            <p class="submit-note"><i class="fa-solid fa-shield-check text-cyan"></i> Bilgileriniz doğrudan CepHane İletişim resmi WhatsApp hattına (+90 530 354 34 65) eksiksiz ekspertiz fişi olarak iletilir.</p>
           </div>
-        </form>
+        </div>
+
+        <!-- ADIM 2: MODEL SEÇİMİ -->
+        <div class="gm-wizard-pane" id="paneStep2">
+          <div class="gm-pane-top-bar">
+            <button type="button" class="gm-btn-back" id="btnBackToStep1">
+              <i class="fa-solid fa-arrow-left"></i> Marka Değiştir
+            </button>
+            <div class="gm-selected-crumb">
+              Marka: <strong id="crumbBrand">Apple</strong>
+            </div>
+          </div>
+
+          <div class="gm-pane-header text-center">
+            <span class="gm-badge-sub"><i class="fa-solid fa-magnifying-glass text-cyan"></i> 2. Adım</span>
+            <h3 class="gm-pane-title">Cihazınızın Modelini Seçin</h3>
+            <p class="gm-pane-desc">Aşağıdaki listeden tıklayabilir veya arama kutusuna yazabilirsiniz.</p>
+          </div>
+
+          <!-- Model Arama Filtresi -->
+          <div class="gm-search-wrapper">
+            <i class="fa-solid fa-magnifying-glass gm-search-icon"></i>
+            <input type="text" id="gmModelSearch" class="gm-search-input" placeholder="Model ara (örn: iPhone 13, 14 Pro, S24, 15 Pro Max...)">
+          </div>
+
+          <!-- Model Hap Kartları Grid -->
+          <div class="gm-models-grid" id="gmModelsGrid">
+            <!-- JS tarafından seçilen markaya göre dinamik doldurulur -->
+          </div>
+
+          <div class="gm-custom-model-box">
+            <span class="gm-custom-note">Modelinizi bulamadınız mı?</span>
+            <input type="text" id="gmCustomModelInput" class="form-control" placeholder="Model adını buraya elle yazın...">
+          </div>
+
+          <div class="gm-nav-row text-center">
+            <button type="button" class="btn btn-primary btn-lg" id="btnNextToStep3">
+              Devam Et: Cihaz Durumunu Seç <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ADIM 3: CİHAZ KONDİSYONU VE GETMOBIL SORULARI -->
+        <div class="gm-wizard-pane" id="paneStep3">
+          <div class="gm-pane-top-bar">
+            <button type="button" class="gm-btn-back" id="btnBackToStep2">
+              <i class="fa-solid fa-arrow-left"></i> Model Değiştir
+            </button>
+            <div class="gm-selected-crumb">
+              Seçilen Cihaz: <strong id="crumbModel">iPhone 13</strong>
+            </div>
+          </div>
+
+          <div class="gm-pane-header text-center">
+            <span class="gm-badge-sub"><i class="fa-solid fa-clipboard-check text-cyan"></i> 3. Adım</span>
+            <h3 class="gm-pane-title">Cihazın Durumunu Belirleyin</h3>
+            <p class="gm-pane-desc">Soruları işaretledikçe alacağınız nakit teklif anında şekillenir.</p>
+          </div>
+
+          <div class="gm-questions-container">
+            <!-- Soru 1: Hafıza Kapasitesi -->
+            <div class="gm-q-block">
+              <label class="gm-q-label"><i class="fa-solid fa-hard-drive text-cyan"></i> 1. Dahili Hafıza Kapasitesi</label>
+              <div class="gm-pills-row" id="pillsStorage">
+                <button type="button" class="gm-pill-btn" data-val="64 GB">64 GB</button>
+                <button type="button" class="gm-pill-btn active" data-val="128 GB">128 GB</button>
+                <button type="button" class="gm-pill-btn" data-val="256 GB">256 GB</button>
+                <button type="button" class="gm-pill-btn" data-val="512 GB">512 GB</button>
+                <button type="button" class="gm-pill-btn" data-val="1 TB">1 TB</button>
+              </div>
+            </div>
+
+            <!-- Soru 2: Pil Sağlığı -->
+            <div class="gm-q-block">
+              <label class="gm-q-label"><i class="fa-solid fa-battery-half text-cyan"></i> 2. Pil Sağlığı (%)</label>
+              <div class="gm-pills-row" id="pillsBattery">
+                <button type="button" class="gm-pill-btn active" data-val="%90 - %100 (Çok İyi)">%90 - %100 (Çok İyi)</button>
+                <button type="button" class="gm-pill-btn" data-val="%80 - %89 (Normal)">%80 - %89 (Normal)</button>
+                <button type="button" class="gm-pill-btn" data-val="%80 Altı / Servis">%80 Altı / Servis Uyarısı</button>
+                <button type="button" class="gm-pill-btn" data-val="Pil Sağlığı İyi (Android)">Android Pil İyi</button>
+              </div>
+            </div>
+
+            <!-- Soru 3: Ekran Durumu -->
+            <div class="gm-q-block">
+              <label class="gm-q-label"><i class="fa-solid fa-display text-cyan"></i> 3. Ekran Durumu</label>
+              <div class="gm-pills-row" id="pillsScreen">
+                <button type="button" class="gm-pill-btn active" data-val="Orijinal ve Çiziksiz (Kusursuz)">Orijinal & Çiziksiz (Kusursuz)</button>
+                <button type="button" class="gm-pill-btn" data-val="Hafif Kılcal Çizikler Var">Hafif Kılcal Çizikler Var</button>
+                <button type="button" class="gm-pill-btn" data-val="Kırık / Çatlak">Kırık / Çatlak (Görüntü Var)</button>
+                <button type="button" class="gm-pill-btn" data-val="Ekran Değişmiş (Yan Sanayi)">Ekran Değişmiş</button>
+              </div>
+            </div>
+
+            <!-- Soru 4: Kasa Kozmetik Durumu -->
+            <div class="gm-q-block">
+              <label class="gm-q-label"><i class="fa-solid fa-shield text-cyan"></i> 4. Kasa Kozmetik Durumu</label>
+              <div class="gm-pills-row" id="pillsBody">
+                <button type="button" class="gm-pill-btn active" data-val="Sıfır Ayarında (Darbe/Ezik Yok)">Sıfır Ayarında (Darbe/Ezik Yok)</button>
+                <button type="button" class="gm-pill-btn" data-val="Temiz (Normal Kullanım)">Temiz (Normal Kullanım)</button>
+                <button type="button" class="gm-pill-btn" data-val="Kenarlarda Ezik veya Çizik Var">Kenarlarda Ezik/Çizik Var</button>
+                <button type="button" class="gm-pill-btn" data-val="Arka Cam Kırık / Hasarlı">Arka Cam Kırık / Hasarlı</button>
+              </div>
+            </div>
+
+            <!-- Soru 5: Kutu & Fatura Durumu -->
+            <div class="gm-q-block">
+              <label class="gm-q-label"><i class="fa-solid fa-box-open text-cyan"></i> 5. Kutu & Fatura Durumu</label>
+              <div class="gm-pills-row" id="pillsBox">
+                <button type="button" class="gm-pill-btn active" data-val="Kutulu ve Faturalı">Kutulu ve Faturalı</button>
+                <button type="button" class="gm-pill-btn" data-val="Sadece Kutusu Var">Sadece Kutusu Var</button>
+                <button type="button" class="gm-pill-btn" data-val="Kutu & Fatura Yok">Kutu & Fatura Yok (Sadece Cihaz)</button>
+              </div>
+            </div>
+
+            <!-- Soru 6: Face ID & Kameralar -->
+            <div class="gm-q-block">
+              <label class="gm-q-label"><i class="fa-solid fa-camera text-cyan"></i> 6. Face ID / Parmak İzi ve Kameralar</label>
+              <div class="gm-pills-row" id="pillsCamera">
+                <button type="button" class="gm-pill-btn active" data-val="Tüm Kameralar & Face ID Sorunsuz">Kusursuz Çalışıyor</button>
+                <button type="button" class="gm-pill-btn" data-val="Face ID veya Kamera Arızalı">Face ID veya Kamera Arızalı</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="gm-nav-row text-center">
+            <button type="button" class="btn btn-primary btn-lg" id="btnNextToStep4">
+              Nakit Teklifi Hesapla & WhatsApp'a İlet <i class="fa-solid fa-bolt"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- ADIM 4: NAKİT FİYAT TEKLİFİ VE WHATSAPP'A GÖNDERME FORMU -->
+        <div class="gm-wizard-pane" id="paneStep4">
+          <div class="gm-pane-top-bar">
+            <button type="button" class="gm-btn-back" id="btnBackToStep3">
+              <i class="fa-solid fa-arrow-left"></i> Kriterleri Düzenle
+            </button>
+            <div class="gm-selected-crumb">
+              Hazırlanan Fiş: <strong id="crumbSummary">iPhone 13 • 128 GB</strong>
+            </div>
+          </div>
+
+          <!-- Canlı Nakit Teklif Kartı (Getmobil Caliber) -->
+          <div class="gm-offer-card">
+            <div class="gm-offer-badge">
+              <span class="val-pulse-dot"></span>
+              <span>CepHane İletişim Canlı Değerleme</span>
+            </div>
+            <div class="gm-offer-label">Cihazınız İçin Tahmini Nakit Teklifimiz:</div>
+            <div class="gm-offer-amount" id="gmFinalPriceDisplay">24.500 ₺ - 27.500 ₺</div>
+            <p class="gm-offer-sub">
+              Bu tutar seçtiğiniz kondisyona göre hesaplanmıştır. Esenyurt mağazamızda 15 dakikalık hızlı kontrolden sonra <strong>elden nakit</strong> veya <strong>anında IBAN transferiyle</strong> ödenir.
+            </p>
+
+            <!-- Cihaz Seçim Etiketleri Özeti -->
+            <div class="gm-tags-summary" id="gmTagsSummary">
+              <!-- JS tarafından doldurulur -->
+            </div>
+          </div>
+
+          <!-- Müşteri İletişim Formu -->
+          <form id="gmContactForm" class="gm-contact-form">
+            <h4 class="gm-contact-title"><i class="fa-solid fa-user-check text-cyan"></i> Teklifi Sedat Bey'e Onaylatmak İçin Bilgileriniz</h4>
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label"><i class="fa-solid fa-user text-cyan"></i> Adınız ve Soyadınız</label>
+                <input type="text" id="gmCustomerName" class="form-control" placeholder="Örn: Ahmet Yılmaz" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label"><i class="fa-solid fa-phone text-cyan"></i> Telefon Numaranız (WhatsApp)</label>
+                <input type="tel" id="gmCustomerPhone" class="form-control" placeholder="05XX XXX XX XX" required>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 14px;">
+              <label class="form-label"><i class="fa-solid fa-comment-dots text-cyan"></i> Cihaz Hakkında Ekstra Notunuz (İsteğe Bağlı)</label>
+              <input type="text" id="gmCustomerNotes" class="form-control" placeholder="Örn: Pil orijinal, kutu içi şarj kablosu mevcut, hiç içi açılmadı...">
+            </div>
+
+            <div class="gm-submit-wrapper">
+              <button type="submit" class="btn btn-whatsapp-giant" id="btnSubmitGmWizard">
+                <i class="fa-brands fa-whatsapp"></i> Fiyat Teklifini Sedat Bey'e WhatsApp'tan Gönder (15 Dk'da Kesin Dönüş)
+              </button>
+              <p class="submit-note">
+                <i class="fa-solid fa-shield-check text-cyan"></i> Fişiniz doğrudan CepHane İletişim Esenyurt merkez WhatsApp hattına (+90 530 354 34 65) eksiksiz olarak aktarılır.
+              </p>
+            </div>
+          </form>
+        </div>
+
       </div>
     </div>
   </section>
@@ -350,84 +481,232 @@
     </div>
   </section>
 
-  <!-- FORM 2: TAMİR & RANDEVU TAKVİMİ (İNSANSIZ, ULTRA TEKNİK GÖRSEL) -->
+  <!-- FORM 2: TEKNİK SERVİS VE GÖZÜNÜZÜN ÖNÜNDE TAMİR LABORATUVARI -->
   <section class="section-wrapper bg-alt" id="tamir-randevu">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag">Gözünüzün Önünde 30 Dk</span>
-        <h2 class="section-title">Teknik Servis <span class="gradient-text">Randevu Takvimi</span></h2>
-        <p class="section-sub">Cihazınızı ve arızayı seçin, size uygun saati belirleyin. CepHane ekibi 15 dakikada randevunuzu teyit etsin.</p>
+        <span class="section-tag"><i class="fa-solid fa-screwdriver-wrench text-cyan"></i> Gözünüzün Önünde 20-30 Dk Teslim</span>
+        <h2 class="section-title">Apple & Akıllı Telefon <span class="gradient-text">Teknik Servis Laboratuvarı</span></h2>
+        <p class="section-sub">Telefonunuz arka odaya gitmez; verileriniz silinmeden, şifrenizi vermenize gerek kalmadan bankoda çayınızı yudumlarken gözünüzün önünde tamir edilir.</p>
       </div>
 
-      <div class="repair-grid">
+      <!-- 4 Temel Müşteri Güven Direği (Tamirde Ezber Bozan Standartlar) -->
+      <div class="repair-trust-pillars">
+        <div class="repair-pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-eye text-cyan"></i></div>
+          <h4>Gözünüzün Önünde Tamir</h4>
+          <p>Cihazınız gizli odalara gitmez. Bankonun karşısında ustamız çalışırken birebir izleyebilirsiniz.</p>
+        </div>
+
+        <div class="repair-pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-lock text-cyan"></i></div>
+          <h4>Verileriniz %100 Güvende</h4>
+          <p>Telefonunuz sıfırlanmaz. Fotoğraf, mesaj ve uygulamalarınıza dokunulmaz; şifrenizi vermek zorunda değilsiniz.</p>
+        </div>
+
+        <div class="repair-pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-shield-check text-cyan"></i></div>
+          <h4>6 Ay Firma Kaşeli Garanti</h4>
+          <p>Takılan tüm ekran, batarya ve entegreler 6 ay CepHane yazılı ve kaşeli servis garantimiz altındadır.</p>
+        </div>
+
+        <div class="repair-pillar-card">
+          <div class="pillar-icon"><i class="fa-solid fa-bolt text-cyan"></i></div>
+          <h4>20-30 Dakikada Teslim</h4>
+          <p>Ekran değişimi 30 dk, pil değişimi 20 dk, lazer arka cam 45 dk. Günlerce cihazsız kalmazsınız.</p>
+        </div>
+      </div>
+
+      <!-- İNTERAKTİF POPÜLER TAMİR HİZMET KATALOĞU (1 TIKLA SEÇ) -->
+      <div class="repair-catalog-section">
+        <div class="repair-catalog-header">
+          <h3><i class="fa-solid fa-screwdriver-wrench text-cyan"></i> Popüler Göz Önünde Servis İşlemleri</h3>
+          <p>İşleminizi seçin; tahmini servis süresi ve teknik detaylar otomatik olarak randevu formuna yansısın.</p>
+        </div>
+
+        <div class="repair-catalog-grid">
+          <!-- 1: Ekran Değişimi -->
+          <div class="repair-catalog-card active" data-issue="Ekran Değişimi (Orijinal OLED / TrueTone Aktarımlı) - ~30 Dk" data-time="~30 Dakika (Göz Önünde)">
+            <div class="r-cat-top">
+              <span class="r-cat-badge"><i class="fa-solid fa-bolt"></i> ~30 Dk</span>
+              <i class="fa-solid fa-mobile-screen r-cat-icon"></i>
+            </div>
+            <h4>Ekran Değişimi</h4>
+            <p>Orijinal OLED / Super Retina panel. TrueTone çipi ve dokunmatik seri numarası özel programlayıcıyla aktarılır.</p>
+            <div class="r-cat-features">
+              <span><i class="fa-solid fa-check text-cyan"></i> TrueTone Aktarımı</span>
+              <span><i class="fa-solid fa-check text-cyan"></i> 6 Ay Kaşeli Garanti</span>
+            </div>
+            <button type="button" class="btn-select-repair">Bu İşlemi Seç <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+
+          <!-- 2: Batarya & Pil Değişimi -->
+          <div class="repair-catalog-card" data-issue="Batarya & Pil Değişimi (%100 Sağlık / Uyarı Vermez) - ~20 Dk" data-time="~20 Dakika (Göz Önünde)">
+            <div class="r-cat-top">
+              <span class="r-cat-badge"><i class="fa-solid fa-bolt"></i> ~20 Dk</span>
+              <i class="fa-solid fa-battery-full r-cat-icon"></i>
+            </div>
+            <h4>Batarya & Pil Değişimi</h4>
+            <p>%100 Pil sağlığı. Orijinal BMS lehimlenerek Apple "Bilinmeyen Parça" veya servis uyarısı tamamen engellenir.</p>
+            <div class="r-cat-features">
+              <span><i class="fa-solid fa-check text-cyan"></i> %100 Sağlık Göstergesi</span>
+              <span><i class="fa-solid fa-check text-cyan"></i> Çip Aktarımı</span>
+            </div>
+            <button type="button" class="btn-select-repair">Bu İşlemi Seç <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+
+          <!-- 3: Lazer Arka Cam -->
+          <div class="repair-catalog-card" data-issue="Lazerle Arka Cam & Kasa Yenileme (Kasa Açılmadan) - ~45 Dk" data-time="~45 Dakika (Lazer Laboratuvarı)">
+            <div class="r-cat-top">
+              <span class="r-cat-badge"><i class="fa-solid fa-bolt"></i> ~45 Dk</span>
+              <i class="fa-solid fa-bolt-lightning r-cat-icon"></i>
+            </div>
+            <h4>Lazerle Arka Cam</h4>
+            <p>Kasa açılmadan endüstriyel fiber lazer ışını ile kırık cam sökülür; fabrikasyon sıfır arka kapak preslenir.</p>
+            <div class="r-cat-features">
+              <span><i class="fa-solid fa-check text-cyan"></i> Kasa Açılmaz</span>
+              <span><i class="fa-solid fa-check text-cyan"></i> MagSafe Korunur</span>
+            </div>
+            <button type="button" class="btn-select-repair">Bu İşlemi Seç <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+
+          <!-- 4: Şarj Soketi & Mikrofon -->
+          <div class="repair-catalog-card" data-issue="Şarj Soketi / Ahize / Mikrofon Cızırtı Temizliği - ~20 Dk" data-time="~20 Dakika (Göz Önünde)">
+            <div class="r-cat-top">
+              <span class="r-cat-badge"><i class="fa-solid fa-bolt"></i> ~20 Dk</span>
+              <i class="fa-solid fa-plug r-cat-icon"></i>
+            </div>
+            <h4>Soket & Ses Onarımı</h4>
+            <p>Hızlı şarj temassızlığı, kablo oynaması, ahize cızırtısı ve mikrofondan ses gitmeme sorunları 20 dk'da çözülür.</p>
+            <div class="r-cat-features">
+              <span><i class="fa-solid fa-check text-cyan"></i> Orijinal Flex Kablo</span>
+              <span><i class="fa-solid fa-check text-cyan"></i> Ses Odası Temizliği</span>
+            </div>
+            <button type="button" class="btn-select-repair">Bu İşlemi Seç <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+
+          <!-- 5: Kamera & Safir Cam -->
+          <div class="repair-catalog-card" data-issue="Kamera & Safir Lens Camı Değişimi (OIS Odak Titreme) - ~30 Dk" data-time="~30 Dakika (Göz Önünde)">
+            <div class="r-cat-top">
+              <span class="r-cat-badge"><i class="fa-solid fa-bolt"></i> ~30 Dk</span>
+              <i class="fa-solid fa-camera r-cat-icon"></i>
+            </div>
+            <h4>Kamera & Lens Camı</h4>
+            <p>Kamera titremesi (OIS arızası), odaklanamama ve kırık dış safir lens camı tozsuz ortamda yenilenir.</p>
+            <div class="r-cat-features">
+              <span><i class="fa-solid fa-check text-cyan"></i> Safir Çizilmez Cam</span>
+              <span><i class="fa-solid fa-check text-cyan"></i> 4K/60FPS Test</span>
+            </div>
+            <button type="button" class="btn-select-repair">Bu İşlemi Seç <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+
+          <!-- 6: Anakart & Çip Onarımı -->
+          <div class="repair-catalog-card" data-issue="Sıvı Teması Kurtarma veya Anakart Çip Onarımı - İnceleme" data-time="Aynı Gün İnceleme (Mikroskop Altı)">
+            <div class="r-cat-top">
+              <span class="r-cat-badge"><i class="fa-solid fa-microscope"></i> Bionic & Çip</span>
+              <i class="fa-solid fa-microchip r-cat-icon"></i>
+            </div>
+            <h4>Anakart & Bionic Çip</h4>
+            <p>Açılmayan cihazlar, sıvı teması, şebeke ve Face ID entegre arızaları termal kamera ve mikroskopla onarılır.</p>
+            <div class="r-cat-features">
+              <span><i class="fa-solid fa-check text-cyan"></i> Termal Teşhis</span>
+              <span><i class="fa-solid fa-check text-cyan"></i> %100 Veri Kurtarma</span>
+            </div>
+            <button type="button" class="btn-select-repair">Bu İşlemi Seç <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="repair-grid" style="margin-top: 40px;">
         <div class="repair-image-side">
           <img src="assets/repair_lab.jpg" alt="CepHane Hassas Lehim ve Ekran Onarım Laboratuvarı" class="repair-img">
           <div class="repair-badges-box">
-            <div class="r-badge"><i class="fa-solid fa-microchip text-cyan"></i> Mikroskop Altında Çip & Anakart Onarımı</div>
-            <div class="r-badge"><i class="fa-solid fa-bolt text-cyan"></i> Ortalama 30 Dakika İşlem Süresi</div>
-            <div class="r-badge"><i class="fa-solid fa-shield-halved text-cyan"></i> 6 Ay Yazılı Servis Garantisi</div>
+            <div class="r-badge"><i class="fa-solid fa-microchip text-cyan"></i> Mikroskop Altında Çip & Bionic Anakart Onarımı</div>
+            <div class="r-badge"><i class="fa-solid fa-bolt text-cyan"></i> Lazerle Kasa Açmadan Arka Cam Yenileme</div>
+            <div class="r-badge"><i class="fa-solid fa-shield-halved text-cyan"></i> Orijinal TrueTone & Pil Sağlığı Aktarımı</div>
           </div>
         </div>
 
         <div class="repair-form-side">
           <form id="repairForm" class="form-card compact-card">
-            <h3 class="form-title"><i class="fa-solid fa-calendar-days text-cyan"></i> Hızlı Randevu Formu</h3>
+            <h3 class="form-title"><i class="fa-solid fa-calendar-check text-cyan"></i> Hızlı Tamir Randevusu & Fiyat Fişi</h3>
 
             <!-- Cihaz & Model -->
             <div class="form-group">
-              <label class="form-label">Tamir Edilecek Cihaz & Model</label>
-              <input type="text" id="repModel" class="form-control" placeholder="Örn: iPhone 11 Pro Max, iPhone 12, S22..." required>
+              <label class="form-label"><i class="fa-solid fa-mobile-screen text-cyan"></i> Tamir Edilecek Cihaz & Model</label>
+              <input type="text" id="repModel" list="popularModels" class="form-control" placeholder="Örn: iPhone 13, 14 Pro Max, S23 Ultra, 11..." required>
             </div>
 
-            <!-- Arıza Türü -->
+            <!-- Arıza Türü Seçimi -->
             <div class="form-group">
-              <label class="form-label">Arıza / İstenen İşlem</label>
+              <label class="form-label"><i class="fa-solid fa-wrench text-cyan"></i> Yapılacak İşlem / Arıza Türü</label>
               <select id="repIssue" class="form-control" required>
-                <option value="Ekran Değişimi (Orijinal / A+ Kalite) - ~30 Dk">Ekran Değişimi (Orijinal / A+ Kalite) - ~30 Dk</option>
-                <option value="Batarya & Pil Değişimi (%100 Sağlık) - ~20 Dk">Batarya & Pil Değişimi (%100 Sağlık) - ~20 Dk</option>
-                <option value="Lazerle Arka Cam / Kasa Yenileme - ~45 Dk">Lazerle Arka Cam / Kasa Yenileme - ~45 Dk</option>
-                <option value="Şarj Soketi / Hoparlör / Ahize Temizliği - ~20 Dk">Şarj Soketi / Hoparlör / Ahize Temizliği - ~20 Dk</option>
-                <option value="Sıvı Teması veya Anakart / Çip Arızası - İnceleme">Sıvı Teması veya Anakart / Çip Arızası - İnceleme</option>
-                <option value="Kamera / Cam Değişimi - ~30 Dk">Kamera / Cam Değişimi - ~30 Dk</option>
+                <option value="Ekran Değişimi (Orijinal OLED / TrueTone Aktarımlı) - ~30 Dk">🖥️ Ekran Değişimi (Orijinal OLED / TrueTone Aktarımlı) - ~30 Dk</option>
+                <option value="Batarya & Pil Değişimi (%100 Sağlık / Uyarı Vermez) - ~20 Dk">🔋 Batarya & Pil Değişimi (%100 Sağlık / Uyarı Vermez) - ~20 Dk</option>
+                <option value="Lazerle Arka Cam & Kasa Yenileme (Kasa Açılmadan) - ~45 Dk">⚡ Lazerle Arka Cam & Kasa Yenileme - ~45 Dk</option>
+                <option value="Şarj Soketi / Ahize / Mikrofon Cızırtı Temizliği - ~20 Dk">🔌 Şarj Soketi / Ahize / Mikrofon Onarımı - ~20 Dk</option>
+                <option value="Kamera & Safir Lens Camı Değişimi (OIS Odak Titreme) - ~30 Dk">📸 Kamera & Safir Lens Camı Değişimi - ~30 Dk</option>
+                <option value="Sıvı Teması Kurtarma veya Anakart Çip Onarımı - İnceleme">🔬 Sıvı Teması veya Anakart / Şarj Entegresi Onarımı</option>
               </select>
             </div>
 
+            <!-- Canlı Süre & Garanti Bilgi Rozeti -->
+            <div class="repair-service-banner" id="repairBanner">
+              <div class="rep-banner-item">
+                <i class="fa-solid fa-clock text-cyan"></i>
+                <div>
+                  <strong>Tahmini İşlem Süresi:</strong>
+                  <span id="repTimeEst">~20 - 30 Dakika (Göz Önünde)</span>
+                </div>
+              </div>
+              <div class="rep-banner-item">
+                <i class="fa-solid fa-shield text-cyan"></i>
+                <div>
+                  <strong>Servis Güvencesi:</strong>
+                  <span>6 Ay CepHane Firma Garantili</span>
+                </div>
+              </div>
+            </div>
+
             <!-- Randevu Tarihi ve Saati -->
-            <div class="form-grid-2">
+            <div class="form-grid-2" style="margin-top: 14px;">
               <div class="form-group">
-                <label class="form-label">Randevu Günü</label>
+                <label class="form-label"><i class="fa-solid fa-calendar text-cyan"></i> Randevu Günü</label>
                 <select id="repDay" class="form-control">
-                  <option value="Bugün">Bugün</option>
+                  <option value="Bugün (En Hızlı)">Bugün (En Hızlı)</option>
                   <option value="Yarın">Yarın</option>
-                  <option value="Hafta İçi">Hafta İçi Uygun Bir Gün</option>
-                  <option value="Cumartesi">Cumartesi</option>
+                  <option value="Hafta İçi Uygun Bir Gün">Hafta İçi Uygun Bir Gün</option>
+                  <option value="Hafta Sonu (Cumartesi / Pazar)">Hafta Sonu (Cumartesi / Pazar)</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label class="form-label">Tercih Edilen Saat Aralığı</label>
+                <label class="form-label"><i class="fa-solid fa-clock text-cyan"></i> Tercih Edilen Saat</label>
                 <select id="repTime" class="form-control">
                   <option value="10:00 - 12:00 (Sabah)">10:00 - 12:00 (Sabah)</option>
                   <option value="12:00 - 14:00 (Öğle)">12:00 - 14:00 (Öğle)</option>
                   <option value="14:00 - 16:30 (Öğleden Sonra)" selected>14:00 - 16:30 (Öğleden Sonra)</option>
                   <option value="16:30 - 19:00 (Akşamüstü)">16:30 - 19:00 (Akşamüstü)</option>
-                  <option value="19:00 - 21:00 (Akşam)">19:00 - 21:00 (Akşam)</option>
+                  <option value="19:00 - 22:00 (Akşam)">19:00 - 22:00 (Akşam)</option>
                 </select>
               </div>
             </div>
 
             <!-- Müşteri Bilgileri -->
-            <div class="form-group">
-              <label class="form-label">İletişim Bilgileriniz</label>
+            <div class="form-group" style="margin-top: 14px;">
+              <label class="form-label"><i class="fa-solid fa-user text-cyan"></i> İletişim Bilgileriniz</label>
               <div class="input-twin">
                 <input type="text" id="repName" class="form-control" placeholder="Adınız Soyadınız" required>
                 <input type="tel" id="repPhone" class="form-control" placeholder="05XX XXX XX XX" required>
               </div>
             </div>
 
-            <button type="submit" class="btn btn-whatsapp-giant">
-              <i class="fa-brands fa-whatsapp"></i> Randevuyu WhatsApp'tan Onaylat
-            </button>
+            <div class="form-submit-box" style="margin-top: 24px;">
+              <button type="submit" class="btn btn-whatsapp-giant" id="btnSubmitRepair">
+                <i class="fa-brands fa-whatsapp"></i> Tamir Fişini Sedat Usta'ya Gönder (15 Dk'da Randevu Teyidi)
+              </button>
+              <p class="submit-note"><i class="fa-solid fa-circle-check text-cyan"></i> Talebiniz doğrudan CepHane İletişim teknik servis hattına iletilir ve randevu saatiniz anında teyit edilir.</p>
+            </div>
           </form>
         </div>
       </div>
@@ -702,59 +981,145 @@
         <button class="modal-x-btn" id="closeHwModalBtn">&times;</button>
       </div>
 
-      <p style="color: var(--titanium-silver); font-size: 14px; margin-bottom: 20px;">
-        Telefonunuzun ekran dokunmatiğini ve hoparlörünü test edin. Alacağınız ekspertiz puanı Sedat Bey'e gidecek fiyat raporuna otomatik eklenecektir.
-      </p>
+      <div class="hw-lab-header">
+        <p style="color: var(--titanium-silver); font-size: 14px; margin-bottom: 20px;">
+          Telefonunuzun donanımını adım adım canlı test edin. Alacağınız ekspertiz puanı ve teknik sağlık raporu doğrudan Sedat Bey'e gidecek fiyat teklifine işlenecektir.
+        </p>
+
+        <!-- 5 Test Sekmesi / Göstergesi -->
+        <div class="hw-tabs-strip">
+          <div class="hw-tab-btn active" data-tab="touch"><i class="fa-solid fa-fingerprint"></i> Dokunmatik</div>
+          <div class="hw-tab-btn" data-tab="pixel"><i class="fa-solid fa-eye"></i> Ölü Piksel</div>
+          <div class="hw-tab-btn" data-tab="sound"><i class="fa-solid fa-volume-high"></i> Hoparlör</div>
+          <div class="hw-tab-btn" data-tab="vibe"><i class="fa-solid fa-mobile-screen"></i> Titreşim</div>
+          <div class="hw-tab-btn" data-tab="gyro"><i class="fa-solid fa-compass"></i> Jiroskop</div>
+        </div>
+      </div>
 
       <div class="hw-test-steps">
-        <!-- Test 1: Dokunmatik Ekran Izgarası -->
-        <div class="hw-step-box">
+        <!-- 1. Dokunmatik Ekran Testi (24 Hücreli Hassas Grid) -->
+        <div class="hw-step-box hw-pane-box active" id="hwPaneTouch">
           <div class="hw-step-title">
             <i class="fa-solid fa-fingerprint text-cyan"></i>
-            <span>1. Dokunmatik Ekran Hassasiyet Testi</span>
-            <span class="hw-step-status" id="touchStatus">Karelere Dokunun</span>
+            <span>1. Dokunmatik Ekran & Hassasiyet Testi</span>
+            <span class="hw-step-status" id="touchStatus">Karelere Parmağınızla Dokunun (0/24)</span>
           </div>
-          <div class="touch-test-grid" id="touchGrid">
-            <!-- 12 Test Kutusu (JS ile oluşturulur veya statik) -->
-            <div class="touch-cell" data-id="1">1</div>
-            <div class="touch-cell" data-id="2">2</div>
-            <div class="touch-cell" data-id="3">3</div>
-            <div class="touch-cell" data-id="4">4</div>
-            <div class="touch-cell" data-id="5">5</div>
-            <div class="touch-cell" data-id="6">6</div>
-            <div class="touch-cell" data-id="7">7</div>
-            <div class="touch-cell" data-id="8">8</div>
-            <div class="touch-cell" data-id="9">9</div>
-            <div class="touch-cell" data-id="10">10</div>
-            <div class="touch-cell" data-id="11">11</div>
-            <div class="touch-cell" data-id="12">12</div>
+          <p class="hw-step-desc">Parmağınızı ekrandaki tüm karelerin üzerinden kaydırarak yeşile/maviye dönüştürün.</p>
+          <div class="touch-test-grid-24" id="touchGrid">
+            <!-- 24 Hücre JS ile doldurulur -->
+          </div>
+          <div class="hw-step-action-row">
+            <button type="button" class="btn btn-sm btn-outline" id="btnResetTouch">Sıfırla</button>
+            <button type="button" class="btn btn-sm btn-primary" id="btnNextHwTab1">Sıradaki Test: Ölü Piksel <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
 
-        <!-- Test 2: Hoparlör & Ahize Akustik Testi -->
-        <div class="hw-step-box">
+        <!-- 2. Ölü Piksel & Ekran Renk Testi -->
+        <div class="hw-step-box hw-pane-box" id="hwPanePixel">
+          <div class="hw-step-title">
+            <i class="fa-solid fa-eye text-cyan"></i>
+            <span>2. Ölü Piksel & OLED Renk Tarama Testi</span>
+            <span class="hw-step-status" id="pixelStatus">Bekleniyor</span>
+          </div>
+          <p class="hw-step-desc">Aşağıdaki renk butonlarına basarak ekranınızda siyah nokta (ölü piksel), leke veya sararma olup olmadığını kontrol edin.</p>
+          
+          <div class="pixel-color-preview-box" id="pixelPreviewBox" style="background: #ff0055;">
+            <span id="pixelPreviewText">Kırmızı Renk Testi</span>
+          </div>
+
+          <div class="pixel-btn-row">
+            <button type="button" class="pixel-color-btn" style="background:#ff0055;" data-color="#ff0055" data-name="Kırmızı">Kırmızı</button>
+            <button type="button" class="pixel-color-btn" style="background:#00e5ff;" data-color="#00e5ff" data-name="Camgöbeği">Cyan</button>
+            <button type="button" class="pixel-color-btn" style="background:#00ff66;" data-color="#00ff66" data-name="Yeşil">Yeşil</button>
+            <button type="button" class="pixel-color-btn" style="background:#ffffff; color:#000;" data-color="#ffffff" data-name="Beyaz">Beyaz</button>
+            <button type="button" class="pixel-color-btn" style="background:#000000; border:1px solid #fff;" data-color="#000000" data-name="Siyah">Siyah</button>
+          </div>
+
+          <div class="hw-step-action-row" style="margin-top: 15px;">
+            <button type="button" class="btn btn-sm btn-primary" id="btnPassPixel">
+              <i class="fa-solid fa-check"></i> Ekranda Ölü Piksel Yok (Kusursuz)
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Hoparlör & Ahize Akustik Testi -->
+        <div class="hw-step-box hw-pane-box" id="hwPaneSound">
           <div class="hw-step-title">
             <i class="fa-solid fa-volume-high text-cyan"></i>
-            <span>2. Hoparlör & Ahize Frekans Testi (1000 Hz)</span>
+            <span>3. Hoparlör & Ahize Akustik Frekans Testi</span>
             <span class="hw-step-status" id="audioStatus">Bekleniyor</span>
           </div>
+          <p class="hw-step-desc">Test seslerini çalarak hem alt ana hoparlörü hem üst ahize netliğini doğrulayın.</p>
+          
           <div class="audio-test-row">
-            <button type="button" class="btn btn-sm btn-outline" id="btnPlaySound">
-              <i class="fa-solid fa-play"></i> Test Sesini Çal (1kHz)
+            <button type="button" class="btn btn-sm btn-outline" id="btnPlaySoundLow">
+              <i class="fa-solid fa-play"></i> 440 Hz Bas Tonu Çal
             </button>
+            <button type="button" class="btn btn-sm btn-outline" id="btnPlaySoundHigh">
+              <i class="fa-solid fa-play"></i> 1500 Hz Ahize Tiz Tonu Çal
+            </button>
+          </div>
+
+          <div class="hw-step-action-row" style="margin-top: 15px;">
             <button type="button" class="btn btn-sm btn-primary" id="btnAudioPassed" disabled>
-              <i class="fa-solid fa-check"></i> Sesi Net Duydum (Sağlam)
+              <i class="fa-solid fa-check"></i> Sesleri Net ve Cızırtısız Duydum
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Titreşim / Taptic Engine Testi -->
+        <div class="hw-step-box hw-pane-box" id="hwPaneVibe">
+          <div class="hw-step-title">
+            <i class="fa-solid fa-mobile-screen text-cyan"></i>
+            <span>4. Titreşim & Taptic Engine Motoru Testi</span>
+            <span class="hw-step-status" id="vibeStatus">Bekleniyor</span>
+          </div>
+          <p class="hw-step-desc">Cihazınızın titreşim motorunun tepki verip vermediğini test edin.</p>
+          
+          <div class="audio-test-row">
+            <button type="button" class="btn btn-sm btn-outline" id="btnTriggerVibe">
+              <i class="fa-solid fa-bolt"></i> Titreşim Motorunu Çalıştır
+            </button>
+          </div>
+
+          <div class="hw-step-action-row" style="margin-top: 15px;">
+            <button type="button" class="btn btn-sm btn-primary" id="btnPassVibe">
+              <i class="fa-solid fa-check"></i> Titreşimi Hissettim (Sorunsuz)
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Jiroskop & Hareket Sensörü Testi -->
+        <div class="hw-step-box hw-pane-box" id="hwPaneGyro">
+          <div class="hw-step-title">
+            <i class="fa-solid fa-compass text-cyan"></i>
+            <span>5. Jiroskop & Eğim Sensörü Testi</span>
+            <span class="hw-step-status" id="gyroStatus">Telefonu Hareket Ettirin</span>
+          </div>
+          <p class="hw-step-desc">Telefonunuzu sağa-sola eğin; aşağıdaki dijital su terazisi hareket etmelidir.</p>
+          
+          <div class="gyro-bubble-stage">
+            <div class="gyro-crosshair"></div>
+            <div class="gyro-bubble" id="gyroBubble"></div>
+          </div>
+          <div class="gyro-readings text-center" id="gyroReadings">X: 0° | Y: 0° | Z: 0°</div>
+
+          <div class="hw-step-action-row" style="margin-top: 15px;">
+            <button type="button" class="btn btn-sm btn-primary" id="btnPassGyro">
+              <i class="fa-solid fa-check"></i> Sensör Başarıyla Çalışıyor
             </button>
           </div>
         </div>
       </div>
 
-      <!-- Test Skoru Özeti -->
+      <!-- Test Skoru Özeti & Tamamlanma Sertifikası -->
       <div class="hw-score-card" id="hwScoreCard" style="display: none;">
-        <div class="hw-score-badge"><i class="fa-solid fa-award"></i> CepHane Ekspertiz Skoru: <span id="hwScoreValue">%100</span></div>
-        <p>Ekran dokunmatiğiniz ve hoparlör frekansınız kusursuz çalışıyor. Bu sonuç Sedat Bey'e gönderilecek teklif fişine başarıyla işlendi!</p>
+        <div class="hw-score-badge">
+          <i class="fa-solid fa-circle-check text-cyan"></i> CepHane Doğrulanmış Cihaz Skoru: <span id="hwScoreValue">%98 (A+ Kusursuz)</span>
+        </div>
+        <p>Ekran dokunmatiği, ölü piksel, hoparlör frekansı ve hareket sensörleri başarıyla doğrulandı. Bu rapor Sedat Bey'e gönderilecek nakit teklif fişine iliştirildi!</p>
         <button type="button" class="btn btn-whatsapp-giant w-full" id="btnApplyTestToValuation">
-          <i class="fa-solid fa-arrow-up"></i> Fiyat Formuna Git & Teklifi Al
+          <i class="fa-solid fa-arrow-up"></i> Bu Raporla Fiyat Al & WhatsApp'a Aktar
         </button>
       </div>
     </div>
@@ -762,11 +1127,14 @@
 
   <!-- Mobile Floating Sticky Bar -->
   <div class="mobile-sticky-bar">
-    <a href="tel:05303543465" class="sticky-btn sticky-call">
-      <i class="fa-solid fa-phone"></i> Hemen Ara
+    <a href="#tamir-randevu" class="sticky-btn sticky-repair">
+      <i class="fa-solid fa-screwdriver-wrench"></i> 30 Dk Tamir
     </a>
-    <a href="https://wa.me/905303543465?text=Merhaba%20CepHane%20İletişim,%20telefonum%20hakkında%20fiyat%20almak%20istiyorum." target="_blank" class="sticky-btn sticky-whatsapp">
-      <i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Yaz
+    <a href="#degerleme" class="sticky-btn sticky-tradein">
+      <i class="fa-solid fa-calculator"></i> Telefonunu Sat
+    </a>
+    <a href="https://wa.me/905303543465?text=Merhaba%20Sedat%20Bey,%20CepHane%20İletişim%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="sticky-btn sticky-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
     </a>
   </div>
 
