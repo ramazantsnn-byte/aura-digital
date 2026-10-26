@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CepHane İletişim Esenyurt | Değerinde Telefon Alım & Hızlı Teknik Servis</title>
-  <meta name="description" content="CepHane İletişim Esenyurt: Telefonunuzu 15 dakikada nakite çevirin veya 30 dakikada garantili tamir ettirin. WhatsApp: 0530 354 34 65">
+  <title>CepHane İletişim Esenyurt | Telefonunu Değerinde Sat & 30 Dk Göz Önünde Tamir</title>
+  <meta name="description" content="CepHane İletişim Esenyurt: Getmobil & EasyCep standardında telefonunu 15 dakikada en yüksek nakite çevir veya gözünün önünde 20-30 dakikada garantili tamir ettir. Sedat Usta: 0530 354 34 65">
   
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,13 +16,23 @@
 </head>
 <body>
 
+  <!-- Background Ambient Glow Mesh -->
+  <div class="ambient-glow ambient-glow-top"></div>
+  <div class="ambient-glow ambient-glow-center"></div>
+  <div class="ambient-glow ambient-glow-bottom"></div>
+
   <!-- Top Announcement Bar -->
   <div class="top-banner">
     <div class="container top-banner-content">
-      <span><i class="fa-solid fa-bolt text-cyan"></i> <strong>15-20 Dakikada Geri Dönüş:</strong> Formu doldurun, CepHane uzman ekibinden anında en yüksek nakit teklifini alın.</span>
+      <div class="top-badge-pulse">
+        <span class="live-dot-green"></span>
+        <span><strong>Esenyurt CepHane İletişim:</strong> 15 Dk'da Nakit Ödeme & 30 Dk'da Göz Önünde Garantili Tamir</span>
+      </div>
       <div class="top-contacts">
-        <a href="tel:05303543465"><i class="fa-solid fa-phone"></i> 0530 354 34 65</a>
-        <a href="https://wa.me/905303543465" target="_blank"><i class="fa-brands fa-whatsapp text-whatsapp"></i> WhatsApp Hızlı Destek</a>
+        <a href="tel:05303543465"><i class="fa-solid fa-phone text-cyan"></i> 0530 354 34 65</a>
+        <a href="https://wa.me/905303543465?text=Merhaba%20Sedat%20Bey,%20bilgi%20almak%20istiyorum." target="_blank" class="top-wa-link">
+          <i class="fa-brands fa-whatsapp text-whatsapp"></i> WhatsApp Hızlı Danışma
+        </a>
       </div>
     </div>
   </div>
@@ -31,20 +41,20 @@
   <header class="navbar-wrapper">
     <nav class="container navbar">
       <a href="#hero" class="nav-brand">
-        <img src="assets/logo.png" alt="CepHane İletişim" class="brand-logo">
+        <img src="assets/logo.png" alt="CepHane İletişim Logo" class="brand-logo">
         <div class="brand-text">
           <span class="brand-name">Cep<span class="text-cyan">Hane</span></span>
-          <span class="brand-tag">İletişim & Teknik Servis</span>
+          <span class="brand-tag">Esenyurt Apple & Akıllı Telefon</span>
         </div>
       </a>
 
       <div class="nav-links">
-        <a href="#degerleme" class="nav-highlight"><i class="fa-solid fa-calculator"></i> Telefonunu Sat (Nakit)</a>
-        <a href="#tamir-randevu"><i class="fa-solid fa-calendar-check"></i> Tamir Randevusu</a>
-        <a href="#ekspertiz-360"><i class="fa-solid fa-arrows-rotate text-cyan"></i> 360° Ekspertiz</a>
+        <a href="#degerleme" class="nav-highlight"><i class="fa-solid fa-hand-holding-dollar"></i> Telefonunu Sat</a>
+        <a href="#tamir-randevu" class="nav-repair-link"><i class="fa-solid fa-screwdriver-wrench text-cyan"></i> 30 Dk Tamir</a>
+        <a href="#donanim-testi"><i class="fa-solid fa-microchip"></i> Donanım Testi</a>
         <a href="#magaza"><i class="fa-solid fa-store"></i> Mağazamız</a>
         <a href="#vitrin">Cihaz Vitrini</a>
-        <a href="#iletisim">Konum & İletişim</a>
+        <a href="#iletisim">İletişim & Konum</a>
       </div>
 
       <div class="nav-actions">
@@ -52,11 +62,11 @@
           <i class="fa-solid fa-screwdriver-wrench text-cyan"></i> 30 Dk Tamir
         </a>
         <a href="#degerleme" class="btn btn-primary">
-          <i class="fa-solid fa-money-bill-wave"></i> Telefonunu Sat
+          <i class="fa-solid fa-calculator"></i> Telefonunu Sat
         </a>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menü">
         <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
@@ -64,37 +74,39 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-drawer" id="mobileDrawer">
-    <a href="#degerleme" class="mobile-nav-link text-cyan"><i class="fa-solid fa-calculator"></i> Telefonunu Nakite Çevir</a>
-    <a href="#tamir-randevu" class="mobile-nav-link"><i class="fa-solid fa-calendar-check"></i> 30 Dk Tamir Randevusu Al</a>
-    <a href="#ekspertiz-360" class="mobile-nav-link"><i class="fa-solid fa-arrows-rotate"></i> 360° Cihaz İnceleme</a>
+    <a href="#degerleme" class="mobile-nav-link text-cyan"><i class="fa-solid fa-hand-holding-dollar"></i> Telefonunu Sat (Nakit)</a>
+    <a href="#tamir-randevu" class="mobile-nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> 30 Dk Tamir Randevusu</a>
+    <a href="#donanim-testi" class="mobile-nav-link"><i class="fa-solid fa-microchip"></i> Canlı Donanım Ekspertizi</a>
     <a href="#magaza" class="mobile-nav-link"><i class="fa-solid fa-store"></i> Mağazamız & Google Fotoğrafları</a>
     <a href="#vitrin" class="mobile-nav-link"><i class="fa-solid fa-mobile-screen"></i> Vitrindeki Cihazlar</a>
     <a href="#iletisim" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> İletişim & Konum</a>
     <a href="tel:05303543465" class="btn btn-primary w-full"><i class="fa-solid fa-phone"></i> Hemen Ara (0530 354 34 65)</a>
   </div>
 
-  <!-- Hero Section -->
+  <!-- HERO SECTION -->
   <section class="hero-section" id="hero">
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          <span>Esenyurt CepHane İletişim & Apple Laboratuvarı</span>
+          <span>Esenyurt'un En Güvenilir Apple & Telefon Merkezi</span>
         </div>
+        
         <h1 class="hero-title">
-          Telefonunu <span class="text-cyan">30 Dk'da Gözünün Önünde Tamir</span> Ettir veya <span class="gradient-text">Değerinde Sat</span>.
+          Telefonunu <span class="gradient-text">Değerinde Sat</span> veya <span class="text-cyan">30 Dk'da Gözünün Önünde Tamir</span> Ettir.
         </h1>
+        
         <p class="hero-desc">
-          Verileriniz silinmeden, şifre vermenize gerek kalmadan <strong>gözünüzün önünde 20-30 dakikada orijinal parça tamiri</strong>. 6 Ay CepHane yazılı garantisi veya eski telefonunuza anında en yüksek nakit ödeme.
+          Verileriniz silinmeden, şifrenizi vermek zorunda kalmadan <strong>bankoda çayınızı yudumlarken 20-30 dakikada gözünüzün önünde tamir</strong>. Ya da eski telefonunuza 15 dakikada en yüksek piyasa nakit teklifini anında elden alın.
         </p>
 
-        <!-- Hızlı Hizmet Seçici (Tamir & Satış Öne Çıkarma) -->
+        <!-- İkili Hızlı Seçici (Tamir vs Satış) -->
         <div class="hero-dual-selector">
           <a href="#tamir-randevu" class="hero-selector-card hero-repair-card">
             <div class="selector-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
             <div class="selector-text">
               <strong>Hemen Tamir Ettir</strong>
-              <small>Ekran • Batarya • Kasa • 30 Dk</small>
+              <small>Ekran • Batarya • Kasa • 30 Dk Teslim</small>
             </div>
             <i class="fa-solid fa-chevron-right selector-arrow"></i>
           </a>
@@ -103,59 +115,65 @@
             <div class="selector-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
             <div class="selector-text">
               <strong>Telefonunu Nakite Çevir</strong>
-              <small>15 Dk'da En Yüksek Teklif</small>
+              <small>15 Dk'da En Yüksek Teklif & Elden Nakit</small>
             </div>
             <i class="fa-solid fa-chevron-right selector-arrow"></i>
           </a>
         </div>
 
+        <!-- 3 Güven Rozeti -->
         <div class="hero-trust-bar">
           <div class="trust-item">
             <i class="fa-solid fa-eye text-cyan"></i>
             <div>
-              <strong>Gözünüzün Önünde</strong>
-              <small>Arka odaya gitmez, şeffaf tamir</small>
+              <strong>Göz Önünde Tamir</strong>
+              <small>Arka odaya gitmez, şeffaf banko</small>
             </div>
           </div>
           <div class="trust-item">
             <i class="fa-solid fa-shield-halved text-cyan"></i>
             <div>
-              <strong>6 Ay Yazılı Garanti</strong>
-              <small>Orijinal & A+ Test Edilmiş Parça</small>
+              <strong>6 Ay Kaşeli Garanti</strong>
+              <small>Tüm ekran ve piller garantili</small>
             </div>
           </div>
           <div class="trust-item">
-            <i class="fa-solid fa-lock text-cyan"></i>
+            <i class="fa-solid fa-bolt text-cyan"></i>
             <div>
-              <strong>Verileriniz Sıfırlanmaz</strong>
-              <small>Şifre vermeden işlem</small>
+              <strong>Anında Nakit / IBAN</strong>
+              <small>15 dakikada ödeme teslimi</small>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Hero Visual (Gerçek Mağaza Görseli ve Kartlar) -->
       <div class="hero-visual">
         <div class="visual-frame">
-          <img src="assets/real_storefront_night.jpg" alt="CepHane İletişim Esenyurt Mağazası" class="hero-img-main">
+          <img src="assets/real_storefront_night.jpg" alt="CepHane İletişim Esenyurt Gerçek Dükkan" class="hero-img-main">
+          
           <div class="visual-floating-badge">
-            <img src="assets/logo.png" alt="Logo" class="badge-mini-logo">
+            <img src="assets/logo.png" alt="CepHane Logo" class="badge-mini-logo">
             <div>
-              <strong>Sıfır & 2. El Değerinde Alım</strong>
-              <small>Apple • Samsung • Xiaomi</small>
+              <strong>CepHane İletişim Esenyurt</strong>
+              <small><i class="fa-solid fa-location-dot"></i> Pınar Mah. Sivas Kongre Cad. No:54/A</small>
             </div>
+            <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.9</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FORM 1: TELEFONUNU NAKİTE ÇEVİR (DEĞERLEME FORMU) -->
-  <section class="section-wrapper bg-alt" id="degerleme">
+  <!-- ========================================================= -->
+  <!-- BÖLÜM 1: GETMOBIL & EASYCEP MODELİ ADIM ADIM DEĞERLEME    -->
+  <!-- ========================================================= -->
+  <section class="section-wrapper" id="degerleme">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag">Anında Değerleme Formu</span>
-        <h2 class="section-title">Telefonunuz Ne Kadar Eder? <span class="text-cyan">Hemen Fiyat Alın</span></h2>
-        <p class="section-sub">Aşağıdaki bilgileri doldurun; CepHane İletişim <strong>15-20 dakika içinde</strong> WhatsApp üzerinden en yüksek nakit teklifini iletsin.</p>
+        <span class="section-tag"><i class="fa-solid fa-calculator text-cyan"></i> Anında Fiyat Belirleme</span>
+        <h2 class="section-title">Telefonunuz Ne Kadar Eder? <span class="gradient-text">Hemen Fiyat Alın</span></h2>
+        <p class="section-sub">Aşağıdaki 4 basit adımı tamamlayın; CepHane İletişim <strong>15-20 dakika içinde</strong> WhatsApp üzerinden en yüksek nakit teklifini Sedat Usta güvencesiyle iletsin.</p>
       </div>
 
       <!-- GETMOBIL STİLİ ADIM ADIM CİHAZ DEĞERLEME SİHİRBAZI -->
@@ -258,7 +276,10 @@
 
           <div class="gm-custom-model-box">
             <span class="gm-custom-note">Modelinizi bulamadınız mı?</span>
-            <input type="text" id="gmCustomModelInput" class="form-control" placeholder="Model adını buraya elle yazın...">
+            <div class="gm-custom-input-group">
+              <input type="text" id="gmCustomModelInput" class="gm-search-input" placeholder="Model adını buraya elle yazın...">
+              <button type="button" class="btn btn-sm btn-primary" id="btnCustomModelNext">Bu Modeli Seç</button>
+            </div>
           </div>
 
           <div class="gm-nav-row text-center">
@@ -268,14 +289,14 @@
           </div>
         </div>
 
-        <!-- ADIM 3: CİHAZ KONDİSYONU VE GETMOBIL SORULARI -->
+        <!-- ADIM 3: CİHAZ DURUMU VE KONDİSYON SORULARI -->
         <div class="gm-wizard-pane" id="paneStep3">
           <div class="gm-pane-top-bar">
             <button type="button" class="gm-btn-back" id="btnBackToStep2">
               <i class="fa-solid fa-arrow-left"></i> Model Değiştir
             </button>
             <div class="gm-selected-crumb">
-              Seçilen Cihaz: <strong id="crumbModel">iPhone 13</strong>
+              Seçilen Cihaz: <strong id="crumbModelStep3">iPhone 13</strong>
             </div>
           </div>
 
@@ -286,10 +307,13 @@
           </div>
 
           <div class="gm-questions-container">
-            <!-- Soru 1: Hafıza Kapasitesi -->
+            <!-- Soru 1: Hafıza -->
             <div class="gm-q-block">
-              <label class="gm-q-label"><i class="fa-solid fa-hard-drive text-cyan"></i> 1. Dahili Hafıza Kapasitesi</label>
-              <div class="gm-pills-row" id="pillsStorage">
+              <div class="gm-q-label">
+                <i class="fa-solid fa-database text-cyan"></i>
+                <span>1. Dahili Hafıza Kapasitesi</span>
+              </div>
+              <div class="gm-pills-row" id="qStoragePills">
                 <button type="button" class="gm-pill-btn" data-val="64 GB">64 GB</button>
                 <button type="button" class="gm-pill-btn active" data-val="128 GB">128 GB</button>
                 <button type="button" class="gm-pill-btn" data-val="256 GB">256 GB</button>
@@ -300,52 +324,67 @@
 
             <!-- Soru 2: Pil Sağlığı -->
             <div class="gm-q-block">
-              <label class="gm-q-label"><i class="fa-solid fa-battery-half text-cyan"></i> 2. Pil Sağlığı (%)</label>
-              <div class="gm-pills-row" id="pillsBattery">
+              <div class="gm-q-label">
+                <i class="fa-solid fa-battery-three-quarters text-cyan"></i>
+                <span>2. Pil Sağlığı (%)</span>
+              </div>
+              <div class="gm-pills-row" id="qBatteryPills">
                 <button type="button" class="gm-pill-btn active" data-val="%90 - %100 (Çok İyi)">%90 - %100 (Çok İyi)</button>
                 <button type="button" class="gm-pill-btn" data-val="%80 - %89 (Normal)">%80 - %89 (Normal)</button>
-                <button type="button" class="gm-pill-btn" data-val="%80 Altı / Servis">%80 Altı / Servis Uyarısı</button>
-                <button type="button" class="gm-pill-btn" data-val="Pil Sağlığı İyi (Android)">Android Pil İyi</button>
+                <button type="button" class="gm-pill-btn" data-val="%80 Altı / Servis Uyarısı">%80 Altı / Servis Uyarısı</button>
+                <button type="button" class="gm-pill-btn" data-val="Android Pil İyi">Android Pil İyi</button>
               </div>
             </div>
 
             <!-- Soru 3: Ekran Durumu -->
             <div class="gm-q-block">
-              <label class="gm-q-label"><i class="fa-solid fa-display text-cyan"></i> 3. Ekran Durumu</label>
-              <div class="gm-pills-row" id="pillsScreen">
-                <button type="button" class="gm-pill-btn active" data-val="Orijinal ve Çiziksiz (Kusursuz)">Orijinal & Çiziksiz (Kusursuz)</button>
+              <div class="gm-q-label">
+                <i class="fa-solid fa-mobile-screen text-cyan"></i>
+                <span>3. Ekran Durumu</span>
+              </div>
+              <div class="gm-pills-row" id="qScreenPills">
+                <button type="button" class="gm-pill-btn active" data-val="Orijinal & Çiziksiz (Kusursuz)">Orijinal & Çiziksiz (Kusursuz)</button>
                 <button type="button" class="gm-pill-btn" data-val="Hafif Kılcal Çizikler Var">Hafif Kılcal Çizikler Var</button>
-                <button type="button" class="gm-pill-btn" data-val="Kırık / Çatlak">Kırık / Çatlak (Görüntü Var)</button>
-                <button type="button" class="gm-pill-btn" data-val="Ekran Değişmiş (Yan Sanayi)">Ekran Değişmiş</button>
+                <button type="button" class="gm-pill-btn" data-val="Kırık / Çatlak (Görüntü Var)">Kırık / Çatlak (Görüntü Var)</button>
+                <button type="button" class="gm-pill-btn" data-val="Ekran Değişmiş">Ekran Değişmiş</button>
               </div>
             </div>
 
-            <!-- Soru 4: Kasa Kozmetik Durumu -->
+            <!-- Soru 4: Kasa Kozmetik -->
             <div class="gm-q-block">
-              <label class="gm-q-label"><i class="fa-solid fa-shield text-cyan"></i> 4. Kasa Kozmetik Durumu</label>
-              <div class="gm-pills-row" id="pillsBody">
+              <div class="gm-q-label">
+                <i class="fa-solid fa-shield text-cyan"></i>
+                <span>4. Kasa Kozmetik Durumu</span>
+              </div>
+              <div class="gm-pills-row" id="qBodyPills">
                 <button type="button" class="gm-pill-btn active" data-val="Sıfır Ayarında (Darbe/Ezik Yok)">Sıfır Ayarında (Darbe/Ezik Yok)</button>
                 <button type="button" class="gm-pill-btn" data-val="Temiz (Normal Kullanım)">Temiz (Normal Kullanım)</button>
-                <button type="button" class="gm-pill-btn" data-val="Kenarlarda Ezik veya Çizik Var">Kenarlarda Ezik/Çizik Var</button>
+                <button type="button" class="gm-pill-btn" data-val="Kenarlarda Ezik/Çizik Var">Kenarlarda Ezik/Çizik Var</button>
                 <button type="button" class="gm-pill-btn" data-val="Arka Cam Kırık / Hasarlı">Arka Cam Kırık / Hasarlı</button>
               </div>
             </div>
 
-            <!-- Soru 5: Kutu & Fatura Durumu -->
+            <!-- Soru 5: Kutu & Fatura -->
             <div class="gm-q-block">
-              <label class="gm-q-label"><i class="fa-solid fa-box-open text-cyan"></i> 5. Kutu & Fatura Durumu</label>
-              <div class="gm-pills-row" id="pillsBox">
+              <div class="gm-q-label">
+                <i class="fa-solid fa-box text-cyan"></i>
+                <span>5. Kutu & Fatura Durumu</span>
+              </div>
+              <div class="gm-pills-row" id="qBoxPills">
                 <button type="button" class="gm-pill-btn active" data-val="Kutulu ve Faturalı">Kutulu ve Faturalı</button>
                 <button type="button" class="gm-pill-btn" data-val="Sadece Kutusu Var">Sadece Kutusu Var</button>
-                <button type="button" class="gm-pill-btn" data-val="Kutu & Fatura Yok">Kutu & Fatura Yok (Sadece Cihaz)</button>
+                <button type="button" class="gm-pill-btn" data-val="Kutu & Fatura Yok (Sadece Cihaz)">Kutu & Fatura Yok (Sadece Cihaz)</button>
               </div>
             </div>
 
-            <!-- Soru 6: Face ID & Kameralar -->
+            <!-- Soru 6: Kamera & Face ID -->
             <div class="gm-q-block">
-              <label class="gm-q-label"><i class="fa-solid fa-camera text-cyan"></i> 6. Face ID / Parmak İzi ve Kameralar</label>
-              <div class="gm-pills-row" id="pillsCamera">
-                <button type="button" class="gm-pill-btn active" data-val="Tüm Kameralar & Face ID Sorunsuz">Kusursuz Çalışıyor</button>
+              <div class="gm-q-label">
+                <i class="fa-solid fa-camera text-cyan"></i>
+                <span>6. Face ID / Parmak İzi ve Kameralar</span>
+              </div>
+              <div class="gm-pills-row" id="qCameraPills">
+                <button type="button" class="gm-pill-btn active" data-val="Kusursuz Çalışıyor">Kusursuz Çalışıyor</button>
                 <button type="button" class="gm-pill-btn" data-val="Face ID veya Kamera Arızalı">Face ID veya Kamera Arızalı</button>
               </div>
             </div>
@@ -353,30 +392,34 @@
 
           <div class="gm-nav-row text-center">
             <button type="button" class="btn btn-primary btn-lg" id="btnNextToStep4">
-              Nakit Teklifi Hesapla & WhatsApp'a İlet <i class="fa-solid fa-bolt"></i>
+              Nakit Teklifi Hesapla & WhatsApp'a İlet <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
         </div>
 
-        <!-- ADIM 4: NAKİT FİYAT TEKLİFİ VE WHATSAPP'A GÖNDERME FORMU -->
+        <!-- ADIM 4: HESAPLANAN FİYAT VE SEDAT BEY'E WHATSAPP İLETİMİ -->
         <div class="gm-wizard-pane" id="paneStep4">
           <div class="gm-pane-top-bar">
             <button type="button" class="gm-btn-back" id="btnBackToStep3">
               <i class="fa-solid fa-arrow-left"></i> Kriterleri Düzenle
             </button>
             <div class="gm-selected-crumb">
-              Hazırlanan Fiş: <strong id="crumbSummary">iPhone 13 • 128 GB</strong>
+              Hazırlanan Fiş: <strong id="crumbModelStep4">iPhone 13 • 128 GB</strong>
             </div>
           </div>
 
-          <!-- Canlı Nakit Teklif Kartı (Getmobil Caliber) -->
+          <!-- Hesaplanan Teklif Fişi -->
           <div class="gm-offer-card">
             <div class="gm-offer-badge">
-              <span class="val-pulse-dot"></span>
-              <span>CepHane İletişim Canlı Değerleme</span>
+              <i class="fa-solid fa-certificate text-cyan"></i> CepHane İletişim Canlı Değerleme
             </div>
-            <div class="gm-offer-label">Cihazınız İçin Tahmini Nakit Teklifimiz:</div>
-            <div class="gm-offer-amount" id="gmFinalPriceDisplay">24.500 ₺ - 27.500 ₺</div>
+            
+            <h3 class="gm-offer-title" id="gmOfferTitle">Cihazınız İçin Tahmini Nakit Teklifimiz:</h3>
+            
+            <div class="gm-price-display" id="gmFinalPriceDisplay">
+              24.500 ₺ - 27.500 ₺
+            </div>
+
             <p class="gm-offer-sub">
               Bu tutar seçtiğiniz kondisyona göre hesaplanmıştır. Esenyurt mağazamızda 15 dakikalık hızlı kontrolden sonra <strong>elden nakit</strong> veya <strong>anında IBAN transferiyle</strong> ödenir.
             </p>
@@ -423,66 +466,43 @@
     </div>
   </section>
 
-  <!-- 360 DERECE AKILLI CİHAZ EKSPERTİZİ BÖLÜMÜ (AMACI VE İŞLEVİ NETLEŞTİRİLDİ) -->
-  <section class="section-wrapper panoramic-section" id="ekspertiz-360">
+  <!-- ========================================================= -->
+  <!-- BÖLÜM 2: CANLI DONANIM EKSPERTİZİ (5 MODÜLLÜ SELF-TEST)  -->
+  <!-- ========================================================= -->
+  <section class="section-wrapper bg-card-surface" id="donanim-testi">
     <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tag"><i class="fa-solid fa-arrows-rotate"></i> 360° Donanım & Çip Güvencesi</span>
-        <h2 class="section-title">Milimetrik <span class="gradient-text">Ekspertiz Standartlarımız</span></h2>
-        <p class="section-sub">Esenyurt mağazamıza geldiğinizde Sedat Bey ve teknik ekibimiz cihazınızı bu 5 donanım standardına göre optik mikroskop ve test cihazlarıyla inceler. Cihazınızın değeri 1 kuruş bile öldürülmeden, piyasadaki en yüksek nakit karşılığı anında elden veya IBAN'ınıza ödenir.</p>
-      </div>
-
-      <div class="panoramic-showcase-box" id="panoBox">
-        <div class="pano-img-container" id="panoContainer">
-          <img src="assets/phone_360.jpg" alt="360 Derece Titanyum iPhone Cihaz Ekspertizi" class="pano-img">
-          
-          <!-- Interactive Inspection Hotspots -->
-          <div class="hotspot hs-camera" onclick="showHotspotInfo('Kamera & Lens Modülü: Safir cam çizik taraması, 3x/5x optik zoom stabilitesi ve OIS sarsıntı kontrolü eksiksiz yapılır.')">
-            <span class="pulse-ring"></span>
-            <span class="hs-label"><i class="fa-solid fa-camera"></i> Safir Lens & Kamera</span>
-          </div>
-
-          <div class="hotspot hs-chassis" onclick="showHotspotInfo('Havacılık Titanyum Kasa: Lazer mikrometre ile gövde bükülme, darbe, vida yuvaları ve su yalıtım contaları test edilir.')">
-            <span class="pulse-ring"></span>
-            <span class="hs-label"><i class="fa-solid fa-shield"></i> Titanyum Kasa</span>
-          </div>
-
-          <div class="hotspot hs-screen" onclick="showHotspotInfo('Dynamic OLED & TrueTone: 120Hz ProMotion ekran akıcılığı, ölü piksel ve dokunmatik hassasiyeti kalibre edilir.')">
-            <span class="pulse-ring"></span>
-            <span class="hs-label"><i class="fa-solid fa-eye"></i> 120Hz TrueTone Ekran</span>
-          </div>
-
-          <div class="hotspot hs-chip" onclick="showHotspotInfo('Bionic Çip & Anakart: Termal kamera ile işlemci sıcaklığı, lehim hatları ve anakart kaçak akımları ölçülür.')">
-            <span class="pulse-ring"></span>
-            <span class="hs-label"><i class="fa-solid fa-microchip"></i> Bionic Çip & Anakart</span>
-          </div>
-
-          <div class="hotspot hs-battery" onclick="showHotspotInfo('Batarya & Şarj Entegresi: %100 orijinal döngü sayısı, pil sağlığı ve hızlı şarj protokolü doğrulanır.')">
-            <span class="pulse-ring"></span>
-            <span class="hs-label"><i class="fa-solid fa-battery-full"></i> Batarya & Pil Sağlığı</span>
+      <div class="donanim-banner-box">
+        <div class="donanim-content">
+          <span class="section-tag"><i class="fa-solid fa-microchip text-cyan"></i> Ücretsiz Donanım Ekspertizi</span>
+          <h2 class="donanim-title">Cihazınızı <span class="gradient-text">Canlı Olarak Test Edin</span></h2>
+          <p class="donanim-desc">
+            Telefonunuzun <strong>dokunmatik ızgarasını, ölü piksellerini, çift frekans hoparlörünü, titreşimini ve jiroskop sensörünü</strong> doğrudan tarayıcınız üzerinden test edin. Test sonucunda üretilen resmi CepHane Donanım Raporu nakit teklifinize eklenir.
+          </p>
+          <div class="donanim-badges-row">
+            <span><i class="fa-solid fa-check text-cyan"></i> 24 Noktalı Dokunmatik Testi</span>
+            <span><i class="fa-solid fa-check text-cyan"></i> RGBW Ölü Piksel Taraması</span>
+            <span><i class="fa-solid fa-check text-cyan"></i> Web Audio Frekans Testi</span>
+            <span><i class="fa-solid fa-check text-cyan"></i> Donanım Skor Kartı</span>
           </div>
         </div>
 
-        <div class="pano-info-bar" id="panoInfoBar">
-          <i class="fa-solid fa-circle-info text-cyan"></i>
-          <span id="panoInfoText">Noktalara tıklayarak CepHane İletişim 360° donanım ekspertiz kriterlerini inceleyebilirsiniz.</span>
-          <span class="pano-badge-hint"><i class="fa-solid fa-hand-pointer"></i> Kontrol Noktaları</span>
+        <div class="donanim-cta-side">
+          <div class="donanim-score-preview">
+            <span class="score-number">%98</span>
+            <span class="score-label">Doğrulanmış A+ Kondisyon</span>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg" id="btnOpenSelfTest">
+            <i class="fa-solid fa-stethoscope"></i> Canlı Donanım Testini Başlat
+          </button>
         </div>
-      </div>
-
-      <div class="expertiz-action-bar">
-        <a href="#degerleme" class="btn btn-primary">
-          <i class="fa-solid fa-calculator"></i> Bu Standartlarla Telefonuna Fiyat Al
-        </a>
-        <button type="button" class="btn btn-outline" id="btnOpenSelfTest">
-          <i class="fa-solid fa-stethoscope text-cyan"></i> Ekran & Ses Canlı Donanım Testi Yap
-        </button>
       </div>
     </div>
   </section>
 
-  <!-- FORM 2: TEKNİK SERVİS VE GÖZÜNÜZÜN ÖNÜNDE TAMİR LABORATUVARI -->
-  <section class="section-wrapper bg-alt" id="tamir-randevu">
+  <!-- ========================================================= -->
+  <!-- BÖLÜM 3: APPLE STANDARDINDA TEKNİK SERVİS LABORATUVARI     -->
+  <!-- ========================================================= -->
+  <section class="section-wrapper" id="tamir-randevu">
     <div class="container">
       <div class="section-header text-center">
         <span class="section-tag"><i class="fa-solid fa-screwdriver-wrench text-cyan"></i> Gözünüzün Önünde 20-30 Dk Teslim</span>
@@ -713,13 +733,80 @@
     </div>
   </section>
 
-  <!-- VİTRİN: 2. EL & SIFIR CİHAZLAR -->
+  <!-- ========================================================= -->
+  <!-- BÖLÜM 4: GERÇEK MAĞAZAMIZ & GOOGLE FOTOĞRAFLARI (ESENYURT)-->
+  <!-- ========================================================= -->
+  <section class="section-wrapper" id="magaza">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-brands fa-google text-cyan"></i> Esenyurt Merkez Şubemiz</span>
+        <h2 class="section-title">CepHane İletişim <span class="gradient-text">Showroom & Servis Odası</span></h2>
+        <p class="section-sub">Esenyurt Pınar Mahallesi Sivas Kongre Caddesi'ndeki mağazamıza dilediğiniz an gelin; kahvenizi yudumlarken cihazınızı test edelim veya anında nakit ödemenizi teslim edelim.</p>
+      </div>
+
+      <div class="store-gallery-grid">
+        <div class="store-card">
+          <img src="assets/real_store_interior.jpg" alt="CepHane İletişim Gerçek Showroom" class="store-card-img">
+          <div class="store-card-overlay">
+            <span class="store-tag"><i class="fa-solid fa-store"></i> CepHane İletişim Mağaza İçi</span>
+            <h3>Orijinal Logo Duvarı & Danışma Masası</h3>
+            <p>Pınar Mah. Sivas Kongre Caddesi No:54 adresindeki mağazamızda tüm ekspertiz ve tamir gözünüzün önünde yapılır.</p>
+          </div>
+        </div>
+
+        <div class="store-card">
+          <img src="assets/real_store_showcase.jpg" alt="CepHane İletişim Vitrini ve Cihaz Stokları" class="store-card-img">
+          <div class="store-card-overlay">
+            <span class="store-tag"><i class="fa-solid fa-mobile-screen"></i> Vitrin ve Aksesuar Alanı</span>
+            <h3>Geniş Sıfır ve 2. El Cihaz Vitrini</h3>
+            <p>Kapalı kutu sıfır ve A+ kondisyonda test edilmiş 2. el iPhone modellerimiz mağazamızda sizi bekliyor.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mağaza Güven Şeridi -->
+      <div class="store-features-strip">
+        <div class="store-feat-item">
+          <i class="fa-solid fa-map-location-dot text-cyan"></i>
+          <div>
+            <strong>Merkezi Konum</strong>
+            <span>Esenyurt Pınar Mah. Sivas Kongre Cad. No:54/A</span>
+          </div>
+        </div>
+        <div class="store-feat-item">
+          <i class="fa-solid fa-hand-holding-dollar text-cyan"></i>
+          <div>
+            <strong>Anında Elden Nakit</strong>
+            <span>15 dakikada ekspertiz ve anında nakit/IBAN ödeme</span>
+          </div>
+        </div>
+        <div class="store-feat-item">
+          <i class="fa-solid fa-mug-hot text-cyan"></i>
+          <div>
+            <strong>Göz Önünde Hizmet</strong>
+            <span>Kahvenizi içerken bankonun karşısında işlem izleme</span>
+          </div>
+        </div>
+        <div class="store-feat-item">
+          <i class="fa-solid fa-certificate text-cyan"></i>
+          <div>
+            <strong>Sedat Usta Güvencesi</strong>
+            <span>Tüm alım, satım ve tamirlerde birebir esnaf dürüstlüğü</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- BÖLÜM 5: VİTRİN: 2. EL & SIFIR GARANTİLİ CİHAZLAR         -->
+  <!-- ========================================================= -->
   <section class="section-wrapper" id="vitrin">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag">CepHane İletişim Güvencesiyle</span>
-        <h2 class="section-title">Garantili <span class="text-cyan">Cihaz Vitrini</span></h2>
-        <p class="section-sub">Tüm testleri yapılmış, faturalı, temiz 2. el ve sıfır kapalı kutu telefonlar. Eski cihazınızla takas imkanı.</p>
+        <span class="section-tag"><i class="fa-solid fa-tag text-cyan"></i> CepHane Güvencesiyle</span>
+        <h2 class="section-title">Garantili <span class="gradient-text">Cihaz Vitrini</span></h2>
+        <p class="section-sub">Tüm testleri yapılmış, faturalı, temiz 2. el ve sıfır kapalı kutu telefonlar. Eski cihazınızla değerinde takas imkanı.</p>
       </div>
 
       <div class="showcase-grid">
@@ -778,318 +865,232 @@
     </div>
   </section>
 
-  <!-- GOOGLE HARİTALAR & MAĞAZAMIZDAN KARELER (ESENYURT / İSTANBUL) -->
-  <section class="section-wrapper" id="magaza">
+  <!-- ========================================================= -->
+  <!-- BÖLÜM 6: KONUM, İLETİŞİM & HARİTA                         -->
+  <!-- ========================================================= -->
+  <section class="section-wrapper" id="iletisim">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag"><i class="fa-brands fa-google text-cyan"></i> Google Haritalar & Mağazamız</span>
-        <h2 class="section-title">CepHane İletişim <span class="gradient-text">Showroom & Servis Odası</span></h2>
-        <p class="section-sub">Esenyurt Pınar Mahallesi Sivas Kongre Caddesi'ndeki mağazamıza dilediğiniz an gelin; kahvenizi yudumlarken cihazınızı test edelim veya anında nakit ödemenizi teslim edelim.</p>
+        <span class="section-tag"><i class="fa-solid fa-location-dot text-cyan"></i> Bizi Ziyaret Edin</span>
+        <h2 class="section-title">Esenyurt Mağazamız ve <span class="gradient-text">İletişim Bilgileri</span></h2>
+        <p class="section-sub">Dilediğiniz an çat kapı gelin; cihazınıza anında fiyat verelim veya çayınızı içerken 30 dakikada tamir edelim.</p>
       </div>
 
-      <div class="store-gallery-grid">
-        <div class="store-card">
-          <img src="assets/real_store_interior.jpg" alt="CepHane İletişim Gerçek Showroom" class="store-card-img">
-          <div class="store-card-overlay">
-            <span class="store-tag"><i class="fa-solid fa-store"></i> CepHane İletişim Mağaza İçi</span>
-            <h3>Orijinal Logo Duvarı & Danışma Masası</h3>
-            <p>Pınar Mah. Sivas Kongre Caddesi No:54 adresindeki mağazamızda tüm ekspertiz gözünüzün önünde yapılır.</p>
-          </div>
-        </div>
-
-        <div class="store-card">
-          <img src="assets/real_storefront_night.jpg" alt="CepHane İletişim Dükkan Cephesi" class="store-card-img">
-          <div class="store-card-overlay">
-            <span class="store-tag"><i class="fa-solid fa-building"></i> Işıklı Dış Cephe & Tabela</span>
-            <h3>Sivas Kongre Caddesi Üzerinde</h3>
-            <p>Apple Teknik Servis ve CepHane İletişim tabelamız ile cadde üzerinden kolayca ulaşabilirsiniz.</p>
-          </div>
-        </div>
-
-        <div class="store-card">
-          <img src="assets/real_store_panoramic.jpg" alt="CepHane İletişim Panoramik Mağaza Görünümü" class="store-card-img">
-          <div class="store-card-overlay">
-            <span class="store-tag"><i class="fa-solid fa-arrows-left-right"></i> Panoramik Mağaza Turu</span>
-            <h3>Geniş Aksesuar & Telefon Reyonları</h3>
-            <p>Yüzlerce çeşit kılıf, kırılmaz cam, şarj cihazı, batarya ve kutulu telefon seçenekleri.</p>
-          </div>
-        </div>
-
-        <div class="store-card">
-          <img src="assets/real_store_showcase.jpg" alt="CepHane İletişim Kutulu Cihaz Vitrini" class="store-card-img">
-          <div class="store-card-overlay">
-            <span class="store-tag"><i class="fa-solid fa-box-open"></i> Sıfır & 2. El Kutu Vitrini</span>
-            <h3>Orijinal Kutulu Cihazlar & Ses Sistemleri</h3>
-            <p>Tüm testleri yapılmış, faturalı ve garantili akıllı telefon modelleri rafta hazır.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="store-features-strip">
-        <div class="store-feat-item">
-          <i class="fa-brands fa-google text-cyan"></i>
-          <div>
-            <strong>4.8 ⭐⭐⭐⭐⭐ Google Puanı (53 Yorum)</strong>
-            <span>Doğrulanmış müşteri memnuniyeti</span>
-          </div>
-        </div>
-        <div class="store-feat-item">
-          <i class="fa-solid fa-train-subway text-cyan"></i>
-          <div>
-            <strong>Sivas Kongre Cad. Üzeri</strong>
-            <span>Toplu taşıma ile kolay erişim</span>
-          </div>
-        </div>
-        <div class="store-feat-item">
-          <i class="fa-solid fa-square-parking text-cyan"></i>
-          <div>
-            <strong>Otopark & Kolay Ulaşım</strong>
-            <span>Pınar Mah. Esenyurt Merkezde</span>
-          </div>
-        </div>
-        <div class="store-feat-item">
-          <i class="fa-solid fa-mug-hot text-cyan"></i>
-          <div>
-            <strong>Kahve & Hızlı Ekspertiz</strong>
-            <span>15-20 dakikada sonuç ve nakit ödeme</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- İLETİŞİM & GOOGLE HARİTALAR -->
-  <section class="section-wrapper bg-alt" id="iletisim">
-    <div class="container">
-      <div class="contact-card">
-        <div class="contact-left">
-          <span class="section-tag">Bize Ulaşın</span>
-          <h2>CepHane İletişim <span class="text-cyan">Merkezi</span></h2>
-          <p>Dükkanımıza gelin, kahvemizi içerken cihazınızın ekspertizini yapıp nakit ödemenizi teslim edelim.</p>
-          <div class="c-item" style="margin-bottom: 20px;">
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <div class="contact-item">
             <i class="fa-solid fa-location-dot text-cyan"></i>
             <div>
               <strong>Adres:</strong>
-              <span>Pınar Mah., Sivas Kongre Cad., No: 54/A, Esenyurt / İstanbul</span>
+              <p>Pınar Mah., Sivas Kongre Cad., No:54/A, Esenyurt / İstanbul</p>
             </div>
           </div>
 
-          <div class="contact-details">
-            <div class="c-item">
-              <i class="fa-solid fa-phone text-cyan"></i>
-              <div>
-                <strong>Doğrudan Telefon:</strong>
-                <a href="tel:05303543465">0530 354 34 65</a>
-              </div>
-            </div>
-
-            <div class="c-item">
-              <i class="fa-brands fa-whatsapp text-whatsapp"></i>
-              <div>
-                <strong>WhatsApp Ekspertiz & Bilgi Hattı:</strong>
-                <a href="https://wa.me/905303543465" target="_blank">0530 354 34 65 (Anında Mesaj Atın)</a>
-              </div>
-            </div>
-
-            <div class="c-item">
-              <i class="fa-brands fa-instagram text-pink"></i>
-              <div>
-                <strong>Instagram Hesabımız:</strong>
-                <a href="https://www.instagram.com/cephane.iletisimm/" target="_blank">@cephane.iletisimm</a>
-              </div>
-            </div>
-
-            <div class="c-item">
-              <i class="fa-solid fa-clock text-cyan"></i>
-              <div>
-                <strong>Çalışma Saatleri:</strong>
-                <span>Haftanın 7 Günü: 09:30 - 23:00</span>
-              </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone text-cyan"></i>
+            <div>
+              <strong>Telefon & Destek:</strong>
+              <p><a href="tel:05303543465" style="color: #fff; text-decoration: none;">0530 354 34 65</a> (Sedat Usta)</p>
             </div>
           </div>
 
-          <div class="action-buttons-row">
-            <a href="https://share.google/V8kiUCASBrG1OifqY" target="_blank" class="btn btn-primary">
-              <i class="fa-solid fa-location-dot"></i> Google Haritalar Konumu
-            </a>
-            <a href="tel:05303543465" class="btn btn-outline">
-              <i class="fa-solid fa-phone"></i> Hemen Ara
+          <div class="contact-item">
+            <i class="fa-brands fa-whatsapp text-whatsapp"></i>
+            <div>
+              <strong>Doğrudan WhatsApp Hattı:</strong>
+              <p><a href="https://wa.me/905303543465" target="_blank" style="color: var(--whatsapp); text-decoration: none;">0530 354 34 65 (15 Dk'da Cevap)</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fa-solid fa-clock text-cyan"></i>
+            <div>
+              <strong>Çalışma Saatlerimiz:</strong>
+              <p>Haftanın 7 Günü: 09:30 - 22:30 (Açık)</p>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="https://maps.google.com/?q=P%C4%B1nar+Mah.+Sivas+Kongre+Cad.+No:54+Esenyurt+%C4%B0stanbul" target="_blank" class="btn btn-primary w-full">
+              <i class="fa-solid fa-diamond-turn-right"></i> Google Haritalar'da Yol Tarifi Al
             </a>
           </div>
         </div>
 
-        <div class="contact-right">
-          <div class="map-placeholder-box">
-            <div class="map-overlay-info">
-              <img src="assets/logo.png" alt="Logo" class="map-logo">
-              <h3>CepHane İletişim</h3>
-              <p>Google Haritalar & Navigasyon</p>
-              <a href="https://share.google/V8kiUCASBrG1OifqY" target="_blank" class="btn btn-sm btn-primary" style="margin-top: 15px;">
-                <i class="fa-solid fa-diamond-turn-right"></i> Konuma Yol Tarifi Al
-              </a>
-            </div>
-          </div>
+        <div class="map-card">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8354784407887!2d28.67491177651031!3d41.039801817478644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa1c9f7ab298b%3A0xe54c1be2727181c0!2sP%C4%B1nar%2C%20Sivas%20Kongre%20Cd.%20No%3A54%2C%2034517%20Esenyurt%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1719000000000!5m2!1str!2str" 
+            width="100%" 
+            height="100%" 
+            style="border:0; min-height: 380px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <span class="footer-logo">Cep<span class="text-cyan">Hane</span> İletişim</span>
-        <p>Değerinde telefon alım satımı, orijinal garantili teknik servis ve aksesuar merkezi.</p>
+        <span class="brand-name">Cep<span class="text-cyan">Hane</span> İletişim</span>
+        <p>Esenyurt Pınar Mahallesi'nin değerinde telefon alım, sıfır & 2. el garantili satış ve 30 dakikada göz önünde teknik servis merkezi.</p>
       </div>
-      <div class="footer-copy">
-        <p>&copy; 2026 CepHane İletişim. Tüm Hakları Saklıdır.</p>
-        <p class="agency-credit">Web Tasarım & Dijital Motor: <strong class="text-cyan">Aura Digital</strong></p>
+      <div class="footer-bottom">
+        <p>© 2026 CepHane İletişim Esenyurt. Tüm Hakları Saklıdır.</p>
+        <p class="footer-sub-text">Sedat Usta • WhatsApp: 0530 354 34 65 • Pınar Mah. Sivas Kongre Cad. No:54/A Esenyurt / İstanbul</p>
       </div>
     </div>
   </footer>
 
-  <!-- MODAL 1: 15-20 DK GERİ DÖNÜŞ VE WHATSAPP ONAYI -->
-  <div class="modal-overlay" id="confirmModal">
+  <!-- ========================================================= -->
+  <!-- MODALLAR & GİZLİ DONANIM ARAÇLARI                         -->
+  <!-- ========================================================= -->
+
+  <!-- 1. ONAY & TEKLİF İLETİLDİ MODALI -->
+  <div class="modal-backdrop" id="confirmModal">
     <div class="modal-card">
-      <div class="modal-icon"><i class="fa-solid fa-circle-check text-cyan"></i></div>
-      <h3 id="modalTitle">Talebiniz Sedat Bey'e İletildi! 🎉</h3>
-      <div class="modal-summary-box" id="modalSummaryBox">
-        <!-- JS tarafından doldurulur -->
+      <div class="modal-icon">
+        <i class="fa-solid fa-circle-check text-cyan"></i>
       </div>
-      <p id="modalDesc">
-        Cihaz ve iletişim bilgileriniz eksiksiz ekspertiz fişi olarak hazırlandı. 
-        <strong>15-20 dakika içerisinde</strong> Sedat Bey tarafından WhatsApp üzerinden size en yüksek nakit teklifi iletilecektir.
+      <h3 class="modal-title" id="modalTitle">Teklifiniz Sedat Bey'e İletildi! 🎉</h3>
+      <div class="modal-summary-box" id="modalSummaryBox"></div>
+      <p class="modal-desc" id="modalDesc">
+        Bilgileriniz başarıyla alındı. Sedat Bey 15-20 dakika içinde WhatsApp üzerinden en yüksek nakit teklifimizle size dönüş yapacaktır.
       </p>
       <div class="modal-actions">
-        <a href="#" id="modalWaLink" target="_blank" class="btn btn-whatsapp-giant">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp Sohbetini Aç & Sedat Bey'e Gönder
+        <a href="#" class="btn btn-whatsapp-giant" id="modalWaLink" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Konuşmasını Aç
         </a>
-        <button class="btn btn-outline w-full" id="modalCloseBtn" style="margin-top: 10px;">Pencereyi Kapat</button>
+        <button type="button" class="btn btn-outline" id="modalCloseBtn">Tamam, Kapat</button>
       </div>
-      <p class="modal-hint-sub"><i class="fa-solid fa-shield-halved text-cyan"></i> Tarayıcınız WhatsApp uygulamasını otomatik açmadıysa yukarıdaki yeşil butona tıklayabilirsiniz.</p>
     </div>
   </div>
 
-  <!-- MODAL 2: CANLI DONANIM EKSPERTİZ TESTİ (EKRAN & SES TESTİ) -->
-  <div class="modal-overlay" id="hardwareTestModal">
-    <div class="modal-card modal-card-wide">
-      <div class="modal-header-row">
-        <div>
-          <span class="section-tag" style="margin: 0;"><i class="fa-solid fa-microchip"></i> CepHane Cihaz Test Laboratuvarı</span>
-          <h3 style="margin-top: 4px; font-size: 22px;">Canlı Donanım <span class="text-cyan">Ekspertiz Testi</span></h3>
+  <!-- 2. BEŞ MODÜLLÜ İNTERAKTİF DONANIM EKSPERTİZ LABORATUVARI -->
+  <div class="hardware-modal-backdrop" id="hardwareTestModal">
+    <div class="hardware-modal-card">
+      <div class="hw-modal-header">
+        <div class="hw-modal-title">
+          <i class="fa-solid fa-microchip text-cyan"></i>
+          <div>
+            <h3>CepHane Akıllı Cihaz Donanım Laboratuvarı</h3>
+            <small>Ekran dokunmatiği, ölü piksel, hoparlör, titreşim ve sensör testi</small>
+          </div>
         </div>
-        <button class="modal-x-btn" id="closeHwModalBtn">&times;</button>
+        <button type="button" class="hw-modal-close" id="closeHwModalBtn">&times;</button>
       </div>
 
-      <div class="hw-lab-header">
-        <p style="color: var(--titanium-silver); font-size: 14px; margin-bottom: 20px;">
-          Telefonunuzun donanımını adım adım canlı test edin. Alacağınız ekspertiz puanı ve teknik sağlık raporu doğrudan Sedat Bey'e gidecek fiyat teklifine işlenecektir.
-        </p>
-
-        <!-- 5 Test Sekmesi / Göstergesi -->
-        <div class="hw-tabs-strip">
-          <div class="hw-tab-btn active" data-tab="touch"><i class="fa-solid fa-fingerprint"></i> Dokunmatik</div>
-          <div class="hw-tab-btn" data-tab="pixel"><i class="fa-solid fa-eye"></i> Ölü Piksel</div>
-          <div class="hw-tab-btn" data-tab="sound"><i class="fa-solid fa-volume-high"></i> Hoparlör</div>
-          <div class="hw-tab-btn" data-tab="vibe"><i class="fa-solid fa-mobile-screen"></i> Titreşim</div>
-          <div class="hw-tab-btn" data-tab="gyro"><i class="fa-solid fa-compass"></i> Jiroskop</div>
-        </div>
+      <!-- Test Sekmeleri -->
+      <div class="hw-tabs-strip">
+        <button type="button" class="hw-tab-btn active" data-tab="touch">
+          <i class="fa-solid fa-hand-pointer"></i> 1. Dokunmatik (24 Hücre)
+        </button>
+        <button type="button" class="hw-tab-btn" data-tab="pixel">
+          <i class="fa-solid fa-tv"></i> 2. Ölü Piksel / Yanık
+        </button>
+        <button type="button" class="hw-tab-btn" data-tab="sound">
+          <i class="fa-solid fa-volume-high"></i> 3. Ses Frekansı
+        </button>
+        <button type="button" class="hw-tab-btn" data-tab="vibe">
+          <i class="fa-solid fa-mobile"></i> 4. Titreşim Motoru
+        </button>
+        <button type="button" class="hw-tab-btn" data-tab="gyro">
+          <i class="fa-solid fa-compass"></i> 5. Jiroskop & Eğim
+        </button>
       </div>
 
-      <div class="hw-test-steps">
-        <!-- 1. Dokunmatik Ekran Testi (24 Hücreli Hassas Grid) -->
+      <!-- Test Panelleri -->
+      <div class="hw-panes-body">
+        <!-- Panel 1: Dokunmatik Izgara (24 Hücre) -->
         <div class="hw-step-box hw-pane-box active" id="hwPaneTouch">
           <div class="hw-step-title">
-            <i class="fa-solid fa-fingerprint text-cyan"></i>
-            <span>1. Dokunmatik Ekran & Hassasiyet Testi</span>
-            <span class="hw-step-status" id="touchStatus">Karelere Parmağınızla Dokunun (0/24)</span>
+            <i class="fa-solid fa-hand-pointer text-cyan"></i>
+            <span>1. 24 Noktalı Dokunmatik Hassasiyet Testi</span>
+            <span class="hw-step-status" id="touchStatus">Parmağınızı tüm kutuların üzerinden kaydırın</span>
           </div>
-          <p class="hw-step-desc">Parmağınızı ekrandaki tüm karelerin üzerinden kaydırarak yeşile/maviye dönüştürün.</p>
-          <div class="touch-test-grid-24" id="touchGrid">
-            <!-- 24 Hücre JS ile doldurulur -->
-          </div>
+          <p class="hw-step-desc">Dokunmatik ekranınızda kör nokta olup olmadığını test etmek için parmağınızla tüm kutucukları yeşile çevirin.</p>
+          
+          <div class="touch-test-grid-24" id="touchGrid24"></div>
+
           <div class="hw-step-action-row">
+            <span class="hw-badge-counter">Doldurulan: <strong id="touchPassCount">0 / 24</strong></span>
             <button type="button" class="btn btn-sm btn-outline" id="btnResetTouch">Sıfırla</button>
-            <button type="button" class="btn btn-sm btn-primary" id="btnNextHwTab1">Sıradaki Test: Ölü Piksel <i class="fa-solid fa-arrow-right"></i></button>
           </div>
         </div>
 
-        <!-- 2. Ölü Piksel & Ekran Renk Testi -->
+        <!-- Panel 2: Ölü Piksel & Ekran Yanığı -->
         <div class="hw-step-box hw-pane-box" id="hwPanePixel">
           <div class="hw-step-title">
-            <i class="fa-solid fa-eye text-cyan"></i>
-            <span>2. Ölü Piksel & OLED Renk Tarama Testi</span>
-            <span class="hw-step-status" id="pixelStatus">Bekleniyor</span>
+            <i class="fa-solid fa-tv text-cyan"></i>
+            <span>2. RGBW Ölü Piksel & Ghost Screen Taraması</span>
+            <span class="hw-step-status" id="pixelStatus">Tam Ekran Renk Değişimi</span>
           </div>
-          <p class="hw-step-desc">Aşağıdaki renk butonlarına basarak ekranınızda siyah nokta (ölü piksel), leke veya sararma olup olmadığını kontrol edin.</p>
+          <p class="hw-step-desc">Aşağıdaki ekrana tıklayarak Kırmızı, Camgöbeği, Yeşil, Beyaz ve Siyah renkler arasında geçiş yapın. Ekranda siyah/beyaz nokta var mı kontrol edin.</p>
           
-          <div class="pixel-color-preview-box" id="pixelPreviewBox" style="background: #ff0055;">
-            <span id="pixelPreviewText">Kırmızı Renk Testi</span>
-          </div>
-
-          <div class="pixel-btn-row">
-            <button type="button" class="pixel-color-btn" style="background:#ff0055;" data-color="#ff0055" data-name="Kırmızı">Kırmızı</button>
-            <button type="button" class="pixel-color-btn" style="background:#00e5ff;" data-color="#00e5ff" data-name="Camgöbeği">Cyan</button>
-            <button type="button" class="pixel-color-btn" style="background:#00ff66;" data-color="#00ff66" data-name="Yeşil">Yeşil</button>
-            <button type="button" class="pixel-color-btn" style="background:#ffffff; color:#000;" data-color="#ffffff" data-name="Beyaz">Beyaz</button>
-            <button type="button" class="pixel-color-btn" style="background:#000000; border:1px solid #fff;" data-color="#000000" data-name="Siyah">Siyah</button>
+          <div class="pixel-color-stage" id="pixelStage">
+            <span id="pixelPrompt"><i class="fa-solid fa-wand-magic-sparkles"></i> Renk Değiştirmek İçin Ekrana Dokunun</span>
           </div>
 
           <div class="hw-step-action-row" style="margin-top: 15px;">
             <button type="button" class="btn btn-sm btn-primary" id="btnPassPixel">
-              <i class="fa-solid fa-check"></i> Ekranda Ölü Piksel Yok (Kusursuz)
+              <i class="fa-solid fa-check"></i> Ölü Piksel Yok (Kusursuz)
+            </button>
+            <button type="button" class="btn btn-sm btn-outline" id="btnFailPixel">
+              <i class="fa-solid fa-triangle-exclamation"></i> Kılcal Leke / Piksel Var
             </button>
           </div>
         </div>
 
-        <!-- 3. Hoparlör & Ahize Akustik Testi -->
+        <!-- Panel 3: Çift Frekans Akustik Ses Testi -->
         <div class="hw-step-box hw-pane-box" id="hwPaneSound">
           <div class="hw-step-title">
             <i class="fa-solid fa-volume-high text-cyan"></i>
-            <span>3. Hoparlör & Ahize Akustik Frekans Testi</span>
-            <span class="hw-step-status" id="audioStatus">Bekleniyor</span>
+            <span>3. Çift Frekans Akustik Hoparlör & Ahize Testi</span>
+            <span class="hw-step-status" id="soundStatus">Web Audio API</span>
           </div>
-          <p class="hw-step-desc">Test seslerini çalarak hem alt ana hoparlörü hem üst ahize netliğini doğrulayın.</p>
+          <p class="hw-step-desc">Hoparlörünüzün bas ve tiz zarlarında patlak/cızırtı olup olmadığını test etmek için frekans butonlarına basın.</p>
           
-          <div class="audio-test-row">
-            <button type="button" class="btn btn-sm btn-outline" id="btnPlaySoundLow">
-              <i class="fa-solid fa-play"></i> 440 Hz Bas Tonu Çal
+          <div class="hw-dual-buttons">
+            <button type="button" class="btn btn-outline" id="btnPlayBassTone">
+              <i class="fa-solid fa-play"></i> 440 Hz Bas Tonunu Çal
             </button>
-            <button type="button" class="btn btn-sm btn-outline" id="btnPlaySoundHigh">
-              <i class="fa-solid fa-play"></i> 1500 Hz Ahize Tiz Tonu Çal
+            <button type="button" class="btn btn-outline" id="btnPlayTrebleTone">
+              <i class="fa-solid fa-play"></i> 1500 Hz Ahize Tiz Tonunu Çal
             </button>
           </div>
 
           <div class="hw-step-action-row" style="margin-top: 15px;">
-            <button type="button" class="btn btn-sm btn-primary" id="btnAudioPassed" disabled>
-              <i class="fa-solid fa-check"></i> Sesleri Net ve Cızırtısız Duydum
+            <button type="button" class="btn btn-sm btn-primary" id="btnPassSound">
+              <i class="fa-solid fa-check"></i> Ses Net ve Pürüzsüz
             </button>
           </div>
         </div>
 
-        <!-- 4. Titreşim / Taptic Engine Testi -->
+        <!-- Panel 4: Titreşim Motoru Testi -->
         <div class="hw-step-box hw-pane-box" id="hwPaneVibe">
           <div class="hw-step-title">
-            <i class="fa-solid fa-mobile-screen text-cyan"></i>
-            <span>4. Titreşim & Taptic Engine Motoru Testi</span>
-            <span class="hw-step-status" id="vibeStatus">Bekleniyor</span>
+            <i class="fa-solid fa-mobile text-cyan"></i>
+            <span>4. Taptic Engine / Titreşim Motoru Testi</span>
+            <span class="hw-step-status" id="vibeStatus">Haptic API</span>
           </div>
-          <p class="hw-step-desc">Cihazınızın titreşim motorunun tepki verip vermediğini test edin.</p>
+          <p class="hw-step-desc">Mobil tarayıcınızın titreşim donanımını tetiklemek için aşağıdaki butona basın.</p>
           
-          <div class="audio-test-row">
-            <button type="button" class="btn btn-sm btn-outline" id="btnTriggerVibe">
-              <i class="fa-solid fa-bolt"></i> Titreşim Motorunu Çalıştır
-            </button>
-          </div>
+          <button type="button" class="btn btn-outline btn-lg w-full" id="btnStartVibeTest">
+            <i class="fa-solid fa-wave-square"></i> Titreşimi Başlat (3 Ritimli Vuruş)
+          </button>
 
           <div class="hw-step-action-row" style="margin-top: 15px;">
             <button type="button" class="btn btn-sm btn-primary" id="btnPassVibe">
-              <i class="fa-solid fa-check"></i> Titreşimi Hissettim (Sorunsuz)
+              <i class="fa-solid fa-check"></i> Titreşim Hissedildi (Normal)
             </button>
           </div>
         </div>
 
-        <!-- 5. Jiroskop & Hareket Sensörü Testi -->
+        <!-- Panel 5: Jiroskop ve Eğim Sensörü Testi -->
         <div class="hw-step-box hw-pane-box" id="hwPaneGyro">
           <div class="hw-step-title">
             <i class="fa-solid fa-compass text-cyan"></i>
