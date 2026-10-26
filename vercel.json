@@ -1,0 +1,55 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/assets/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(.*)cephaneiletisim.com"
+        }
+      ],
+      "destination": "/cephane/assets/$1"
+    },
+    {
+      "source": "/app.js",
+      "has": [
+        {
+          "type": "host",
+          "value": "(.*)cephaneiletisim.com"
+        }
+      ],
+      "destination": "/cephane/app.js"
+    },
+    {
+      "source": "/style.css",
+      "has": [
+        {
+          "type": "host",
+          "value": "(.*)cephaneiletisim.com"
+        }
+      ],
+      "destination": "/cephane/style.css"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(.*)cephaneiletisim.com"
+        }
+      ],
+      "destination": "/cephane/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(.*)cephaneiletisim.com"
+        }
+      ],
+      "destination": "/cephane/$1"
+    }
+  ]
+}
